@@ -1,0 +1,228 @@
+html, body {
+  /* Index ------------------------------------------------------------------------------------*/
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  background-image: url("../images/mobile_background.png");
+  font-family: "GardensC";
+}
+
+html #app, body #app {
+  height: 100%;
+  /* Accueil ----------------------------------------------------------------------------------*/
+}
+
+html #app .accueil, body #app .accueil {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #app .accueil header, body #app .accueil header {
+    border-bottom: solid black 1px;
+    background-color: rgba(158, 158, 158, 0.2);
+  }
+}
+
+html #app .accueil header, body #app .accueil header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html #app .accueil header .logo, body #app .accueil header .logo {
+  height: 65px;
+  margin-left: 10px;
+}
+
+html #app .accueil header .connexion, body #app .accueil header .connexion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html #app .accueil header .connexion .apparition-enter-active, html #app .accueil header .connexion .apparition-leave-active, body #app .accueil header .connexion .apparition-enter-active, body #app .accueil header .connexion .apparition-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+html #app .accueil header .connexion .apparition-enter, html #app .accueil header .connexion .apparition-leave-to, body #app .accueil header .connexion .apparition-enter, body #app .accueil header .connexion .apparition-leave-to {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+html #app .accueil header .connexion .menu, body #app .accueil header .connexion .menu {
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+html #app .accueil .contentAccueil, body #app .accueil .contentAccueil {
+  height: 70%;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #app .accueil .contentAccueil .searchSection, body #app .accueil .contentAccueil .searchSection {
+    position: absolute;
+    top: 0px;
+    left: 35%;
+  }
+}
+
+html #app .accueil .contentAccueil .searchSection, body #app .accueil .contentAccueil .searchSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+}
+
+html #app .accueil .contentAccueil .searchSection .searchBar, body #app .accueil .contentAccueil .searchSection .searchBar {
+  height: 30px;
+  width: 210px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 3px 4px 15px 1px black;
+          box-shadow: 3px 4px 15px 1px black;
+}
+
+html #app .accueil .contentAccueil .searchSection form, body #app .accueil .contentAccueil .searchSection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+html #app .accueil .contentAccueil .searchSection .submit, body #app .accueil .contentAccueil .searchSection .submit {
+  width: 110px;
+  background-color: #A4D626;
+}
+
+html #app .accueil .contentAccueil .potagers, body #app .accueil .contentAccueil .potagers {
+  margin-top: 50px;
+}
+
+html #app .accueil .contentAccueil .potagers, html #app .accueil .contentAccueil .jardiniers, body #app .accueil .contentAccueil .potagers, body #app .accueil .contentAccueil .jardiniers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html #app .accueil .contentAccueil .potagers h2, html #app .accueil .contentAccueil .jardiniers h2, body #app .accueil .contentAccueil .potagers h2, body #app .accueil .contentAccueil .jardiniers h2 {
+  margin: 0px;
+  font-weight: lighter;
+}
+
+html #app .accueil .contentAccueil .sections, body #app .accueil .contentAccueil .sections {
+  height: 75%;
+  width: 100%;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html #app .accueil .contentAccueil .sections .potager, html #app .accueil .contentAccueil .sections .jardinier, body #app .accueil .contentAccueil .sections .potager, body #app .accueil .contentAccueil .sections .jardinier {
+  height: 150px;
+  width: 150px;
+  background-color: lightskyblue;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+  html #app .accueil .contentAccueil, body #app .accueil .contentAccueil {
+    overflow: scroll;
+  }
+}
+
+html #app .accueil footer, body #app .accueil footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+html #app .accueil footer .reseauxSociaux, body #app .accueil footer .reseauxSociaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+html #app .accueil footer .reseauxSociaux img, body #app .accueil footer .reseauxSociaux img {
+  width: 50px;
+}
+
+html #app .accueil footer .reseauxSociaux h3, body #app .accueil footer .reseauxSociaux h3 {
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 320px) {
+  html #app .accueil footer .reseauxSociaux img, body #app .accueil footer .reseauxSociaux img {
+    width: 30px;
+  }
+  html #app .accueil footer .reseauxSociaux h3, body #app .accueil footer .reseauxSociaux h3 {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html #app .accueil footer, body #app .accueil footer {
+    border-top: solid black 1px;
+    background-color: rgba(158, 158, 158, 0.2);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
