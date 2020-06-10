@@ -4,7 +4,6 @@ export default tpl({
     template: './html/horsConnexion/accueil.html',
     data () {
         return {
-            show: false,
         }
     },
     mounted(){
@@ -15,8 +14,8 @@ export default tpl({
             this.$router.push("/").catch(err => {})
         },
         
-        connexion() {
-            this.show = !this.show  
-        },
+        connexionPage() {
+            this.$router.push("/connexion")
+        }
     },
 })

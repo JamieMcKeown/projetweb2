@@ -1,6 +1,21 @@
 import tpl from '../../utils/avecTemplateHtml'
 
-// export du object literal complet représentant le component
 export default tpl({
-    template: 'inscription.html'
+    template: './html/horsConnexion/inscription.html',
+    data () {
+        return {
+        }
+    },
+    mounted(){
+       
+    },
+    methods: {
+        homepageRoute() {
+            this.$router.push("/")
+        },
+
+        connexionPage() {
+            this.$router.push("/connexion")
+        },
+    },
 })

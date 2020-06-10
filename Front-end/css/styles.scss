@@ -1,66 +1,78 @@
-html, body {
+$bgColor: rgba($color: #9E9E9E, $alpha: 0.2);
+$w: white;
 
-/* Index ------------------------------------------------------------------------------------*/
+html, body, #app {
+    height: 100%;
     width: 100%;
-    height: 100%;
     margin: 0px;
-    background-image: url("../images/mobile_background.png");
     font-family: "GardensC";
-    
-    #app {
-    height: 100%;
+    background-image: url("../images/web_background.png");
 
-/* Accueil ----------------------------------------------------------------------------------*/
-    .accueil {
-        height: 100%;
+    @media only screen and (max-width: 1023px) {
+        background-image: url("../images/mobile_background.png");
+        background-position-x: 500px;
+    }
+
+/* Header -----------------------------------------------------------------------------------*/
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
 
         @media only screen and (max-width: 1023px) {
-            header {
-                border-bottom: solid black 1px;
-                background-color: rgba($color: #9E9E9E, $alpha: 0.2);
+            height: 10%;
+            width: 100%;
+            border-bottom: solid black 1px;
+            background-color: $bgColor;
+        }
+
+        .logo {
+
+            @media only screen and (max-width: 1023px) {
+                height: 65px;
             }
         }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            
-            .logo {
-                height: 65px;
-                margin-left: 10px;
-            }
+        .connexion {
 
-            .connexion {
+            @media only screen and (max-width: 1023px) {
                 display: flex;
                 flex-direction: row;
+            }
 
-                .apparition-enter-active, .apparition-leave-active {
-                    transition: opacity .5s;
-                    transition: 2s;
+            h3 {
+                position: absolute;
+                color: $w;
+
+                @media only screen and ( max-width: 1023px) {
+                    font-size: x-small;
+                    transform: translate(7px, 12px);
                 }
-                .apparition-enter, .apparition-leave-to {
-                    opacity: 0;
-                    transform: translateX(100px);
-                }
+            }
+            
+            .menu {
                 
-                .menu {
+                @media only screen and (max-width: 1023px) {
                     height: 50px;
                     margin-right: 20px;
                     margin-left: 5px;
                 }
             }
         }
+    }
+
+/* Accueil ----------------------------------------------------------------------------------*/
+    #accueil {
+        height: 100%;
+        width: 100%;
 
         .contentAccueil {
-            height: 70%;
 
-            @media only screen and (min-width: 1024px) {
-                .searchSection {
-                    position: absolute;
-                    top: 0px;
-                    left: 35%;
-                }
+            @media only screen and (max-width: 1023px) {
+                height: 70%;
+                width: 100%;
+                overflow: scroll;
             }
 
             .searchSection {
@@ -68,7 +80,11 @@ html, body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 15px;
+                margin: 15px 0px 15px;
+
+                @media only screen and (max-width: 1023px) {
+                    margin: 15px 0px 0px;
+                }
     
                 .searchBar {
                     height: 30px;
@@ -89,84 +105,177 @@ html, body {
                 }
             }
 
-            .potagers {
-                margin-top: 50px;
-            }
-    
             .potagers, .jardiniers {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-    
-                h2 {
-                    margin: 0px;
-                    font-weight: lighter;
-                }
-            }
-
-            .sections {
-                height: 75%;
-                width: 100%;
-                margin-top: 15px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-    
-                .potager, .jardinier {
-                    height: 150px;
-                    width: 150px;
-                    background-color: lightskyblue;
-                    margin-bottom: 15px;
-                }
-            }
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .contentAccueil {
-                overflow: scroll ;
-            }
-        }
-
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-    
-            .reseauxSociaux {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
                 text-align: center;
-    
-                img {
-                    width: 50px;
+
+                @media only screen and (max-width: 1023px) {
+                    flex-direction: column;
                 }
-    
-                h3 {
-                    margin-bottom: 0px;
-                }
-    
-                @media only screen and (max-width: 320px) {
-                    img {
-                        width: 30px;
+
+                h2 {
+                    width: 20%;
+
+                    @media only screen and (max-width: 1023px) {
+                        width: auto;
                     }
-    
-                    h3 {
-                        font-size: small;
+                }
+
+                .sections {
+                    width: 80%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    justify-content: space-around;
+
+                    @media only screen and (max-width: 1023px) {
+                        width: 100%;
+                    }
+
+                    .potager, .jardinier {
+                        height: 140px;
+                        width: 160px;
+                        margin-bottom: 15px;
+                        background-color: black;
                     }
                 }
             }
-        } 
+            
+        }
+    }
 
-        @media only screen and (max-width: 1023px) {
-            footer {
-                border-top: solid black 1px;
-                background-color: rgba($color: #9E9E9E, $alpha: 0.2);
+/* Connexion --------------------------------------------------------------------------------*/
+#connexion {
+    height: 100%;
+    width: 100%;
+
+    .contentConnexion {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .connexionBox {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media only screen and (min-width: 1024px) {
+                    width: 440px;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    @media only screen and (min-width: 1024px) {
+                        width: 100%;
+                        justify-content: center;
+                    }
+
+                    .courriel {
+
+                        @media only screen and (min-width: 1024px) {
+                            margin-right: 168px;
+                        }
+                    }
+
+                    .password {
+                        @media only screen and (min-width: 1024px) {
+                            margin-right: 100px;
+                        }
+                    }
+
+                    input {
+                        margin-left: 15px;
+                    }
+
+                }
+
+                .button {
+                    width: 110px;
+                    background-color: #A4D626;
+                    color: $w;
+
+                    @media only screen and (min-width: 1024px) {
+                        align-self: flex-end;
+                        margin-top:15px;
+                    }
+                }
+            }
+
+            .inscription {
+                text-align: center;
+                position: relative;
+
+                img {
+                    width: 150px;
+
+                    @media only screen and (min-width: 1024px) {
+                        width: 265px;
+                    }
+                }
+                
+                p {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    color: $w;
+
+                    @media only screen and (min-width: 1024px) {
+                        font-size: 25px;
+                    }
+                }
             }
         }
     }
 }
+
+/* Footer -----------------------------------------------------------------------------------*/
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0px;
+
+        @media only screen and (max-width: 1023px) {
+            height: 20%;
+            border-top: solid black 1px;
+            background-color: $bgColor;
+        }
+
+        .reseauxSociaux {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            img {
+                width: 50px;
+            }
+
+            
+            @media only screen and (max-width: 320px) {
+                img {
+                    width: 30px;
+                }
+
+                h3 {
+                    font-size: small;
+                }
+            }
+        }
+    }
 }
