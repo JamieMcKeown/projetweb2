@@ -2,25 +2,23 @@
     <header>
         <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
         <div class="connexion">
-            <transition name="apparition">
-                <h3 v-if=show>Connexion</h3>
-            </transition>
+            <div class="searchSection">
+                <input type="text" value="Recherche Rapide" class="searchBar">
+                <form action="">
+                    <input type="radio" id="distance2" name="choix2" value="distance2">
+                    <label for="distance2">Par distance</label><br>
+                    <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
+                    <label for="jardinier2">Par jardinier</label><br>
+                    <input type="radio" id="potager2" name="choix2" value="potager2">
+                    <label for="potager2">Par potager</label>
+                </form>
+                <input type="button" value="Soumettre" class="submit">
+            </div>
             <img class="menu" src="../../images/tomate_mobile.png" alt="menu" @click="connexion">
         </div>
     </header>
     <div class="contentAccueil">
-        <div class="searchSection">
-            <input type="text" value="Recherche Rapide" class="searchBar">
-            <form action="">
-                <input type="radio" id="distance2" name="choix2" value="distance2">
-                <label for="distance2">Par distance</label><br>
-                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                <label for="jardinier2">Par jardinier</label><br>
-                <input type="radio" id="potager2" name="choix2" value="potager2">
-                <label for="potager2">Par potager</label>
-            </form>
-            <input type="button" value="Soumettre" class="submit">
-        </div>
+      
         <div class="potagers">
             <h2>Les potagers</h2>
             <div class="sections">
