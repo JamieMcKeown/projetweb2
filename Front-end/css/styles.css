@@ -1,46 +1,23 @@
-html, body {
-  /* Index ------------------------------------------------------------------------------------*/
+html, body, #app {
+  height: 100%;
   width: 100%;
-  height: 100%;
   margin: 0px;
-  background-image: url("../images/mobile_background.png");
   font-family: "GardensC";
-}
-
-html #app, body #app {
-  height: 100%;
+  background-image: url("../images/web_background.png");
+  /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
-}
-
-html #app .accueil, body #app .accueil {
-  height: 100%;
+  /* Connexion --------------------------------------------------------------------------------*/
+  /* Footer -----------------------------------------------------------------------------------*/
 }
 
 @media only screen and (max-width: 1023px) {
-  html #app .accueil header, body #app .accueil header {
-    border-bottom: solid black 1px;
-    background-color: rgba(158, 158, 158, 0.2);
+  html, body, #app {
+    background-image: url("../images/mobile_background.png");
+    background-position-x: 500px;
   }
 }
 
-html #app .accueil header, body #app .accueil header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-html #app .accueil header .logo, body #app .accueil header .logo {
-  height: 65px;
-  margin-left: 10px;
-}
-
-html #app .accueil header .connexion, body #app .accueil header .connexion {
+html header, body header, #app header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,40 +25,75 @@ html #app .accueil header .connexion, body #app .accueil header .connexion {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-html #app .accueil header .connexion .apparition-enter-active, html #app .accueil header .connexion .apparition-leave-active, body #app .accueil header .connexion .apparition-enter-active, body #app .accueil header .connexion .apparition-leave-active {
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-html #app .accueil header .connexion .apparition-enter, html #app .accueil header .connexion .apparition-leave-to, body #app .accueil header .connexion .apparition-enter, body #app .accueil header .connexion .apparition-leave-to {
-  opacity: 0;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-}
-
-html #app .accueil header .connexion .menu, body #app .accueil header .connexion .menu {
-  height: 50px;
-  margin-right: 20px;
-  margin-left: 5px;
-}
-
-html #app .accueil .contentAccueil, body #app .accueil .contentAccueil {
-  height: 70%;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #app .accueil .contentAccueil .searchSection, body #app .accueil .contentAccueil .searchSection {
-    position: absolute;
-    top: 0px;
-    left: 35%;
+@media only screen and (max-width: 1023px) {
+  html header, body header, #app header {
+    height: 10%;
+    width: 100%;
+    border-bottom: solid black 1px;
+    background-color: rgba(158, 158, 158, 0.2);
   }
 }
 
-html #app .accueil .contentAccueil .searchSection, body #app .accueil .contentAccueil .searchSection {
+@media only screen and (max-width: 1023px) {
+  html header .logo, body header .logo, #app header .logo {
+    height: 65px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html header .connexion, body header .connexion, #app header .connexion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+html header .connexion h3, body header .connexion h3, #app header .connexion h3 {
+  position: absolute;
+  color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  html header .connexion h3, body header .connexion h3, #app header .connexion h3 {
+    font-size: x-small;
+    -webkit-transform: translate(7px, 12px);
+            transform: translate(7px, 12px);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html header .connexion .menu, body header .connexion .menu, #app header .connexion .menu {
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+}
+
+html #accueil, body #accueil, #app #accueil {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #accueil .contentAccueil, body #accueil .contentAccueil, #app #accueil .contentAccueil {
+    height: 70%;
+    width: 100%;
+    overflow: scroll;
+  }
+}
+
+html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,10 +107,16 @@ html #app .accueil .contentAccueil .searchSection, body #app .accueil .contentAc
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 15px;
+  margin: 15px 0px 15px;
 }
 
-html #app .accueil .contentAccueil .searchSection .searchBar, body #app .accueil .contentAccueil .searchSection .searchBar {
+@media only screen and (max-width: 1023px) {
+  html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
+    margin: 15px 0px 0px;
+  }
+}
+
+html #accueil .contentAccueil .searchSection .searchBar, body #accueil .contentAccueil .searchSection .searchBar, #app #accueil .contentAccueil .searchSection .searchBar {
   height: 30px;
   width: 210px;
   margin-bottom: 10px;
@@ -106,7 +124,7 @@ html #app .accueil .contentAccueil .searchSection .searchBar, body #app .accueil
           box-shadow: 3px 4px 15px 1px black;
 }
 
-html #app .accueil .contentAccueil .searchSection form, body #app .accueil .contentAccueil .searchSection form {
+html #accueil .contentAccueil .searchSection form, body #accueil .contentAccueil .searchSection form, #app #accueil .contentAccueil .searchSection form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,16 +135,74 @@ html #app .accueil .contentAccueil .searchSection form, body #app .accueil .cont
   margin-bottom: 10px;
 }
 
-html #app .accueil .contentAccueil .searchSection .submit, body #app .accueil .contentAccueil .searchSection .submit {
+html #accueil .contentAccueil .searchSection .submit, body #accueil .contentAccueil .searchSection .submit, #app #accueil .contentAccueil .searchSection .submit {
   width: 110px;
   background-color: #A4D626;
 }
 
-html #app .accueil .contentAccueil .potagers, body #app .accueil .contentAccueil .potagers {
-  margin-top: 50px;
+html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
-html #app .accueil .contentAccueil .potagers, html #app .accueil .contentAccueil .jardiniers, body #app .accueil .contentAccueil .potagers, body #app .accueil .contentAccueil .jardiniers {
+@media only screen and (max-width: 1023px) {
+  html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html #accueil .contentAccueil .potagers h2, html #accueil .contentAccueil .jardiniers h2, body #accueil .contentAccueil .potagers h2, body #accueil .contentAccueil .jardiniers h2, #app #accueil .contentAccueil .potagers h2, #app #accueil .contentAccueil .jardiniers h2 {
+  width: 20%;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #accueil .contentAccueil .potagers h2, html #accueil .contentAccueil .jardiniers h2, body #accueil .contentAccueil .potagers h2, body #accueil .contentAccueil .jardiniers h2, #app #accueil .contentAccueil .potagers h2, #app #accueil .contentAccueil .jardiniers h2 {
+    width: auto;
+  }
+}
+
+html #accueil .contentAccueil .potagers .sections, html #accueil .contentAccueil .jardiniers .sections, body #accueil .contentAccueil .potagers .sections, body #accueil .contentAccueil .jardiniers .sections, #app #accueil .contentAccueil .potagers .sections, #app #accueil .contentAccueil .jardiniers .sections {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #accueil .contentAccueil .potagers .sections, html #accueil .contentAccueil .jardiniers .sections, body #accueil .contentAccueil .potagers .sections, body #accueil .contentAccueil .jardiniers .sections, #app #accueil .contentAccueil .potagers .sections, #app #accueil .contentAccueil .jardiniers .sections {
+    width: 100%;
+  }
+}
+
+html #accueil .contentAccueil .potagers .sections .potager, html #accueil .contentAccueil .potagers .sections .jardinier, html #accueil .contentAccueil .jardiniers .sections .potager, html #accueil .contentAccueil .jardiniers .sections .jardinier, body #accueil .contentAccueil .potagers .sections .potager, body #accueil .contentAccueil .potagers .sections .jardinier, body #accueil .contentAccueil .jardiniers .sections .potager, body #accueil .contentAccueil .jardiniers .sections .jardinier, #app #accueil .contentAccueil .potagers .sections .potager, #app #accueil .contentAccueil .potagers .sections .jardinier, #app #accueil .contentAccueil .jardiniers .sections .potager, #app #accueil .contentAccueil .jardiniers .sections .jardinier {
+  height: 140px;
+  width: 160px;
+  margin-bottom: 15px;
+  background-color: black;
+}
+
+html #connexion, body #connexion, #app #connexion {
+  height: 100%;
+  width: 100%;
+}
+
+html #connexion .contentConnexion, body #connexion .contentConnexion, #app #connexion .contentConnexion {
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,95 +210,177 @@ html #app .accueil .contentAccueil .potagers, html #app .accueil .contentAccueil
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-html #app .accueil .contentAccueil .potagers h2, html #app .accueil .contentAccueil .jardiniers h2, body #app .accueil .contentAccueil .potagers h2, body #app .accueil .contentAccueil .jardiniers h2 {
-  margin: 0px;
-  font-weight: lighter;
-}
-
-html #app .accueil .contentAccueil .sections, body #app .accueil .contentAccueil .sections {
-  height: 75%;
-  width: 100%;
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-html #app .accueil .contentAccueil .sections .potager, html #app .accueil .contentAccueil .sections .jardinier, body #app .accueil .contentAccueil .sections .potager, body #app .accueil .contentAccueil .sections .jardinier {
-  height: 150px;
-  width: 150px;
-  background-color: lightskyblue;
-  margin-bottom: 15px;
-}
-
-@media only screen and (max-width: 1024px) {
-  html #app .accueil .contentAccueil, body #app .accueil .contentAccueil {
-    overflow: scroll;
-  }
-}
-
-html #app .accueil footer, body #app .accueil footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
 }
 
-html #app .accueil footer .reseauxSociaux, body #app .accueil footer .reseauxSociaux {
+html #connexion .contentConnexion .connexionBox, body #connexion .contentConnexion .connexionBox, #app #connexion .contentConnexion .connexionBox {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html #connexion .contentConnexion .connexionBox form, body #connexion .contentConnexion .connexionBox form, #app #connexion .contentConnexion .connexionBox form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox form, body #connexion .contentConnexion .connexionBox form, #app #connexion .contentConnexion .connexionBox form {
+    width: 440px;
+  }
+}
+
+html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox form div .courriel, body #connexion .contentConnexion .connexionBox form div .courriel, #app #connexion .contentConnexion .connexionBox form div .courriel {
+    margin-right: 168px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox form div .password, body #connexion .contentConnexion .connexionBox form div .password, #app #connexion .contentConnexion .connexionBox form div .password {
+    margin-right: 100px;
+  }
+}
+
+html #connexion .contentConnexion .connexionBox form div input, body #connexion .contentConnexion .connexionBox form div input, #app #connexion .contentConnexion .connexionBox form div input {
+  margin-left: 15px;
+}
+
+html #connexion .contentConnexion .connexionBox form .button, body #connexion .contentConnexion .connexionBox form .button, #app #connexion .contentConnexion .connexionBox form .button {
+  width: 110px;
+  background-color: #A4D626;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox form .button, body #connexion .contentConnexion .connexionBox form .button, #app #connexion .contentConnexion .connexionBox form .button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 15px;
+  }
+}
+
+html #connexion .contentConnexion .connexionBox .inscription, body #connexion .contentConnexion .connexionBox .inscription, #app #connexion .contentConnexion .connexionBox .inscription {
   text-align: center;
+  position: relative;
 }
 
-html #app .accueil footer .reseauxSociaux img, body #app .accueil footer .reseauxSociaux img {
-  width: 50px;
+html #connexion .contentConnexion .connexionBox .inscription img, body #connexion .contentConnexion .connexionBox .inscription img, #app #connexion .contentConnexion .connexionBox .inscription img {
+  width: 150px;
 }
 
-html #app .accueil footer .reseauxSociaux h3, body #app .accueil footer .reseauxSociaux h3 {
-  margin-bottom: 0px;
-}
-
-@media only screen and (max-width: 320px) {
-  html #app .accueil footer .reseauxSociaux img, body #app .accueil footer .reseauxSociaux img {
-    width: 30px;
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox .inscription img, body #connexion .contentConnexion .connexionBox .inscription img, #app #connexion .contentConnexion .connexionBox .inscription img {
+    width: 265px;
   }
-  html #app .accueil footer .reseauxSociaux h3, body #app .accueil footer .reseauxSociaux h3 {
-    font-size: small;
+}
+
+html #connexion .contentConnexion .connexionBox .inscription p, body #connexion .contentConnexion .connexionBox .inscription p, #app #connexion .contentConnexion .connexionBox .inscription p {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #connexion .contentConnexion .connexionBox .inscription p, body #connexion .contentConnexion .connexionBox .inscription p, #app #connexion .contentConnexion .connexionBox .inscription p {
+    font-size: 25px;
   }
+}
+
+html footer, body footer, #app footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  bottom: 0px;
 }
 
 @media only screen and (max-width: 1023px) {
-  html #app .accueil footer, body #app .accueil footer {
+  html footer, body footer, #app footer {
+    height: 20%;
     border-top: solid black 1px;
     background-color: rgba(158, 158, 158, 0.2);
+  }
+}
+
+html footer .reseauxSociaux, body footer .reseauxSociaux, #app footer .reseauxSociaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+html footer .reseauxSociaux img, body footer .reseauxSociaux img, #app footer .reseauxSociaux img {
+  width: 50px;
+}
+
+@media only screen and (max-width: 320px) {
+  html footer .reseauxSociaux img, body footer .reseauxSociaux img, #app footer .reseauxSociaux img {
+    width: 30px;
+  }
+  html footer .reseauxSociaux h3, body footer .reseauxSociaux h3, #app footer .reseauxSociaux h3 {
+    font-size: small;
   }
 }
 /*# sourceMappingURL=styles.css.map */
