@@ -1,6 +1,11 @@
 <div id="accueil">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        <div class="logoContainer">
+            <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        </div>
+
+
+
         <div class="searchSection">
             <input type="text" value="Recherche Rapide" class="searchBar">
             <form action="">
@@ -10,18 +15,18 @@
                 <label for="jardinier2">par jardinier</label>
                 <input type="radio" id="potager2" name="choix2" value="potager2">
                 <label for="potager2">par potager</label>
-                <input type="button" value="Soumettre" class="submit">
+                <input type="button" value="soumettre" class="submit">
             </form>
             
         </div>
         <div class="connexion">
-            <h3 @click="connexionPage">connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+            
+            <img  @click="connexionPage" class="menu" src="../../images/tomateConnexion.png" alt="menu">
         </div>
     </header>
 
   
-    </header>
+    
     <div class="contentAccueil">
         
 
@@ -44,17 +49,17 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-           
-        
-        
-            <img src="images/insta_mobile.png" alt="inst  <div class="contentAccueil">
-      
-
-        
-        
-        </div>
-    </footer>
+   <div class="footer">
+       <div class="suivezNous">
+           <h3>suivez-nous sur les reseaux sociaux</h3>
+       </div>
+       <div class="iconHolder">
+           <img src="../../images/fb_mobile.png" alt="">
+           <img src="../../images/insta_mobile.png" alt="">
+       </div>
+       <div class="dreamTeam">
+           <h5>une compagnie du groupe dream team</h5>
+       </div>
+   </div>
+   
 </div>

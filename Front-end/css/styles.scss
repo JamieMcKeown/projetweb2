@@ -2,57 +2,44 @@ $bgColor: rgba($color: #9E9E9E, $alpha: 0.2);
 $w: white;
 
 html, body, #app {
+    
     height: 100%;
-    width: 100%;
     margin: 0px;
     font-family: "GardensC";
     background-image: url("../images/web_background.png");
+    object-fit: cover;
 
-    @media only screen and (max-width: 1023px) {
-        background-image: url("../images/mobile_background.png");
-        background-position-x: 500px;
-    }
+
+    // @media only screen and (max-width: 1023px) {
+    //     background-image: url("../images/mobile_background.png");
+    //     background-position-x: 500px;
+    // }
 
 /* Header -----------------------------------------------------------------------------------*/
     header {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content:space-between;
         align-items: center;
+        height: 175px;
+       
 
 
         .logo {
-
-            @media only screen and (max-width: 1023px) {
-                height: 65px;
-            }
+            margin-left: 10px;
+            height: 125px;
         }
 
         .connexion {
-
-            @media only screen and (max-width: 1023px) {
-                display: flex;
-                flex-direction: row;
-            }
-
-            h3 {
-                position: absolute;
-                color: $w;
-
-                @media only screen and ( max-width: 1023px) {
-                    font-size: x-small;
-                    transform: translate(7px, 12px);
-                }
+            img {
+                height: 125px;
+                margin-right: 10px;
             }
             
-            .menu {
-                
-                @media only screen and (max-width: 1023px) {
-                    height: 50px;
-                    margin-right: 20px;
-                    margin-left: 5px;
-                }
-            }
+
+           
+            
+            
         }
     }
 
@@ -63,28 +50,21 @@ html, body, #app {
 
         .contentAccueil {
 
-            @media only screen and (max-width: 1023px) {
-                height: 70%;
-                width: 100%;
-                overflow: scroll;
-            }
+           
 
             .searchSection {
                 display: flex;
-                justify-content: center;
-                align-items: center;
+               
                 flex-direction: column;
-                margin: 15px 0px 15px;
+                
 
-                @media only screen and (max-width: 1023px) {
-                    margin: 15px 0px 0px;
-                }
+              
     
                 .searchBar {
                     height: 30px;
-                    width: 210px;
-                    margin-bottom: 10px;
-                    box-shadow: 3px 4px 15px 1px black;
+                    width: 350px;
+                    margin-bottom: 5px;
+                    
                 }
     
                 form {
@@ -95,7 +75,7 @@ html, body, #app {
     
                 .submit {
                     width: 110px;
-                    background-color: #A4D626;
+                    background-color: #A4D626!important;
                 }
             }
 
@@ -235,37 +215,9 @@ html, body, #app {
 }
 
 /* Footer -----------------------------------------------------------------------------------*/
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        position: absolute;
-        bottom: 0px;
+   .footer {
+       display: flex;
+       flex-direction: column;
 
-    
-
-        .reseauxSociaux {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            img {
-                width: 50px;
-            }
-
-            
-            @media only screen and (max-width: 320px) {
-                img {
-                    width: 30px;
-                }
-
-                h3 {
-                    font-size: small;
-                }
-            }
-        }
-    }
+   }
 }

@@ -1,60 +1,31 @@
 html, body, #app {
   height: 100%;
-  width: 100%;
   margin: 0px;
   font-family: "GardensC";
   background-image: url("../images/web_background.png");
+  object-fit: cover;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
 
-@media only screen and (max-width: 1023px) {
-  html, body, #app {
-    background-image: url("../images/mobile_background.png");
-    background-position-x: 500px;
-  }
-}
-
 html header, body header, #app header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  height: 175px;
 }
 
-@media only screen and (max-width: 1023px) {
-  html header .logo, body header .logo, #app header .logo {
-    height: 65px;
-  }
+html header .logo, body header .logo, #app header .logo {
+  margin-left: 10px;
+  height: 125px;
 }
 
-@media only screen and (max-width: 1023px) {
-  html header .connexion, body header .connexion, #app header .connexion {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-html header .connexion h3, body header .connexion h3, #app header .connexion h3 {
-  position: absolute;
-  color: white;
-}
-
-@media only screen and (max-width: 1023px) {
-  html header .connexion h3, body header .connexion h3, #app header .connexion h3 {
-    font-size: x-small;
-    transform: translate(7px, 12px);
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html header .connexion .menu, body header .connexion .menu, #app header .connexion .menu {
-    height: 50px;
-    margin-right: 20px;
-    margin-left: 5px;
-  }
+html header .connexion img, body header .connexion img, #app header .connexion img {
+  height: 125px;
+  margin-right: 10px;
 }
 
 html #accueil, body #accueil, #app #accueil {
@@ -62,33 +33,15 @@ html #accueil, body #accueil, #app #accueil {
   width: 100%;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #accueil .contentAccueil, body #accueil .contentAccueil, #app #accueil .contentAccueil {
-    height: 70%;
-    width: 100%;
-    overflow: scroll;
-  }
-}
-
 html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin: 15px 0px 15px;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
-    margin: 15px 0px 0px;
-  }
 }
 
 html #accueil .contentAccueil .searchSection .searchBar, body #accueil .contentAccueil .searchSection .searchBar, #app #accueil .contentAccueil .searchSection .searchBar {
   height: 30px;
-  width: 210px;
-  margin-bottom: 10px;
-  box-shadow: 3px 4px 15px 1px black;
+  width: 350px;
+  margin-bottom: 5px;
 }
 
 html #accueil .contentAccueil .searchSection form, body #accueil .contentAccueil .searchSection form, #app #accueil .contentAccueil .searchSection form {
@@ -99,7 +52,7 @@ html #accueil .contentAccueil .searchSection form, body #accueil .contentAccueil
 
 html #accueil .contentAccueil .searchSection .submit, body #accueil .contentAccueil .searchSection .submit, #app #accueil .contentAccueil .searchSection .submit {
   width: 110px;
-  background-color: #A4D626;
+  background-color: #A4D626 !important;
 }
 
 html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
@@ -247,32 +200,7 @@ html #connexion .contentConnexion .connexionBox .inscription p, body #connexion 
   }
 }
 
-html footer, body footer, #app footer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 0px;
-}
-
-html footer .reseauxSociaux, body footer .reseauxSociaux, #app footer .reseauxSociaux {
+html .footer, body .footer, #app .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-html footer .reseauxSociaux img, body footer .reseauxSociaux img, #app footer .reseauxSociaux img {
-  width: 50px;
-}
-
-@media only screen and (max-width: 320px) {
-  html footer .reseauxSociaux img, body footer .reseauxSociaux img, #app footer .reseauxSociaux img {
-    width: 30px;
-  }
-  html footer .reseauxSociaux h3, body footer .reseauxSociaux h3, #app footer .reseauxSociaux h3 {
-    font-size: small;
-  }
 }
