@@ -20,12 +20,6 @@ html, body, #app {
         justify-content: space-around;
         align-items: center;
 
-        @media only screen and (max-width: 1023px) {
-            height: 10%;
-            width: 100%;
-            border-bottom: solid black 1px;
-            background-color: $bgColor;
-        }
 
         .logo {
 
@@ -249,11 +243,7 @@ html, body, #app {
         position: absolute;
         bottom: 0px;
 
-        @media only screen and (max-width: 1023px) {
-            height: 20%;
-            border-top: solid black 1px;
-            background-color: $bgColor;
-        }
+    
 
         .reseauxSociaux {
             display: flex;
