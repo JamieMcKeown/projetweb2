@@ -7,6 +7,7 @@ html, body, #app {
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
+  /* Inscription ------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
 
@@ -328,6 +329,111 @@ html #connexion .contentConnexion .connexionBox .inscription p, body #connexion 
 @media only screen and (min-width: 1024px) {
   html #connexion .contentConnexion .connexionBox .inscription p, body #connexion .contentConnexion .connexionBox .inscription p, #app #connexion .contentConnexion .connexionBox .inscription p {
     font-size: 25px;
+  }
+}
+
+html #inscription, body #inscription, #app #inscription {
+  height: 100%;
+  width: 100%;
+}
+
+html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
+    height: 68%;
+    width: 100%;
+    overflow: scroll;
+    text-align: center;
+  }
+}
+
+html #inscription .contentInscription h1, body #inscription .contentInscription h1, #app #inscription .contentInscription h1 {
+  text-align: center;
+}
+
+html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html #inscription .contentInscription form .sectionUn, body #inscription .contentInscription form .sectionUn, #app #inscription .contentInscription form .sectionUn {
+    margin-left: 75px;
+  }
+  html #inscription .contentInscription form .sectionDeux, body #inscription .contentInscription form .sectionDeux, #app #inscription .contentInscription form .sectionDeux {
+    margin-right: 75px;
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form .champs, body #inscription .contentInscription form .champs, #app #inscription .contentInscription form .champs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  html #inscription .contentInscription form .champs h2, body #inscription .contentInscription form .champs h2, #app #inscription .contentInscription form .champs h2 {
+    margin-right: 15px;
+  }
+}
+
+html #inscription .contentInscription form .champs input, body #inscription .contentInscription form .champs input, #app #inscription .contentInscription form .champs input {
+  height: 35px;
+}
+
+html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
+  height: 35px;
+  width: 176px;
+  margin-top: 15px;
+  background-color: #A4D626;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
+    margin-left: 192px;
   }
 }
 
