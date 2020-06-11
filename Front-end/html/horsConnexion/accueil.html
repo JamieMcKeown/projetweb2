@@ -1,61 +1,29 @@
 <div id="accueil">
     <header>
         <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        <div class="searchSection">
+            <input type="text" value="Recherche Rapide" class="searchBar">
+            <form action="">
+                <input type="radio" id="distance2" name="choix2" value="distance2">
+                <label for="distance2">Par distance</label>
+                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
+                <label for="jardinier2">Par jardinier</label>
+                <input type="radio" id="potager2" name="choix2" value="potager2">
+                <label for="potager2">Par potager</label>
+                <input type="button" value="Soumettre" class="submit">
+            </form>
+            
+        </div>
         <div class="connexion">
-
             <h3 @click="connexionPage">connexion</h3>
             <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
         </div>
     </header>
-    <div class="contentAccueil">
-        <div class="searchSection">
-            <input type="text" value="Recherche Rapide" class="searchBar">
-            <form action="">
-                <input type="radio" id="distance2" name="choix2" value="distance2">
-                <label for="distance2">par distance</label><br>
-                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                <label for="jardinier2">par jardinier</label><br>
-                <input type="radio" id="potager2" name="choix2" value="potager2">
-                <label for="potager2">par potager</label>
-            </form>
-            <input type="button" value="Soumettre" class="submit">
-        </div>
 
-            <div class="searchSection">
-                <input type="text" value="Recherche Rapide" class="searchBar">
-                <form action="">
-                    <input type="radio" id="distance2" name="choix2" value="distance2">
-                    <label for="distance2">Par distance</label><br>
-                    <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                    <label for="jardinier2">Par jardinier</label><br>
-                    <input type="radio" id="potager2" name="choix2" value="potager2">
-                    <label for="potager2">Par potager</label>
-                </form>
-                <input type="button" value="Soumettre" class="submit">
-            </div>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu" @click="connexion">
-        </div>
+  
     </header>
     <div class="contentAccueil">
-      
-
-            <h3 @click="connexionPage">Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
-        </div>
-    </header>
-    <div class="contentAccueil">
-        <div class="searchSection">
-            <input type="text" value="Recherche Rapide" class="searchBar">
-            <form action="">
-                <input type="radio" id="distance2" name="choix2" value="distance2">
-                <label for="distance2">Par distance</label><br>
-                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                <label for="jardinier2">Par jardinier</label><br>
-                <input type="radio" id="potager2" name="choix2" value="potager2">
-                <label for="potager2">Par potager</label>
-            </form>
-            <input type="button" value="Soumettre" class="submit">
-        </div>
+        
 
         <div class="potagers">
             <h2>les potagers</h2>
@@ -82,7 +50,10 @@
            
         
         
-            <img src="images/insta_mobile.png" alt="instagram">
+            <img src="images/insta_mobile.png" alt="inst  <div class="contentAccueil">
+      
+
+        
         
         </div>
     </footer>
