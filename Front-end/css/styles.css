@@ -1,3 +1,4 @@
+/* Test*/
 html, body, #app {
   height: 100%;
   width: 100%;
@@ -18,18 +19,10 @@ html, body, #app {
 }
 
 html header, body header, #app header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -49,13 +42,8 @@ html header, body header, #app header {
 
 @media only screen and (max-width: 1023px) {
   html header .connexion, body header .connexion, #app header .connexion {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -67,8 +55,7 @@ html header .connexion h3, body header .connexion h3, #app header .connexion h3 
 @media only screen and (max-width: 1023px) {
   html header .connexion h3, body header .connexion h3, #app header .connexion h3 {
     font-size: x-small;
-    -webkit-transform: translate(7px, 12px);
-            transform: translate(7px, 12px);
+    transform: translate(7px, 12px);
   }
 }
 
@@ -94,19 +81,10 @@ html #accueil, body #accueil, #app #accueil {
 }
 
 html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 15px 0px 15px;
 }
 
@@ -120,18 +98,12 @@ html #accueil .contentAccueil .searchSection .searchBar, body #accueil .contentA
   height: 30px;
   width: 210px;
   margin-bottom: 10px;
-  -webkit-box-shadow: 3px 4px 15px 1px black;
-          box-shadow: 3px 4px 15px 1px black;
+  box-shadow: 3px 4px 15px 1px black;
 }
 
 html #accueil .contentAccueil .searchSection form, body #accueil .contentAccueil .searchSection form, #app #accueil .contentAccueil .searchSection form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin-bottom: 10px;
 }
 
@@ -141,21 +113,14 @@ html #accueil .contentAccueil .searchSection .submit, body #accueil .contentAccu
 }
 
 html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
 
 @media only screen and (max-width: 1023px) {
   html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -171,16 +136,10 @@ html #accueil .contentAccueil .potagers h2, html #accueil .contentAccueil .jardi
 
 html #accueil .contentAccueil .potagers .sections, html #accueil .contentAccueil .jardiniers .sections, body #accueil .contentAccueil .potagers .sections, body #accueil .contentAccueil .jardiniers .sections, #app #accueil .contentAccueil .potagers .sections, #app #accueil .contentAccueil .jardiniers .sections {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -203,46 +162,23 @@ html #connexion, body #connexion, #app #connexion {
 
 html #connexion .contentConnexion, body #connexion .contentConnexion, #app #connexion .contentConnexion {
   height: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 html #connexion .contentConnexion .connexionBox, body #connexion .contentConnexion .connexionBox, #app #connexion .contentConnexion .connexionBox {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 html #connexion .contentConnexion .connexionBox form, body #connexion .contentConnexion .connexionBox form, #app #connexion .contentConnexion .connexionBox form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -252,24 +188,15 @@ html #connexion .contentConnexion .connexionBox form, body #connexion .contentCo
 }
 
 html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
   html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
     width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -297,8 +224,7 @@ html #connexion .contentConnexion .connexionBox form .button, body #connexion .c
 
 @media only screen and (min-width: 1024px) {
   html #connexion .contentConnexion .connexionBox form .button, body #connexion .contentConnexion .connexionBox form .button, #app #connexion .contentConnexion .connexionBox form .button {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     margin-top: 15px;
   }
 }
@@ -333,15 +259,9 @@ html #connexion .contentConnexion .connexionBox .inscription p, body #connexion 
 
 html footer, body footer, #app footer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   position: absolute;
   bottom: 0px;
 }
@@ -355,19 +275,10 @@ html footer, body footer, #app footer {
 }
 
 html footer .reseauxSociaux, body footer .reseauxSociaux, #app footer .reseauxSociaux {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -383,4 +294,3 @@ html footer .reseauxSociaux img, body footer .reseauxSociaux img, #app footer .r
     font-size: small;
   }
 }
-/*# sourceMappingURL=styles.css.map */
