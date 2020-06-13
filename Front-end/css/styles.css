@@ -63,7 +63,8 @@ html header .searchSection .searchBar, body header .searchSection .searchBar, #a
 html header .searchSection form, body header .searchSection form, #app header .searchSection form {
   display: flex;
   flex-direction: row;
-  margin-bottom: 5px;
+  margin-bottom: -10px;
+  margin-left: 2px;
 }
 
 html header .searchSection .submit, body header .searchSection .submit, #app header .searchSection .submit {
