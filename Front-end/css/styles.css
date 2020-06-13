@@ -34,7 +34,7 @@ html header input[type="radio"], body header input[type="radio"], #app header in
 
 html header .connexion, body header .connexion, #app header .connexion {
   margin-right: 20px;
-  width: 25%;
+  width: 15%;
 }
 
 html header .connexion img, body header .connexion img, #app header .connexion img {
@@ -59,8 +59,12 @@ html header .searchSection form, body header .searchSection form, #app header .s
 }
 
 html header .searchSection .submit, body header .searchSection .submit, #app header .searchSection .submit {
-  width: 110px;
-  background-color: #A4D626 !important;
+  color: white;
+  width: 150px;
+  background-color: #C5E388 !important;
+  border: 1px solid white;
+  font-size: 24px;
+  font-family: "GardensC";
 }
 
 @media screen and (max-width: 992px) {
@@ -68,15 +72,29 @@ html header .searchSection .submit, body header .searchSection .submit, #app hea
     display: none;
   }
   html header .logoContainer, body header .logoContainer, #app header .logoContainer {
-    width: 60%;
+    width: 70%;
+  }
+  html header .connexion, body header .connexion, #app header .connexion {
+    margin-right: 60px;
   }
 }
 
 @media screen and (max-width: 767px) {
   html header .connexion, body header .connexion, #app header .connexion {
+    margin-right: 70px;
+    width: 20%;
+  }
+  html header .connexion img, body header .connexion img, #app header .connexion img {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html header .connexion, body header .connexion, #app header .connexion {
     margin-right: 40px;
-    height: 100px;
-    margin-bottom: 30px;
+  }
+  html header .connexion img, body header .connexion img, #app header .connexion img {
+    height: 90px;
   }
 }
 

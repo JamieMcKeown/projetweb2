@@ -44,7 +44,7 @@ html, body, #app {
                 
             }
              margin-right: 20px;
-             width: 25%;
+             width: 15%;
         }
 
         .searchSection {
@@ -66,8 +66,12 @@ html, body, #app {
             }
 
             .submit {
-                width: 110px;
-                background-color: #A4D626!important;
+                color:white;
+                width:150px;
+                background-color: #C5E388!important;
+                border: 1px solid white;
+                font-size: 24px;
+                font-family: "GardensC";
             }
         }
 
@@ -76,19 +80,33 @@ html, body, #app {
               display: none;
             }
             .logoContainer {
-                width: 60%;
+                width: 70%;
             }
-            
+            .connexion {
+                margin-right: 60px;
+            }
             
           }
 
           @media screen and (max-width: 767px){
               .connexion {
-                  margin-right: 40px;
-                  height: 100px;
-                  margin-bottom: 30px;
+                  img {
+                      height: 110px;
+                  }
+                  margin-right: 70px;
+                  
+                  width: 20%;
               }
           }
+
+          @media screen and (max-width: 600px){
+            .connexion {
+                img {
+                    height: 90px;
+                }
+                margin-right: 40px;
+          }
+        }
     }
 
 /* Accueil ----------------------------------------------------------------------------------*/
