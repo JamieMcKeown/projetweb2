@@ -19,7 +19,7 @@ html header, body header, #app header {
 }
 
 html header .logoContainer, body header .logoContainer, #app header .logoContainer {
-  width: 40%;
+  width: 34%;
 }
 
 html header .logo, body header .logo, #app header .logo {
@@ -34,7 +34,10 @@ html header input[type="radio"], body header input[type="radio"], #app header in
 
 html header .connexion, body header .connexion, #app header .connexion {
   margin-right: 20px;
-  width: 15%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 html header .connexion img, body header .connexion img, #app header .connexion img {
@@ -44,6 +47,7 @@ html header .connexion img, body header .connexion img, #app header .connexion i
 html header .searchSection, body header .searchSection, #app header .searchSection {
   display: flex;
   flex-direction: column;
+  width: 15%;
 }
 
 html header .searchSection .searchBar, body header .searchSection .searchBar, #app header .searchSection .searchBar {
@@ -89,7 +93,7 @@ html header .searchSection .submit, body header .searchSection .submit, #app hea
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   html header .connexion, body header .connexion, #app header .connexion {
     margin-right: 40px;
   }
