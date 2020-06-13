@@ -10,11 +10,11 @@
             <input type="text" value="Recherche Rapide" class="searchBar">
             <form action="">
                 <input type="radio" id="distance2" name="choix2" value="distance2">
-                <label style="margin-right: 5px" for="distance2">par distance</label>
+                <label style="margin-right: 5px" for="distance2">distance</label>
                 <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                <label style="margin-right: 5px"for="jardinier2">par jardinier</label>
+                <label style="margin-right: 5px"for="jardinier2">jardinier</label>
                 <input type="radio" id="potager2" name="choix2" value="potager2">
-                <label for="potager2">par potager</label>
+                <label for="potager2">potager</label>
                 
             </form>
             <input type="button" value="soumettre" class="submit">
@@ -24,7 +24,19 @@
             
             <img  @click="connexionPage" class="menu" src="../../images/tomateConnexion.png" alt="menu">
         </div>
-        <div class="connexion2">
+        
+        <!-- hidden dropdown for mobile  -->
+
+        <div style="display: none" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
        
     </header>
 

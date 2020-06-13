@@ -17,6 +17,9 @@ html, body, #app {
 
 /* Header -----------------------------------------------------------------------------------*/
     header {
+        button, input, optgroup, select, textarea{
+            margin: 2px!important;;
+        }
         display: flex;
         flex-direction: row;
         justify-content:space-between;
@@ -57,7 +60,7 @@ html, body, #app {
 
             .searchBar {
                 height: 20px;
-                width: 300px;
+                width: 220px;
                 margin-bottom: 5px;
                 
             }
@@ -70,10 +73,10 @@ html, body, #app {
 
             .submit {
                 color:white;
-                width:150px;
+                width: 220px;
                 background-color: #C5E388!important;
                 border: 1px solid white;
-                font-size: 24px;
+                font-size: 18px;
                 font-family: "GardensC";
             }
         }
