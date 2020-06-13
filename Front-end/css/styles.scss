@@ -39,6 +39,7 @@ html, body, #app {
 
         input[type="radio"]{
             margin-left: 0!important;
+            border: 2px solid #C5E388!important;
         }
 
         .connexion {
@@ -62,6 +63,7 @@ html, body, #app {
                 height: 20px;
                 width: 220px;
                 margin-bottom: 5px;
+                border: 2px solid #C5E388!important;
                 
             }
 
@@ -83,12 +85,15 @@ html, body, #app {
         }
 
         @media screen and (max-width: 992px) {
-            .searchSection {
+            .connexion {
                 display: none;
               }
 
             .logoContainer {
-                width: 70%;
+                width: 50%;
+            }
+            .searchSection {
+                width: 50%;
             }
 
             .connexion {
@@ -97,24 +102,24 @@ html, body, #app {
             
           }
 
-          @media screen and (max-width: 767px){
-              .connexion {
-                  img {
-                      height: 110px;
-                  }
-                  margin-right: 70px;
-                  width: 20%;
-              }
-          }
+        //   @media screen and (max-width: 767px){
+        //       .connexion {
+        //           img {
+        //               height: 110px;
+        //           }
+        //           margin-right: 70px;
+        //           width: 20%;
+        //       }
+        //   }
 
-          @media screen and (max-width: 767px){
-            .connexion {
-                img {
-                    height: 90px;
-                }
-                margin-right: 40px;
-          }
-        }
+        //   @media screen and (max-width: 767px){
+        //     .connexion {
+        //         img {
+        //             height: 90px;
+        //         }
+        //         margin-right: 40px;
+        //   }
+        // }
     }
 
 /* Accueil ----------------------------------------------------------------------------------*/
