@@ -85,19 +85,37 @@ html, body, #app {
         }
 
         @media screen and (max-width: 992px) {
-            .connexion {
+            .connexion, .searchSection {
                 display: none;
               }
 
             .logoContainer {
                 width: 50%;
             }
-            .searchSection {
-                width: 50%;
-            }
-
-            .connexion {
-                margin-right: 60px;
+            
+            .mobileSearch {
+                .login {
+                    background:  #C5E388!important;
+                    color:white;
+                    width: 138px;
+                    border: 2px solid white;
+                }
+                .searchFeatures {
+                    display:flex;
+                    flex-direction: row;
+                }
+                .searchBar {
+                    border: 2px solid #C5E388!important;
+                }
+                .submit {
+                    color:white;
+                    
+                    background-color: #C5E388!important;
+                    border: 1px solid white;
+                    font-size: 18px;
+                    font-family: "GardensC";
+                }
+                display: block!important;
             }
             
           }

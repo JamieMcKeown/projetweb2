@@ -79,17 +79,34 @@ html header .searchSection .submit, body header .searchSection .submit, #app hea
 }
 
 @media screen and (max-width: 992px) {
-  html header .connexion, body header .connexion, #app header .connexion {
+  html header .connexion, html header .searchSection, body header .connexion, body header .searchSection, #app header .connexion, #app header .searchSection {
     display: none;
   }
   html header .logoContainer, body header .logoContainer, #app header .logoContainer {
     width: 50%;
   }
-  html header .searchSection, body header .searchSection, #app header .searchSection {
-    width: 50%;
+  html header .mobileSearch, body header .mobileSearch, #app header .mobileSearch {
+    display: block !important;
   }
-  html header .connexion, body header .connexion, #app header .connexion {
-    margin-right: 60px;
+  html header .mobileSearch .login, body header .mobileSearch .login, #app header .mobileSearch .login {
+    background: #C5E388 !important;
+    color: white;
+    width: 138px;
+    border: 2px solid white;
+  }
+  html header .mobileSearch .searchFeatures, body header .mobileSearch .searchFeatures, #app header .mobileSearch .searchFeatures {
+    display: flex;
+    flex-direction: row;
+  }
+  html header .mobileSearch .searchBar, body header .mobileSearch .searchBar, #app header .mobileSearch .searchBar {
+    border: 2px solid #C5E388 !important;
+  }
+  html header .mobileSearch .submit, body header .mobileSearch .submit, #app header .mobileSearch .submit {
+    color: white;
+    background-color: #C5E388 !important;
+    border: 1px solid white;
+    font-size: 18px;
+    font-family: "GardensC";
   }
 }
 

@@ -20,23 +20,22 @@
             <input type="button" value="soumettre" class="submit">
             
         </div>
-        <div class="connexion">
-            
+        <div class="connexion">     
             <img  @click="connexionPage" class="menu" src="../../images/tomateConnexion.png" alt="menu">
         </div>
-        
-        <!-- hidden dropdown for mobile  -->
 
-        <div style="display: none" class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+        <div style="display: none" class="mobileSearch">
+            <button class="login" @click="connexionPage">Connexion</button>
+            <div class="searchFeatures">
+                <input type="text" value="Recherche Rapide" class="searchBar">
+                <input type="button" value="soumettre" class="submit">
             </div>
-          </div>
+           
+        </div>
+        
+       
+
+      
        
     </header>
 
