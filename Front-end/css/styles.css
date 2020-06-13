@@ -18,41 +18,71 @@ html header, body header, #app header {
   height: 175px;
 }
 
+html header .logoContainer, body header .logoContainer, #app header .logoContainer {
+  width: 40%;
+}
+
 html header .logo, body header .logo, #app header .logo {
-  margin-left: 10px;
+  margin-left: 20px;
   height: 125px;
+  width: 90%;
+}
+
+html header input[type="radio"], body header input[type="radio"], #app header input[type="radio"] {
+  margin-left: 0 !important;
+}
+
+html header .connexion, body header .connexion, #app header .connexion {
+  margin-right: 20px;
+  width: 25%;
 }
 
 html header .connexion img, body header .connexion img, #app header .connexion img {
   height: 125px;
-  margin-right: 10px;
+}
+
+html header .searchSection, body header .searchSection, #app header .searchSection {
+  display: flex;
+  flex-direction: column;
+}
+
+html header .searchSection .searchBar, body header .searchSection .searchBar, #app header .searchSection .searchBar {
+  height: 20px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+html header .searchSection form, body header .searchSection form, #app header .searchSection form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+html header .searchSection .submit, body header .searchSection .submit, #app header .searchSection .submit {
+  width: 110px;
+  background-color: #A4D626 !important;
+}
+
+@media screen and (max-width: 992px) {
+  html header .searchSection, body header .searchSection, #app header .searchSection {
+    display: none;
+  }
+  html header .logoContainer, body header .logoContainer, #app header .logoContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html header .connexion, body header .connexion, #app header .connexion {
+    margin-right: 40px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
 }
 
 html #accueil, body #accueil, #app #accueil {
   height: 100%;
   width: 100%;
-}
-
-html #accueil .contentAccueil .searchSection, body #accueil .contentAccueil .searchSection, #app #accueil .contentAccueil .searchSection {
-  display: flex;
-  flex-direction: column;
-}
-
-html #accueil .contentAccueil .searchSection .searchBar, body #accueil .contentAccueil .searchSection .searchBar, #app #accueil .contentAccueil .searchSection .searchBar {
-  height: 30px;
-  width: 350px;
-  margin-bottom: 5px;
-}
-
-html #accueil .contentAccueil .searchSection form, body #accueil .contentAccueil .searchSection form, #app #accueil .contentAccueil .searchSection form {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10px;
-}
-
-html #accueil .contentAccueil .searchSection .submit, body #accueil .contentAccueil .searchSection .submit, #app #accueil .contentAccueil .searchSection .submit {
-  width: 110px;
-  background-color: #A4D626 !important;
 }
 
 html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
