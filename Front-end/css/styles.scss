@@ -54,6 +54,10 @@ html, body, #app {
              justify-content: center;
         }
 
+        .searchTomatoe {
+            margin-left: 10px;
+        }
+
         .searchSection {
             display: flex;
             flex-direction: column;
@@ -315,8 +319,18 @@ html, body, #app {
 
 /* Footer -----------------------------------------------------------------------------------*/
    .footer {
+       height: 75px;
        display: flex;
        flex-direction: column;
+       justify-content: center;
+       width: 90%;
+       margin-left: 5%;
+       position: relative;
+       top: 15%;
+       align-items: center;
+       p {
+           font-size: 18px;
+       }
 
    }
 }

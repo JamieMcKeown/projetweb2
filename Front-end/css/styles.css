@@ -49,6 +49,10 @@ html header .connexion img, body header .connexion img, #app header .connexion i
   height: 125px;
 }
 
+html header .searchTomatoe, body header .searchTomatoe, #app header .searchTomatoe {
+  margin-left: 10px;
+}
+
 html header .searchSection, body header .searchSection, #app header .searchSection {
   display: flex;
   flex-direction: column;
@@ -295,6 +299,17 @@ html #connexion .contentConnexion .connexionBox .inscription p, body #connexion 
 }
 
 html .footer, body .footer, #app .footer {
+  height: 75px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  top: 15%;
+  align-items: center;
+}
+
+html .footer p, body .footer p, #app .footer p {
+  font-size: 18px;
 }
