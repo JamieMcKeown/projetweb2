@@ -78,12 +78,22 @@ html header .searchSection .submit, body header .searchSection .submit, #app hea
   font-family: "GardensC";
 }
 
+html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   html header .connexion, html header .searchSection, body header .connexion, body header .searchSection, #app header .connexion, #app header .searchSection {
     display: none;
   }
+  html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   html header .logoContainer, body header .logoContainer, #app header .logoContainer {
-    width: 50%;
+    width: 70%;
   }
   html header .mobileSearch, body header .mobileSearch, #app header .mobileSearch {
     display: block !important;
@@ -107,6 +117,30 @@ html header .searchSection .submit, body header .searchSection .submit, #app hea
     border: 1px solid white;
     font-size: 18px;
     font-family: "GardensC";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  html header .twoTomatoes img, body header .twoTomatoes img, #app header .twoTomatoes img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  html header .twoTomatoes img, body header .twoTomatoes img, #app header .twoTomatoes img {
+    height: 75px;
   }
 }
 
