@@ -28,7 +28,22 @@ html, body, #app {
             }
         }
 
-        .connexion {
+        .searchTomatoe {
+            margin-left: 10px;
+        }
+
+        .searchSection {
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+
+            .searchBar {
+                height: 20px;
+                width: 220px;
+                margin-bottom: 5px;
+                border: 2px solid #C5E388!important;
+                
+            }
 
             @media only screen and (max-width: 1023px) {
                 display: flex;
@@ -39,10 +54,26 @@ html, body, #app {
                 position: absolute;
                 color: $w;
 
-                @media only screen and ( max-width: 1023px) {
-                    font-size: x-small;
-                    transform: translate(7px, 12px);
-                }
+        .twoTomatoes {
+            display:none;
+            }
+
+
+
+        @media screen and (max-width: 992px) {
+            .connexion, .searchSection {
+                display: none;
+              }
+
+            .twoTomatoes {
+                padding-right: 5%;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .logoContainer {
+                width: 70%;
             }
             
             .menu {
@@ -53,7 +84,38 @@ html, body, #app {
                     margin-left: 5px;
                 }
             }
+            
         }
+
+       
+        
+           
+        
+
+        @media screen and (max-width: 767px){
+            .twoTomatoes {
+                padding-right: 5%;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                img {
+                    height: 100px;
+                }
+            }
+            }
+
+        @media screen and (max-width: 500px){
+            .twoTomatoes {
+                padding-right: 5%;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                img {
+                    height: 75px;
+                }
+            }
+        }
+       
     }
 
 /* Accueil ----------------------------------------------------------------------------------*/
@@ -138,6 +200,9 @@ html, body, #app {
             
         }
     }
+
+
+    
 
 /* Connexion --------------------------------------------------------------------------------*/
 #connexion {
@@ -235,32 +300,19 @@ html, body, #app {
 }
 
 /* Footer -----------------------------------------------------------------------------------*/
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        position: absolute;
-        bottom: 0px;
-
-    
-
-        .reseauxSociaux {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            img {
-                width: 50px;
-            }
-
-            
-            @media only screen and (max-width: 320px) {
-                img {
-                    width: 30px;
-                }
+   .footer {
+       height: 75px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       width: 90%;
+       margin-left: 5%;
+       position: relative;
+       top: 15%;
+       align-items: center;
+       p {
+           font-size: 18px;
+       }
 
                 h3 {
                     font-size: small;

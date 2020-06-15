@@ -20,9 +20,24 @@
             </form>
             
         </div>
-        <div class="connexion">
-            <h3 @click="connexionPage">connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div class="connexion">     
+            <img  @click="connexionPage" class="menu" src="../../images/tomateConnexion.png" alt="menu">
+        </div>
+
+
+        <!-- mobile search and connect features -->
+
+        <!-- <div style="display: none" class="mobileSearch">
+            <button class="login" @click="connexionPage">Connexion</button>
+            <div class="searchFeatures">
+                <input type="text" value="Recherche Rapide" class="searchBar">
+                <input type="button" value="soumettre" class="submit">
+            </div>
+        </div> -->
+
+        <div   class="twoTomatoes">
+            <img  @click="connexionPage"  src="../../images/tomateConnexion.png" alt="menu">
+            <img   class="searchTomatoe" src="../../images/recherche rapide.png" alt="menu">
         </div>
     </header>
 
@@ -50,17 +65,18 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-           
-        
-        
-            <img src="images/insta_mobile.png" alt="inst  <div class="contentAccueil">
-      
-
-        
-        
-        </div>
-    </footer>
+   <div class="footer">
+       <div class="suivezNous">
+           <p>suivez-nous sur les reseaux sociaux</p>
+       </div>
+       <div class="iconHolder">
+           <img src="../../images/fb_mobile.png" alt="">
+           <img src="../../images/insta_mobile.png" alt="">
+       </div>
+       <div class="dreamTeam">
+           <p>une compagnie du groupe dream team</p>
+       </div>
+   </div>
+   
+   
 </div>
