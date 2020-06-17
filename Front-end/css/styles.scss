@@ -2,30 +2,56 @@ $bgColor: rgba($color: #9E9E9E, $alpha: 0.2);
 $w: white;
 
 html, body, #app {
+    
     height: 100%;
-    width: 100%;
     margin: 0px;
     font-family: "GardensC";
     background-image: url("../images/web_background.png");
+    object-fit: cover;
 
-    @media only screen and (max-width: 1023px) {
-        background-image: url("../images/mobile_background.png");
-        background-position-x: 500px;
-    }
+
+    // @media only screen and (max-width: 1023px) {
+    //     background-image: url("../images/mobile_background.png");
+    //     background-position-x: 500px;
+    // }
 
 /* Header -----------------------------------------------------------------------------------*/
     header {
+        button, input, optgroup, select, textarea{
+            margin: 2px!important;;
+        }
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content:space-between;
         align-items: center;
-
+        height: 175px;
+       
+        .logoContainer {
+            width: 34%;
+        }
 
         .logo {
+           margin-left: 20px;
+            height: 125px;
+            width: 90%;
+           
+        }
 
-            @media only screen and (max-width: 1023px) {
-                height: 65px;
+        input[type="radio"]{
+            margin-left: 0!important;
+            border: 2px solid #C5E388!important;
+        }
+
+        .connexion {
+            img {
+                height: 125px;
+                
             }
+             margin-right: 20px;
+             width: 30%;
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
         }
 
         .searchTomatoe {
@@ -45,14 +71,22 @@ html, body, #app {
                 
             }
 
-            @media only screen and (max-width: 1023px) {
+            form {
                 display: flex;
                 flex-direction: row;
+                margin-bottom: -10px;
+                margin-left: 2px;
             }
 
-            h3 {
-                position: absolute;
-                color: $w;
+            .submit {
+                color:white;
+                width: 220px;
+                background-color: #C5E388!important;
+                border: 1px solid white;
+                font-size: 18px;
+                font-family: "GardensC";
+            }
+        }
 
         .twoTomatoes {
             display:none;
@@ -76,13 +110,29 @@ html, body, #app {
                 width: 70%;
             }
             
-            .menu {
-                
-                @media only screen and (max-width: 1023px) {
-                    height: 50px;
-                    margin-right: 20px;
-                    margin-left: 5px;
+            .mobileSearch {
+                .login {
+                    background:  #C5E388!important;
+                    color:white;
+                    width: 138px;
+                    border: 2px solid white;
                 }
+                .searchFeatures {
+                    display:flex;
+                    flex-direction: row;
+                }
+                .searchBar {
+                    border: 2px solid #C5E388!important;
+                }
+                .submit {
+                    color:white;
+                    
+                    background-color: #C5E388!important;
+                    border: 1px solid white;
+                    font-size: 18px;
+                    font-family: "GardensC";
+                }
+                display: block!important;
             }
             
         }
@@ -125,41 +175,9 @@ html, body, #app {
 
         .contentAccueil {
 
-            @media only screen and (max-width: 1023px) {
-                height: 70%;
-                width: 100%;
-                overflow: scroll;
-            }
+           
 
-            .searchSection {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin: 15px 0px 15px;
-
-                @media only screen and (max-width: 1023px) {
-                    margin: 15px 0px 0px;
-                }
-    
-                .searchBar {
-                    height: 30px;
-                    width: 210px;
-                    margin-bottom: 10px;
-                    box-shadow: 3px 4px 15px 1px black;
-                }
-    
-                form {
-                    display: flex;
-                    flex-direction: row;
-                    margin-bottom: 10px;
-                }
-    
-                .submit {
-                    width: 110px;
-                    background-color: #A4D626;
-                }
-            }
+            
 
             .potagers, .jardiniers {
                 display: flex;
@@ -314,10 +332,5 @@ html, body, #app {
            font-size: 18px;
        }
 
-                h3 {
-                    font-size: small;
-                }
-            }
-        }
-    }
+   }
 }
