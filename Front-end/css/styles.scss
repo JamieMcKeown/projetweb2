@@ -1,5 +1,6 @@
 $bgColor: rgba($color: #9E9E9E, $alpha: 0.2);
 $w: white;
+$g: #A4D626;
 
 html, body, #app {
     height: 100%;
@@ -101,7 +102,7 @@ html, body, #app {
     
                 .submit {
                     width: 110px;
-                    background-color: #A4D626;
+                    background-color: $g;
                 }
             }
 
@@ -203,7 +204,7 @@ html, body, #app {
 
                 .button {
                     width: 110px;
-                    background-color: #A4D626;
+                    background-color: $g;
                     color: $w;
 
                     @media only screen and (min-width: 1024px) {
@@ -305,7 +306,7 @@ html, body, #app {
                 height: 35px;
                 width: 176px;
                 margin-top: 15px;
-                background-color: #A4D626;
+                background-color: $g;
                 color: $w;
 
                 @media only screen and (min-width: 1024px) {
@@ -314,6 +315,116 @@ html, body, #app {
             }
         }
     }
+}
+
+/* Modification de produit ------------------------------------------------------------------*/
+#modifProduit {
+    height: 100%;
+    width: 100%;
+
+    .contentModifProduit {
+        display: flex;
+        flex-direction: column;
+        
+        @media only screen and (max-width: 1023px) {
+            height: 68%;
+            width: 100%;
+            overflow: scroll;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+
+            @media only screen and (min-width: 1024px) {
+                align-items: center;
+                justify-content: center;  
+            }
+
+            @media only screen and (max-width: 1023px) {
+                flex-direction: column;
+            }
+
+            .champs {
+
+                @media only screen and (min-width: 1024px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h2 {
+                        margin-right: 15px;
+                    }
+                }
+
+                input {
+                    height: 35px;
+                }
+            } 
+            
+            .button {
+                height: 35px;
+                width: 200px;
+                margin-top: 15px;
+                align-self: center;
+                background-color: $g;
+                color: $w;
+
+                @media only screen and (min-width: 1024px) {
+                    margin-left: 192px;
+                }
+            }
+            
+            .annuler {
+                background-color:red ;
+            }
+        }
+
+        .choixProduit {
+
+            .carrousel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                @media only screen and (max-width: 1023px) {
+                    flex-direction: row;
+                }
+
+                .thumbnails {
+                    overflow: hidden;
+                    
+                    span {
+                        display: flex;
+                        
+                        .produit {
+                            margin-right: 15px;
+    
+                            @media only screen and (max-width: 1023px) {
+                                height: 80px;
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+
+                .leftArrow, .rightArrow {
+
+                    @media only screen and (max-width: 1023px) {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+
+                .leftArrow {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }    
 }
 
 /* Footer -----------------------------------------------------------------------------------*/

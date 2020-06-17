@@ -8,6 +8,7 @@ html, body, #app {
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
   /* Inscription ------------------------------------------------------------------------------*/
+  /* Modification de produit ------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
 
@@ -435,6 +436,164 @@ html #inscription .contentInscription form .button, body #inscription .contentIn
   html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
     margin-left: 192px;
   }
+}
+
+html #modifProduit, body #modifProduit, #app #modifProduit {
+  height: 100%;
+  width: 100%;
+}
+
+html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
+    height: 68%;
+    width: 100%;
+    overflow: scroll;
+    text-align: center;
+  }
+}
+
+html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit form .champs, body #modifProduit .contentModifProduit form .champs, #app #modifProduit .contentModifProduit form .champs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  html #modifProduit .contentModifProduit form .champs h2, body #modifProduit .contentModifProduit form .champs h2, #app #modifProduit .contentModifProduit form .champs h2 {
+    margin-right: 15px;
+  }
+}
+
+html #modifProduit .contentModifProduit form .champs input, body #modifProduit .contentModifProduit form .champs input, #app #modifProduit .contentModifProduit form .champs input {
+  height: 35px;
+}
+
+html #modifProduit .contentModifProduit form .button, body #modifProduit .contentModifProduit form .button, #app #modifProduit .contentModifProduit form .button {
+  height: 35px;
+  width: 200px;
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #A4D626;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit form .button, body #modifProduit .contentModifProduit form .button, #app #modifProduit .contentModifProduit form .button {
+    margin-left: 192px;
+  }
+}
+
+html #modifProduit .contentModifProduit form .annuler, body #modifProduit .contentModifProduit form .annuler, #app #modifProduit .contentModifProduit form .annuler {
+  background-color: red;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails {
+  overflow: hidden;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 html footer, body footer, #app footer {
