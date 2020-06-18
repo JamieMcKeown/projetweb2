@@ -22,6 +22,10 @@ html header button, html header input, html header optgroup, html header select,
   margin: 2px !important;
 }
 
+html header .submit, body header .submit, #app header .submit {
+  margin-top: 10px !important;
+}
+
 html header .logoContainer, body header .logoContainer, #app header .logoContainer {
   width: 34%;
 }

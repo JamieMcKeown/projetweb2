@@ -25,6 +25,10 @@ html, body, #app {
         justify-content:space-between;
         align-items: center;
         height: 175px;
+
+        .submit {
+            margin-top: 10px!important;
+        }
        
         .logoContainer {
             width: 34%;
