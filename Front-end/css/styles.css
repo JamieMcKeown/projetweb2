@@ -498,8 +498,14 @@ html #modifProduit .contentModifProduit form, body #modifProduit .contentModifPr
 }
 
 html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .contentModifProduit form .produitImg, #app #modifProduit .contentModifProduit form .produitImg {
-  width: 300px;
+  width: 400px;
   height: 200px;
+}
+
+@media only screen and (min-width: 1023px) {
+  html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .contentModifProduit form .produitImg, #app #modifProduit .contentModifProduit form .produitImg {
+    margin-bottom: 85px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -517,9 +523,14 @@ html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .co
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    height: 45px;
   }
   html #modifProduit .contentModifProduit form .champs h2, body #modifProduit .contentModifProduit form .champs h2, #app #modifProduit .contentModifProduit form .champs h2 {
     margin-right: 15px;
+  }
+  html #modifProduit .contentModifProduit form .champs input, body #modifProduit .contentModifProduit form .champs input, #app #modifProduit .contentModifProduit form .champs input {
+    height: 25px;
+    width: 245px;
   }
 }
 
@@ -535,11 +546,14 @@ html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .co
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 14px;
   }
 }
 
 html #modifProduit .contentModifProduit form .buttons .button, body #modifProduit .contentModifProduit form .buttons .button, #app #modifProduit .contentModifProduit form .buttons .button {
-  height: 35px;
+  height: 55px;
   width: 200px;
   margin-top: 15px;
   -ms-flex-item-align: center;
