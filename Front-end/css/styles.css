@@ -5,6 +5,14 @@ html, body, #app {
   font-family: "GardensC";
   background-image: url("../images/web_background.png");
   /* Header -----------------------------------------------------------------------------------*/
+<<<<<<< HEAD
+=======
+  /* Accueil ----------------------------------------------------------------------------------*/
+  /* Connexion --------------------------------------------------------------------------------*/
+  /* Inscription ------------------------------------------------------------------------------*/
+  /* Modification de produit ------------------------------------------------------------------*/
+  /* Footer -----------------------------------------------------------------------------------*/
+>>>>>>> 3399977f2dea34cf797da4dd73f9f05a190e2b83
 }
 
 @media only screen and (max-width: 1023px) {
@@ -300,6 +308,7 @@ html header .searchSection #connexion .contentConnexion .connexionBox .inscripti
   }
 }
 
+<<<<<<< HEAD
 html header .searchSection .footer, body header .searchSection .footer, #app header .searchSection .footer {
   height: 75px;
   display: flex;
@@ -310,6 +319,334 @@ html header .searchSection .footer, body header .searchSection .footer, #app hea
   position: relative;
   top: 15%;
   align-items: center;
+=======
+html #inscription, body #inscription, #app #inscription {
+  height: 100%;
+  width: 100%;
+}
+
+html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
+    height: 68%;
+    width: 100%;
+    overflow: scroll;
+    text-align: center;
+  }
+}
+
+html #inscription .contentInscription h1, body #inscription .contentInscription h1, #app #inscription .contentInscription h1 {
+  text-align: center;
+}
+
+html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html #inscription .contentInscription form .sectionUn, body #inscription .contentInscription form .sectionUn, #app #inscription .contentInscription form .sectionUn {
+    margin-left: 75px;
+  }
+  html #inscription .contentInscription form .sectionDeux, body #inscription .contentInscription form .sectionDeux, #app #inscription .contentInscription form .sectionDeux {
+    margin-right: 75px;
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form .champs, body #inscription .contentInscription form .champs, #app #inscription .contentInscription form .champs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  html #inscription .contentInscription form .champs h2, body #inscription .contentInscription form .champs h2, #app #inscription .contentInscription form .champs h2 {
+    margin-right: 15px;
+  }
+}
+
+html #inscription .contentInscription form .champs input, body #inscription .contentInscription form .champs input, #app #inscription .contentInscription form .champs input {
+  height: 35px;
+}
+
+html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
+  height: 35px;
+  width: 176px;
+  margin-top: 15px;
+  background-color: #A4D626;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
+    margin-left: 192px;
+  }
+}
+
+html #modifProduit, body #modifProduit, #app #modifProduit {
+  height: 100%;
+  width: 100%;
+}
+
+html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
+    height: 68%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+    text-align: center;
+  }
+}
+
+html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .contentModifProduit form .produitImg, #app #modifProduit .contentModifProduit form .produitImg {
+  width: 300px;
+  height: 200px;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit form .champs, body #modifProduit .contentModifProduit form .champs, #app #modifProduit .contentModifProduit form .champs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  html #modifProduit .contentModifProduit form .champs h2, body #modifProduit .contentModifProduit form .champs h2, #app #modifProduit .contentModifProduit form .champs h2 {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit form .buttons, body #modifProduit .contentModifProduit form .buttons, #app #modifProduit .contentModifProduit form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+html #modifProduit .contentModifProduit form .buttons .button, body #modifProduit .contentModifProduit form .buttons .button, #app #modifProduit .contentModifProduit form .buttons .button {
+  height: 35px;
+  width: 200px;
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #A4D626;
+  color: white;
+}
+
+html #modifProduit .contentModifProduit form .buttons .annuler, body #modifProduit .contentModifProduit form .buttons .annuler, #app #modifProduit .contentModifProduit form .buttons .annuler {
+  background-color: red;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails {
+  overflow: hidden;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 343px;
+  }
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
+    height: 80px;
+    width: 80px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
+  height: 50px;
+  width: 50px;
+}
+
+html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+html footer, body footer, #app footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 1023px) {
+  html footer, body footer, #app footer {
+    height: 20%;
+    position: absolute;
+    bottom: 0px;
+    border-top: solid black 1px;
+    background-color: rgba(158, 158, 158, 0.2);
+  }
+}
+
+html footer .reseauxSociaux, body footer .reseauxSociaux, #app footer .reseauxSociaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+>>>>>>> 3399977f2dea34cf797da4dd73f9f05a190e2b83
 }
 
 html header .searchSection .footer p, body header .searchSection .footer p, #app header .searchSection .footer p {
