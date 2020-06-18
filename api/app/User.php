@@ -10,4 +10,8 @@ class User extends Model
         'password',
         'reponse'
     ];
+
+    public function potager(){
+        return $this->hasOne('App\Potager');
+    }
 }

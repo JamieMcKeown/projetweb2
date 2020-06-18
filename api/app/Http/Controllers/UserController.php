@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Potager;
 
 class UserController extends Controller
 {
@@ -26,8 +27,8 @@ class UserController extends Controller
     }
 
     /**
-     * Créer un utilisateur et retourne un json avec l'utilisateur créer
-     * Utilisé le id fourni dans le json pour ensuite créer le potager
+     * Créer un utilisateur et son potager 
+     * puis retourne un json avec l'utilisateur créer
      */
     public function create(Request $request) {
         $user = new User();
@@ -46,7 +47,16 @@ class UserController extends Controller
 
         $success = $user->save();
 
-        return $user;
+        $potager = new Potager();
+        $potager->user_id = $user->id;
+        $potager->rating = 0;
+        $potager->vote = 0;
+
+        $potager->save();
+
+        $result = [];
+        array_push($result, $user, $potager);
+        return $result;
     }
 
     /**
@@ -65,7 +75,100 @@ class UserController extends Controller
 
         return $user;
     }
+    
+    /** 
+     * Permet d'update les informations de l'utilisateur selon le ID fourni.
+     * Pour update mdp ou reponse secrete utiliser les fonctions editUserPassword() ou editUserSecret()
+    */
+    public function editUser(Request $request, $id){
+        $user = User::find($id);
+        if ($request->prenom != null){
+            $user->prenom = $request->prenom;
+        } else {
+            $user->prenom = $user->prenom;
+        }
 
+        if ($request->nom != null) {
+            $user->nom = $request->nom;
+        } else {
+            $user->nom = $user->nom;
+        }
+
+        if ($request->email != null) {
+            $user->email = $request->email;
+        } else {
+            $user->email = $user->email;
+        }
+
+        if ($request->numero_porte != null) {
+            $user->numero_porte = $request->numero_porte;
+        } else {
+            $user->numero_porte = $user->numero_porte;
+        }
+ 
+        if ($request->ville != null) {
+            $user->ville = $request->ville;
+        } else {
+            $user->ville = $user->ville;
+        }
+
+        if ($request->code_postal != null) {
+            $user->code_postal = $request->code_postal;
+        } else {
+            $user->code_postal = $user->code_postal; 
+        }
+
+        if ($request->image != null ) {
+            $user->image = $request->image;
+        } else {
+            $user->image = $user->image;
+        }
+
+        if ($request->bio != null) {
+            $user->bio = $request->bio;
+        } else {
+            $user->bio = $user->bio;
+        }
+
+        $success = $user->save();
+
+        return $user;
+    }
+
+    /** 
+     * Permet d'update le password de l'utilisateur selon le ID fourni.
+     * Pour update les information general ou reponse secrete utiliser les fonctions editUser() ou editUserSecret()
+    */
+    public function editUserPassword(Request $request, $id){
+        $user = User::find($id);
+
+        if ($request->password != null && $request->password != $user->password) {
+            $user->password = $request->password;
+        } else {
+            $success = false;
+        }
+
+        $success = $user->save();
+
+        return $user;
+    }
+
+    /** 
+     * Permet d'update la reponse secrete de l'utilisateur selon le ID fourni.
+     * Pour update les information general ou mdp utiliser les fonctions editUser() ou editUserPassword()
+    */
+    public function editUserSecret(Request $request, $id) {
+        $user = User::find($id);
+
+        if ($request->reponse != null) {
+            $user->reponse = $request->reponse;
+        } else {
+            $user->reponse = $user->reponse;
+        }
+
+        $success = $user->save();
+        return $user;
+    }
     /**
      * IMPORTANT: S'assurer en javascript que l'utilisateur soit administrateur pour utiliser ce endpoint
      * À FAIRE: Validation en PHP que le user qui utilise ce endpoint soit un admin.
@@ -87,4 +190,6 @@ class UserController extends Controller
             "success" => $success
         ];
     }
+
+
 }
