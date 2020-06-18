@@ -238,83 +238,18 @@ html .connexionBody .concombre, body .connexionBody .concombre, #app .connexionB
   justify-content: center;
 }
 
-html #inscription, body #inscription, #app #inscription {
-  height: 100%;
-  width: 100%;
+html .inscriptionContainer, body .inscriptionContainer, #app .inscriptionContainer {
+  width: 80%;
+  margin-left: 10%;
 }
 
-html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
-  display: flex;
-  flex-direction: column;
+html .inscriptionContainer .column1, body .inscriptionContainer .column1, #app .inscriptionContainer .column1 {
+  width: 80%;
+  margin-left: 10%;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
-    height: 68%;
-    width: 100%;
-    overflow: scroll;
-    text-align: center;
-  }
-}
-
-html #inscription .contentInscription h1, body #inscription .contentInscription h1, #app #inscription .contentInscription h1 {
-  text-align: center;
-}
-
-html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-  display: flex;
-  flex-direction: row;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-    align-items: center;
-    justify-content: center;
-  }
-  html #inscription .contentInscription form .sectionUn, body #inscription .contentInscription form .sectionUn, #app #inscription .contentInscription form .sectionUn {
-    margin-left: 75px;
-  }
-  html #inscription .contentInscription form .sectionDeux, body #inscription .contentInscription form .sectionDeux, #app #inscription .contentInscription form .sectionDeux {
-    margin-right: 75px;
-    margin-left: 50px;
-    padding-top: 30px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #inscription .contentInscription form .champs, body #inscription .contentInscription form .champs, #app #inscription .contentInscription form .champs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  html #inscription .contentInscription form .champs h2, body #inscription .contentInscription form .champs h2, #app #inscription .contentInscription form .champs h2 {
-    margin-right: 15px;
-  }
-}
-
-html #inscription .contentInscription form .champs input, body #inscription .contentInscription form .champs input, #app #inscription .contentInscription form .champs input {
-  height: 35px;
-}
-
-html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
-  height: 35px;
-  width: 176px;
-  margin-top: 15px;
-  background-color: #A4D626;
-  color: white;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #inscription .contentInscription form .button, body #inscription .contentInscription form .button, #app #inscription .contentInscription form .button {
-    margin-left: 192px;
-  }
+html .inscriptionContainer .column1 label, body .inscriptionContainer .column1 label, #app .inscriptionContainer .column1 label {
+  width: 25%;
 }
 
 html #modifProduit, body #modifProduit, #app #modifProduit {

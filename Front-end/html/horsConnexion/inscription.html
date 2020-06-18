@@ -1,69 +1,72 @@
 <div id="inscription">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
-        <div class="connexion">
-            <h3>Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div class="logoContainer">
+            <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
         </div>
+
+
+
+        <div class="searchSection">
+            <input type="text" value="Recherche Rapide" class="searchBar">
+            <form @submit.prevent >
+                <input type="radio" id="distance2" name="choix2" value="distance2" >
+                <label style="margin-right: 5px" for="distance2">distance</label>
+                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
+                <label style="margin-right: 5px"for="jardinier2">jardinier</label>
+                <input type="radio" id="potager2" name="choix2" value="potager2">
+                <label for="potager2">potager</label>
+                
+            </form>
+            <input type="button" value="soumettre" class="submit">
+            
+        </div>
+        <div class="connexion">     
+            <img  @click="homepageRoute" class="menu" src="../../images/accueil.png" alt="menu">
+        </div>
+
+        <div   class="twoTomatoes">
+            <img  @click="homepageRoute"  src="../../images/accueil.png" alt="menu">
+            <img   class="searchTomatoe" src="../../images/rechercheRapide.png" alt="menu">
+        </div>
+        
+       
+
+      
+       
     </header>
-    <div class="contentInscription">
-        <h1>Inscription</h1>
-        <form action="">
-            <div class="sectionUn">
-                <div class="champs">
-                    <h2>Prénom</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Nom</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Courriel</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Mot de passe</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Confirmation</h2>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="sectionDeux">
-                <div class="champs">
-                    <h2>Adresse</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Ville</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Code postal</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Question secrète</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Réponse</h2>
-                    <input type="text">
-                </div>
-                <input type="button" value="S'inscrire" class="button">
-            </div>
-        </form>
+    <div class="inscriptionContainer">
+        <div class="column1">
+            <form action="">
+                <label for="prenom">prenom</label>
+                <input type="text" name="prenom"><br>
+                <label for="nom">nom</label>
+                <input type="text" name="nom"><br>
+                <label for="courriel">courriel</label>
+                <input type="text" name="courriel"><br>
+                <label for="mot de passe">mot de passe</label>
+                <input type="text" name="mot de passe"><br>
+                <label for="confirmation M.D.P.">confirmez M.D.P.</label>
+                <input type="text" name="confirmationMotDePasse"><br>
+            </form>
+        </div>
+        <div class="column2">
+
+        </div>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-            <h3>Suivez-nous sur Facebook</h3>
+
+
+
+
+    <div class="footer">
+        <div class="suivezNous">
+            <p>suivez-nous sur les reseaux sociaux</p>
         </div>
-        <div class="reseauxSociaux">
-            <img src="images/insta_mobile.png" alt="instagram">
-            <h3>Suivez-nous sur Instagram</h3>
+        <div class="iconHolder">
+            <img src="../../images/fb_mobile.png" alt="">
+            <img src="../../images/insta_mobile.png" alt="">
         </div>
-    </footer>
+        <div class="dreamTeam">
+            <p>une compagnie du groupe dream team</p>
+        </div>
+    </div>
 </div>
