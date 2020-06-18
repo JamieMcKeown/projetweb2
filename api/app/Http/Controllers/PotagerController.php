@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Potager;
+use App\User;
 
 class PotagerController extends Controller
 {
@@ -13,25 +14,42 @@ class PotagerController extends Controller
      */
     public function show(){
         $potagerToShow = Potager::all();
-        return $potagerToShow;
+        $result = [];
+        foreach ($potagerToShow as $potager) {
+            $item = [
+                "Prenom" => $potager->user->prenom,
+                "Nom" => $potager->user->nom,
+                "id" => $potager->id,
+                "user_id" => $potager->user_id,
+                "rating" => $potager->rating,
+                "vote" => $potager->vote,
+                "image" => $potager->image
+        ];
+            array_push($result, $item);
+        }
+        return $result;
     }
 
     /**
      * Permet de créer le potager après la création d'un utilisateur. 
      * La request et le ID de l'utilisateur créer précédement
+     * Fonction obsolete. Voir create dans UserController.php
+     * 
+     *     public function create(Request $request){
+     *   $potager = new Potager;
+     *   $potager->user_id = $request->userid;
+     *   $potager->rating = 0;
+     *   $potager->vote = 0;
+     *
+     *   $success = $potager->save();
+     * 
+     *   return [
+     *      'success' => $success
+     *   ];
+     * }
+     * 
      */
-    public function create(Request $request){
-        $potager = new Potager;
-        $potager->userid = $request->userid;
-        $potager->rating = 0;
-        $potager->vote = 0;
-
-        $success = $potager->save();
-
-        return [
-            'success' => $success
-        ];
-    }
+ 
 
     /**
      * Permet d'updater le rating du potager et d'augmenter le nombre de vote de 1
@@ -51,6 +69,34 @@ class PotagerController extends Controller
     }
 
     /**
+     * Permet d'update les informations du potager (l'image utiliser par le potager)
+     */
+    public function editPotager(Request $request, $id) {
+        $potager = Potager::find($id);
+
+        if ($request->image != null) {
+            $potager->image = $request->image;
+        } else {
+            $potager->image = $potager->image;
+        }
+
+        $success = $potager->save();
+        $result = [];
+
+        $item = [
+            "Prenom" => $potager->user->prenom,
+            "Nom" => $potager->user->nom,
+            "id" => $potager->id,
+            "user_id" => $potager->user_id,
+            "rating" => $potager->rating,
+            "vote" => $potager->vote,
+            "image" => $potager->image
+        ];
+        array_push($result, $item);
+        return $result;
+    }
+
+    /**
      * IMPORTANT: S'assurer en javascript que l'utilisateur soit administrateur pour utiliser ce endpoint
      * À FAIRE: Validation en PHP que le user qui utilise ce endpoint soit un admin.
      * Permet de supprimer le potager d'un utilisateur lors de la suppression du compte de celui-ci
@@ -59,7 +105,7 @@ class PotagerController extends Controller
      * Besoin du id de l'utilisateur
      */
     public function delete($id) {
-        $potager = Potager::where('userid', $id)->first();
+        $potager = Potager::where('user_id', $id)->first();
 
         if ($potager != null){
             $success = $potager->delete();
