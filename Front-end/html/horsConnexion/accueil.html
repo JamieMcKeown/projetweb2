@@ -1,17 +1,23 @@
 <div id="accueil">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        <div class="logoContainer">
+            <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        </div>
+
+
+
         <div class="searchSection">
             <input type="text" value="Recherche Rapide" class="searchBar">
             <form @submit.prevent >
                 <input type="radio" id="distance2" name="choix2" value="distance2" >
-                <label style="margin-right: 5px" for="distance2">par distance</label>
+                <label style="margin-right: 5px" for="distance2">distance</label>
                 <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
-                <label for="jardinier2">par jardinier</label>
+                <label style="margin-right: 5px"for="jardinier2">jardinier</label>
                 <input type="radio" id="potager2" name="choix2" value="potager2">
-                <label for="potager2">par potager</label>
-                <input type="button" value="Soumettre" class="submit">
+                <label for="potager2">potager</label>
+                
             </form>
+            <input type="button" value="soumettre" class="submit">
             
         </div>
         <div class="connexion">     
@@ -33,10 +39,15 @@
             <img  @click="connexionPage"  src="../../images/tomateConnexion.png" alt="menu">
             <img   class="searchTomatoe" src="../../images/recherche rapide.png" alt="menu">
         </div>
+        
+       
+
+      
+       
     </header>
 
   
-    </header>
+    
     <div class="contentAccueil">
         
 
