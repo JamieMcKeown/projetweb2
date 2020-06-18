@@ -202,106 +202,40 @@ html #accueil .contentAccueil .potagers .sections .potager, html #accueil .conte
   background-color: black;
 }
 
-html #connexion, body #connexion, #app #connexion {
-  height: 100%;
-  width: 100%;
-}
-
-html #connexion .contentConnexion, body #connexion .contentConnexion, #app #connexion .contentConnexion {
-  height: 400px;
+html .connexionBody, body .connexionBody, #app .connexionBody {
+  width: 80%;
+  margin-left: 10%;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-html #connexion .contentConnexion .connexionBox, body #connexion .contentConnexion .connexionBox, #app #connexion .contentConnexion .connexionBox {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-html #connexion .contentConnexion .connexionBox form, body #connexion .contentConnexion .connexionBox form, #app #connexion .contentConnexion .connexionBox form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox form, body #connexion .contentConnexion .connexionBox form, #app #connexion .contentConnexion .connexionBox form {
-    width: 440px;
-  }
-}
-
-html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
+html .connexionBody .inputArea, body .connexionBody .inputArea, #app .connexionBody .inputArea {
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 25px;
 }
 
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox form div, body #connexion .contentConnexion .connexionBox form div, #app #connexion .contentConnexion .connexionBox form div {
-    width: 100%;
-    justify-content: center;
-  }
+html .connexionBody .inputArea input, body .connexionBody .inputArea input, #app .connexionBody .inputArea input {
+  width: 240px;
+  height: 20px;
+  margin-top: 10px;
+  border: 2px solid #C5E388 !important;
 }
 
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox form div .courriel, body #connexion .contentConnexion .connexionBox form div .courriel, #app #connexion .contentConnexion .connexionBox form div .courriel {
-    margin-right: 168px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox form div .password, body #connexion .contentConnexion .connexionBox form div .password, #app #connexion .contentConnexion .connexionBox form div .password {
-    margin-right: 100px;
-  }
-}
-
-html #connexion .contentConnexion .connexionBox form div input, body #connexion .contentConnexion .connexionBox form div input, #app #connexion .contentConnexion .connexionBox form div input {
-  margin-left: 15px;
-}
-
-html #connexion .contentConnexion .connexionBox form .button, body #connexion .contentConnexion .connexionBox form .button, #app #connexion .contentConnexion .connexionBox form .button {
-  width: 110px;
-  background-color: #A4D626;
-  color: white;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox form .button, body #connexion .contentConnexion .connexionBox form .button, #app #connexion .contentConnexion .connexionBox form .button {
-    align-self: flex-end;
-    margin-top: 15px;
-  }
-}
-
-html #connexion .contentConnexion .connexionBox .inscription, body #connexion .contentConnexion .connexionBox .inscription, #app #connexion .contentConnexion .connexionBox .inscription {
+html .connexionBody h1, body .connexionBody h1, #app .connexionBody h1 {
   text-align: center;
-  position: relative;
+  margin-bottom: 20px;
 }
 
-html #connexion .contentConnexion .connexionBox .inscription img, body #connexion .contentConnexion .connexionBox .inscription img, #app #connexion .contentConnexion .connexionBox .inscription img {
-  width: 150px;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox .inscription img, body #connexion .contentConnexion .connexionBox .inscription img, #app #connexion .contentConnexion .connexionBox .inscription img {
-    width: 265px;
-  }
-}
-
-html #connexion .contentConnexion .connexionBox .inscription p, body #connexion .contentConnexion .connexionBox .inscription p, #app #connexion .contentConnexion .connexionBox .inscription p {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  color: white;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #connexion .contentConnexion .connexionBox .inscription p, body #connexion .contentConnexion .connexionBox .inscription p, #app #connexion .contentConnexion .connexionBox .inscription p {
-    font-size: 25px;
-  }
+html .connexionBody .concombre, body .connexionBody .concombre, #app .connexionBody .concombre {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 html #inscription, body #inscription, #app #inscription {

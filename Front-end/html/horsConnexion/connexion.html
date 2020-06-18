@@ -45,24 +45,18 @@
       
        
     </header>
-    <div class="contentConnexion">
-        <h1>Connexion</h1>
-        <div class="connexionBox">
-            <form action="">
-                <div>
-                    <h2 class="courriel">Courriel</h2>
-                    <input type="text">
-                </div>
-                <div>
-                    <h2 class="password">Mot de passe</h2>
-                    <input type="text">
-                </div>
-                <input type="button" value="Soumettre" class="button">
+    <div class="connexionBody">
+        <h1>connexion</h1>
+        <div class="inputArea">
+            <form @submit.prevent>
+                <label for="userCourriel">courriel</label><br>
+                <input class="userCourriel "type="text" name="courrielInput" ><br>
+                <label for="userMDP">mot de passe</label><br>
+                <input class="userMDP" type="text" name="courrielInput"><br>
             </form>
-            <div class="inscription">
-                <img src="../../images/concombre.png" alt="background de l'inscription">
-                <p @click="inscriptionPage">Inscription</p>
-            </div>
+        </div>
+        <div class="concombre">
+            <img @click="inscriptionPage" src="../../images/inscrire.png" alt="">
         </div>
     </div>
     <div class="footer">
