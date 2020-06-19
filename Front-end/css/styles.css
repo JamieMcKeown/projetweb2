@@ -809,6 +809,14 @@ html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentP
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -817,6 +825,18 @@ html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentP
     width: 100%;
     overflow: scroll;
     text-align: center;
+  }
+}
+
+html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -827,21 +847,34 @@ html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentP
   }
 }
 
-html #profil .contentProfil .firstSection h2, html #profil .contentProfil .secondSection h2, body #profil .contentProfil .firstSection h2, body #profil .contentProfil .secondSection h2, #app #profil .contentProfil .firstSection h2, #app #profil .contentProfil .secondSection h2 {
-  height: 75px;
-  width: 100%;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
+@media only screen and (min-width: 1024px) {
+  html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil .contenu .secondSection, body #profil .contentProfil .contenu .firstSection, body #profil .contentProfil .contenu .secondSection, #app #profil .contentProfil .contenu .firstSection, #app #profil .contentProfil .contenu .secondSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil .contenu .secondSection, body #profil .contentProfil .contenu .firstSection, body #profil .contentProfil .contenu .secondSection, #app #profil .contentProfil .contenu .firstSection, #app #profil .contentProfil .contenu .secondSection {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .firstSection, html #profil .contentProfil .secondSection, body #profil .contentProfil .firstSection, body #profil .contentProfil .secondSection, #app #profil .contentProfil .firstSection, #app #profil .contentProfil .secondSection {
+  html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil .contenu .secondSection, body #profil .contentProfil .contenu .firstSection, body #profil .contentProfil .contenu .secondSection, #app #profil .contentProfil .contenu .firstSection, #app #profil .contentProfil .contenu .secondSection {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -856,7 +889,20 @@ html #profil .contentProfil .firstSection h2, html #profil .contentProfil .secon
   }
 }
 
-html #profil .contentProfil .thirdSection, body #profil .contentProfil .thirdSection, #app #profil .contentProfil .thirdSection {
+html #profil .contentProfil .contenu .firstSection h2, html #profil .contentProfil .contenu .secondSection h2, body #profil .contentProfil .contenu .firstSection h2, body #profil .contentProfil .contenu .secondSection h2, #app #profil .contentProfil .contenu .firstSection h2, #app #profil .contentProfil .contenu .secondSection h2 {
+  height: 75px;
+  width: 100%;
+  padding-top: 15px;
+  background-image: url("../images/potager.png");
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+html #profil .contentProfil .contenu .thirdSection, body #profil .contentProfil .contenu .thirdSection, #app #profil .contentProfil .contenu .thirdSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,7 +916,7 @@ html #profil .contentProfil .thirdSection, body #profil .contentProfil .thirdSec
 }
 
 @media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .thirdSection form .buttons, body #profil .contentProfil .thirdSection form .buttons, #app #profil .contentProfil .thirdSection form .buttons {
+  html #profil .contentProfil .contenu .thirdSection form .buttons, body #profil .contentProfil .contenu .thirdSection form .buttons, #app #profil .contentProfil .contenu .thirdSection form .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -881,7 +927,25 @@ html #profil .contentProfil .thirdSection, body #profil .contentProfil .thirdSec
   }
 }
 
-html #profil .contentProfil .thirdSection form .buttons .button, body #profil .contentProfil .thirdSection form .buttons .button, #app #profil .contentProfil .thirdSection form .buttons .button {
+@media only screen and (min-width: 1024px) {
+  html #profil .contentProfil .contenu .thirdSection form .buttons, body #profil .contentProfil .contenu .thirdSection form .buttons, #app #profil .contentProfil .contenu .thirdSection form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 14px;
+  }
+}
+
+html #profil .contentProfil .contenu .thirdSection form .buttons .button, body #profil .contentProfil .contenu .thirdSection form .buttons .button, #app #profil .contentProfil .contenu .thirdSection form .buttons .button {
   height: 55px;
   width: 200px;
   margin-top: 15px;
