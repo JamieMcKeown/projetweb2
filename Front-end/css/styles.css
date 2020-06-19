@@ -21,7 +21,7 @@ html header,
 body header,
 #app header {
   background-image: url("../images/footer.png");
-  filter: grayscale(0.3);
+  filter: grayscale(0.1);
   background-position: center;
   object-fit: cover;
   width: 80%;
@@ -992,17 +992,16 @@ body .newFooter img,
   left: 5%;
 }
 
-html .newFooter .socialMedia,
-body .newFooter .socialMedia,
-#app .newFooter .socialMedia {
-  margin-top: -10px;
-  position: relative;
-  top: -10px;
-  left: 65%;
+html .newFooter h3,
+body .newFooter h3,
+#app .newFooter h3 {
+  margin-left: 10%;
 }
 
-html .newFooter .socialMedia img,
-body .newFooter .socialMedia img,
-#app .newFooter .socialMedia img {
-  height: 55px;
+@media only screen and (min-width: 767px) {
+  html .newFooter h3,
+  body .newFooter h3,
+  #app .newFooter h3 {
+    margin-left: 50%;
+  }
 }

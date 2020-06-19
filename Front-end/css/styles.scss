@@ -22,7 +22,7 @@ body,
     /* Header -----------------------------------------------------------------------------------*/
     header {
         background-image: url("../images/footer.png");
-        filter: grayscale(0.3);
+        filter: grayscale(0.1);
         background-position: center;
         object-fit: cover;
         width: 80%;
@@ -770,25 +770,17 @@ body,
             left: 5%;
         }
 
-        .socialMedia {
-            margin-top: -10px;
-            img {
-               
-                
-                height: 55px;
-            }
-            position: relative;
-            top: -10px;
-            left: 65%;
-
+        
+            h3 {
+                margin-left: 10%;      
         }
-
-
-
-
-
-
-
-
     }
+
+    @media only screen and (min-width: 767px){
+       .newFooter {
+           h3 {
+               margin-left: 50%;
+           }
+       }
+       }
 }
