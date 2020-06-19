@@ -474,17 +474,24 @@ html, body, #app {
 
     .contentModifProfil {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+
 
         @media only screen and (max-width: 1023px) {
             height: 68%;
             width: 100%;
-            flex-direction: column;
             overflow: scroll;
             text-align: center;
         }
 
         form {
             display: flex;
+
+            @media only screen and (min-width: 1024px) {
+                width: 100%;
+                justify-content: space-around;
+            }
 
             @media only screen and (max-width: 1023px) {
                 flex-direction: column;
@@ -502,14 +509,34 @@ html, body, #app {
                     align-self: flex-start;
                 }
 
-                .modifButton {
-                    height: 25px;
-                    width: 200px;
-                    margin-top: 15px;
-                    align-self: center;
-                    background-color: $g;
-                    color: $w;
-                }
+                .champs {
+
+                    @media only screen and (min-width: 1024px) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 45px;
+    
+                        h2 {
+                            margin-right: 15px;
+                        }
+    
+                        input {
+                            height: 25px;
+                            width: 245px;
+                        }
+                    }
+
+                    .modifButton {
+                        height: 25px;
+                        width: 200px;
+                        margin-top: 15px;
+                        align-self: center;
+                        background-color: $g;
+                        color: $w;
+                    }
+                } 
             }
 
             .thirdSection {
@@ -523,17 +550,28 @@ html, body, #app {
                     align-self: flex-start;
                 }
 
-                .button {
-                    height: 55px;
-                    width: 200px;
-                    margin-top: 15px;
-                    align-self: center;
-                    background-color: $g;
-                    color: $w;
-                }
-                
-                .annuler {
-                    background-color:red ;
+                .buttons {
+
+                    @media only screen and (min-width: 1024px) {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-self: flex-end;
+                        margin-bottom: 14px;
+                    }
+    
+                    .button {
+                        height: 55px;
+                        width: 200px;
+                        margin-top: 15px;
+                        align-self: center;
+                        background-color: $g;
+                        color: $w;
+                    }
+                    
+                    .annuler {
+                        background-color:red ;
+                    }
                 }
             }
         }

@@ -661,16 +661,19 @@ html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #a
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #app #modifProfil .contentModifProfil {
     height: 68%;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     overflow: scroll;
     text-align: center;
   }
@@ -680,6 +683,14 @@ html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfi
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+  html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -706,7 +717,33 @@ html #modifProfil .contentModifProfil form .firstSection h2, body #modifProfil .
       align-self: flex-start;
 }
 
-html #modifProfil .contentModifProfil form .firstSection .modifButton, body #modifProfil .contentModifProfil form .firstSection .modifButton, #app #modifProfil .contentModifProfil form .firstSection .modifButton {
+@media only screen and (min-width: 1024px) {
+  html #modifProfil .contentModifProfil form .firstSection .champs, body #modifProfil .contentModifProfil form .firstSection .champs, #app #modifProfil .contentModifProfil form .firstSection .champs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 45px;
+  }
+  html #modifProfil .contentModifProfil form .firstSection .champs h2, body #modifProfil .contentModifProfil form .firstSection .champs h2, #app #modifProfil .contentModifProfil form .firstSection .champs h2 {
+    margin-right: 15px;
+  }
+  html #modifProfil .contentModifProfil form .firstSection .champs input, body #modifProfil .contentModifProfil form .firstSection .champs input, #app #modifProfil .contentModifProfil form .firstSection .champs input {
+    height: 25px;
+    width: 245px;
+  }
+}
+
+html #modifProfil .contentModifProfil form .firstSection .champs .modifButton, body #modifProfil .contentModifProfil form .firstSection .champs .modifButton, #app #modifProfil .contentModifProfil form .firstSection .champs .modifButton {
   height: 25px;
   width: 200px;
   margin-top: 15px;
@@ -729,7 +766,25 @@ html #modifProfil .contentModifProfil form .thirdSection h2, body #modifProfil .
       align-self: flex-start;
 }
 
-html #modifProfil .contentModifProfil form .thirdSection .button, body #modifProfil .contentModifProfil form .thirdSection .button, #app #modifProfil .contentModifProfil form .thirdSection .button {
+@media only screen and (min-width: 1024px) {
+  html #modifProfil .contentModifProfil form .thirdSection .buttons, body #modifProfil .contentModifProfil form .thirdSection .buttons, #app #modifProfil .contentModifProfil form .thirdSection .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 14px;
+  }
+}
+
+html #modifProfil .contentModifProfil form .thirdSection .buttons .button, body #modifProfil .contentModifProfil form .thirdSection .buttons .button, #app #modifProfil .contentModifProfil form .thirdSection .buttons .button {
   height: 55px;
   width: 200px;
   margin-top: 15px;
@@ -740,7 +795,7 @@ html #modifProfil .contentModifProfil form .thirdSection .button, body #modifPro
   color: white;
 }
 
-html #modifProfil .contentModifProfil form .thirdSection .annuler, body #modifProfil .contentModifProfil form .thirdSection .annuler, #app #modifProfil .contentModifProfil form .thirdSection .annuler {
+html #modifProfil .contentModifProfil form .thirdSection .buttons .annuler, body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler, #app #modifProfil .contentModifProfil form .thirdSection .buttons .annuler {
   background-color: red;
 }
 
