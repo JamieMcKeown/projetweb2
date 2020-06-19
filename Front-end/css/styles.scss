@@ -467,6 +467,79 @@ html, body, #app {
     }    
 }
 
+/* Modification de produit ------------------------------------------------------------------*/
+#modifProfil {
+    height: 100%;
+    width: 100%;
+
+    .contentModifProfil {
+        display: flex;
+
+        @media only screen and (max-width: 1023px) {
+            height: 68%;
+            width: 100%;
+            flex-direction: column;
+            overflow: scroll;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+
+            @media only screen and (max-width: 1023px) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .firstSection {
+
+                h2 {
+                    height: 75px;
+                    padding-top: 15px;
+                    background-image: url("../images/potager.png");
+                    color: $w;
+                    display: flex;
+                    align-self: flex-start;
+                }
+
+                .modifButton {
+                    height: 25px;
+                    width: 200px;
+                    margin-top: 15px;
+                    align-self: center;
+                    background-color: $g;
+                    color: $w;
+                }
+            }
+
+            .thirdSection {
+
+                h2 {
+                    height: 75px;
+                    padding-top: 15px;
+                    background-image: url("../images/potager.png");
+                    color: $w;
+                    display: flex;
+                    align-self: flex-start;
+                }
+
+                .button {
+                    height: 55px;
+                    width: 200px;
+                    margin-top: 15px;
+                    align-self: center;
+                    background-color: $g;
+                    color: $w;
+                }
+                
+                .annuler {
+                    background-color:red ;
+                }
+            }
+        }
+    }
+}
+
 /* Footer -----------------------------------------------------------------------------------*/
     footer {
         width: 100%;

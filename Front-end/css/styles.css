@@ -9,6 +9,7 @@ html, body, #app {
   /* Connexion --------------------------------------------------------------------------------*/
   /* Inscription ------------------------------------------------------------------------------*/
   /* Modification de produit ------------------------------------------------------------------*/
+  /* Modification de produit ------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
 
@@ -649,6 +650,98 @@ html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, bod
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
+}
+
+html #modifProfil, body #modifProfil, #app #modifProfil {
+  height: 100%;
+  width: 100%;
+}
+
+html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #app #modifProfil .contentModifProfil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #app #modifProfil .contentModifProfil {
+    height: 68%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+    text-align: center;
+  }
+}
+
+html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+html #modifProfil .contentModifProfil form .firstSection h2, body #modifProfil .contentModifProfil form .firstSection h2, #app #modifProfil .contentModifProfil form .firstSection h2 {
+  height: 75px;
+  padding-top: 15px;
+  background-image: url("../images/potager.png");
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+html #modifProfil .contentModifProfil form .firstSection .modifButton, body #modifProfil .contentModifProfil form .firstSection .modifButton, #app #modifProfil .contentModifProfil form .firstSection .modifButton {
+  height: 25px;
+  width: 200px;
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #A4D626;
+  color: white;
+}
+
+html #modifProfil .contentModifProfil form .thirdSection h2, body #modifProfil .contentModifProfil form .thirdSection h2, #app #modifProfil .contentModifProfil form .thirdSection h2 {
+  height: 75px;
+  padding-top: 15px;
+  background-image: url("../images/potager.png");
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+html #modifProfil .contentModifProfil form .thirdSection .button, body #modifProfil .contentModifProfil form .thirdSection .button, #app #modifProfil .contentModifProfil form .thirdSection .button {
+  height: 55px;
+  width: 200px;
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #A4D626;
+  color: white;
+}
+
+html #modifProfil .contentModifProfil form .thirdSection .annuler, body #modifProfil .contentModifProfil form .thirdSection .annuler, #app #modifProfil .contentModifProfil form .thirdSection .annuler {
+  background-color: red;
 }
 
 html footer, body footer, #app footer {
