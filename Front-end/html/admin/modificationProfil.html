@@ -1,0 +1,72 @@
+<div id="modifProfil">
+    <header>
+        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
+        <div class="connexion">
+            <h3 @click="connexionPage">Connexion</h3>
+            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        </div>
+    </header>
+    <div class="contentModifProfil">
+        <h1>Bienvenue Utilisateur</h1>
+        <form action="">
+            <div class="firstSection">
+                <h2>Votre potager</h2>
+                <div class="champs">
+                    <p>Prénom</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Nom</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Courriel</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Adresse</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Ville</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Code postal</p>
+                    <input type="text">
+                </div>
+                <div class="champs">
+                    <p>Mot de passe</p>
+                    <input type="button" value="modifier" class="modifButton button">
+                </div>
+                <div class="champs">
+                    <p>Question secrète</p>
+                    <input type="button" value="modifier" class="modifButton button">
+                </div>
+            </div>
+            <div class="secondSection">
+                <div class="champs">
+                    <p>Bio</p>
+                    <textarea name="bio" cols="30" rows="28"></textarea>
+                </div>
+            </div>
+            <div class="thirdSection">
+                <h2>Votre potager</h2>
+                <div class="buttons">
+                    <input type="button" value="Sauvegarder les changements" class="button">
+                    <input type="button" value="Annuler" class="button annuler">
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="reseauxSociaux">
+            <img src="images/fb_mobile.png" alt="facebook">
+            <h3>Suivez-nous sur Facebook</h3>
+        </div>
+        <div class="reseauxSociaux">
+            <img src="images/insta_mobile.png" alt="instagram">
+            <h3>Suivez-nous sur Instagram</h3>
+        </div>
+    </footer>
+</div>
