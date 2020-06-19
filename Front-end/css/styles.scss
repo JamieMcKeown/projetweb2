@@ -228,99 +228,42 @@ html, body, #app {
     
 
 /* Connexion --------------------------------------------------------------------------------*/
-#connexion {
-    height: 100%;
-    width: 100%;
-
-    .contentConnexion {
-        height: 70%;
+.connexionBody {
+    .inputArea{
+        margin-top: 70px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
-
-        .connexionBox {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                @media only screen and (min-width: 1024px) {
-                    width: 440px;
-                }
-
-                div {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-
-                    @media only screen and (min-width: 1024px) {
-                        width: 100%;
-                        justify-content: center;
-                    }
-
-                    .courriel {
-
-                        @media only screen and (min-width: 1024px) {
-                            margin-right: 168px;
-                        }
-                    }
-
-                    .password {
-                        @media only screen and (min-width: 1024px) {
-                            margin-right: 100px;
-                        }
-                    }
-
-                    input {
-                        margin-left: 15px;
-                    }
-
-                }
-
-                .button {
-                    width: 110px;
-                    background-color: $g;
-                    color: $w;
-
-                    @media only screen and (min-width: 1024px) {
-                        align-self: flex-end;
-                        margin-top:15px;
-                    }
-                }
-            }
-
-            .inscription {
-                text-align: center;
-                position: relative;
-
-                img {
-                    width: 150px;
-
-                    @media only screen and (min-width: 1024px) {
-                        width: 265px;
-                    }
-                }
-                
-                p {
-                    position: absolute;
-                    top: 30%;
-                    left: 30%;
-                    color: $w;
-
-                    @media only screen and (min-width: 1024px) {
-                        font-size: 25px;
-                    }
-                }
-            }
+        font-size: 24px;
+        margin-bottom: 25px;
+        input {
+            width: 240px;
+            height: 20px;
+            margin-top: 10px;
+            border: 2px solid #C5E388 !important;
         }
     }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    width: 80%;
+    margin-left: 10%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    .concombre {
+        margin-top: 25px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
 }
+    
+
 
 /* Inscription ------------------------------------------------------------------------------*/
 #inscription {

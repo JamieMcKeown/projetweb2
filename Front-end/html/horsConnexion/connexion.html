@@ -1,39 +1,74 @@
 <div id="connexion">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
-        <div class="connexion">
-            <h3>Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div class="logoContainer">
+            <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
         </div>
-    </header>
-    <div class="contentConnexion">
-        <h1>Connexion</h1>
-        <div class="connexionBox">
-            <form action="">
-                <div>
-                    <h2 class="courriel">Courriel</h2>
-                    <input type="text">
-                </div>
-                <div>
-                    <h2 class="password">Mot de passe</h2>
-                    <input type="text">
-                </div>
-                <input type="button" value="Soumettre" class="button">
+
+
+
+        <div class="searchSection">
+            <input type="text" value="Recherche Rapide" class="searchBar">
+            <form @submit.prevent >
+                <input type="radio" id="distance2" name="choix2" value="distance2" >
+                <label style="margin-right: 5px" for="distance2">distance</label>
+                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
+                <label style="margin-right: 5px"for="jardinier2">jardinier</label>
+                <input type="radio" id="potager2" name="choix2" value="potager2">
+                <label for="potager2">potager</label>
+                
             </form>
-            <div class="inscription">
-                <img src="../../images/concombre.png" alt="background de l'inscription">
-                <p @click="inscriptionPage">Inscription</p>
+            <input type="button" value="soumettre" class="submit">
+            
+        </div>
+        <div class="connexion">     
+            <img  @click="homepageRoute" class="menu" src="../../images/accueil.png" alt="menu">
+        </div>
+
+
+        <!-- mobile search and connect features -->
+
+        <!-- <div style="display: none" class="mobileSearch">
+            <button class="login" @click="connexionPage">Connexion</button>
+            <div class="searchFeatures">
+                <input type="text" value="Recherche Rapide" class="searchBar">
+                <input type="button" value="soumettre" class="submit">
             </div>
+        </div> -->
+
+        <div   class="twoTomatoes">
+            <img  @click="homepageRoute"  src="../../images/accueil.png" alt="menu">
+            <img   class="searchTomatoe" src="../../images/rechercheRapide.png" alt="menu">
+        </div>
+        
+       
+
+      
+       
+    </header>
+    <div class="connexionBody">
+        <h1>connexion</h1>
+        <div class="inputArea">
+            <form @submit.prevent>
+                <label for="userCourriel">courriel</label><br>
+                <input class="userCourriel "type="text" name="courrielInput" ><br>
+                <label for="userMDP">mot de passe</label><br>
+                <input class="userMDP" type="text" name="courrielInput"><br>
+            </form>
+        </div>
+        <div class="concombre">
+            <img @click="inscriptionPage" src="../../images/inscrire.png" alt="">
         </div>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-            <h3>Suivez-nous sur Facebook</h3>
+    <div class="footer">
+        <div class="suivezNous">
+            <p>suivez-nous sur les reseaux sociaux</p>
         </div>
-        <div class="reseauxSociaux">
-            <img src="images/insta_mobile.png" alt="instagram">
-            <h3>Suivez-nous sur Instagram</h3>
+        <div class="iconHolder">
+            <img src="../../images/fb_mobile.png" alt="">
+            <img src="../../images/insta_mobile.png" alt="">
         </div>
-    </footer>
+        <div class="dreamTeam">
+            <p>une compagnie du groupe dream team</p>
+        </div>
+    </div>
 </div>
