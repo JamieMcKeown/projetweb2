@@ -724,7 +724,11 @@ html, body, #app {
     flex-direction: row;
     justify-content: center;
     img {
+        box-shadow: 5px 5px rgba(0,0,0,0.2);
         height: 120px;
+        width: 90%;
+        
+        
     }
     
    
