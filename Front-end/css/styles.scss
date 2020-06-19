@@ -698,19 +698,35 @@ html, body, #app {
 }
 
 /* Footer -----------------------------------------------------------------------------------*/
-   .footer {
-       height: 75px;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       width: 90%;
-       margin-left: 5%;
-       position: relative;
-       top: 15%;
-       align-items: center;
-       p {
-           font-size: 18px;
-       }
+//    .footer {
+//        height: 75px;
+//        display: flex;
+//        flex-direction: column;
+//        justify-content: center;
+//        width: 90%;
+//        margin-left: 5%;
+//        position: relative;
+//        top: 15%;
+//        align-items: center;
+//        p {
+//            font-size: 18px;
+//        }
 
-   }
+//    }
+
+
+.newFooter {
+    margin-top: 100px;
+    width: 90%;
+    margin-left: 5%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+        height: 120px;
+    }
+    
+   
+}
 }

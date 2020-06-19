@@ -3,8 +3,7 @@ html, body, #app {
   margin: 0px;
   font-family: "GardensC";
   background-image: url("../images/web_background.png");
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
@@ -16,19 +15,10 @@ html, body, #app {
 }
 
 html header, body header, #app header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 175px;
 }
 
@@ -58,16 +48,9 @@ html header input[type="radio"], body header input[type="radio"], #app header in
 html header .connexion, body header .connexion, #app header .connexion {
   margin-right: 20px;
   width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 html header .connexion img, body header .connexion img, #app header .connexion img {
@@ -79,13 +62,8 @@ html header .searchTomatoe, body header .searchTomatoe, #app header .searchTomat
 }
 
 html header .searchSection, body header .searchSection, #app header .searchSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 15%;
 }
 
@@ -97,13 +75,8 @@ html header .searchSection .searchBar, body header .searchSection .searchBar, #a
 }
 
 html header .searchSection form, body header .searchSection form, #app header .searchSection form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin-bottom: -10px;
   margin-left: 2px;
 }
@@ -127,16 +100,9 @@ html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
   }
   html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
     padding-right: 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   html header .logoContainer, body header .logoContainer, #app header .logoContainer {
     width: 70%;
@@ -151,13 +117,8 @@ html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
     border: 2px solid white;
   }
   html header .mobileSearch .searchFeatures, body header .mobileSearch .searchFeatures, #app header .mobileSearch .searchFeatures {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   html header .mobileSearch .searchBar, body header .mobileSearch .searchBar, #app header .mobileSearch .searchBar {
     border: 2px solid #C5E388 !important;
@@ -174,16 +135,9 @@ html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
 @media screen and (max-width: 767px) {
   html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
     padding-right: 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   html header .twoTomatoes img, body header .twoTomatoes img, #app header .twoTomatoes img {
     height: 100px;
@@ -193,16 +147,9 @@ html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
 @media screen and (max-width: 500px) {
   html header .twoTomatoes, body header .twoTomatoes, #app header .twoTomatoes {
     padding-right: 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   html header .twoTomatoes img, body header .twoTomatoes img, #app header .twoTomatoes img {
     height: 75px;
@@ -215,21 +162,14 @@ html #accueil, body #accueil, #app #accueil {
 }
 
 html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
 
 @media only screen and (max-width: 1023px) {
   html #accueil .contentAccueil .potagers, html #accueil .contentAccueil .jardiniers, body #accueil .contentAccueil .potagers, body #accueil .contentAccueil .jardiniers, #app #accueil .contentAccueil .potagers, #app #accueil .contentAccueil .jardiniers {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -245,16 +185,10 @@ html #accueil .contentAccueil .potagers h2, html #accueil .contentAccueil .jardi
 
 html #accueil .contentAccueil .potagers .sections, html #accueil .contentAccueil .jardiniers .sections, body #accueil .contentAccueil .potagers .sections, body #accueil .contentAccueil .jardiniers .sections, #app #accueil .contentAccueil .potagers .sections, #app #accueil .contentAccueil .jardiniers .sections {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -274,27 +208,15 @@ html .connexionBody, body .connexionBody, #app .connexionBody {
   width: 80%;
   margin-left: 10%;
   height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 html .connexionBody .inputArea, body .connexionBody .inputArea, #app .connexionBody .inputArea {
   margin-top: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   font-size: 24px;
   margin-bottom: 25px;
 }
@@ -313,16 +235,9 @@ html .connexionBody h1, body .connexionBody h1, #app .connexionBody h1 {
 
 html .connexionBody .concombre, body .connexionBody .concombre, #app .connexionBody .concombre {
   margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 html #inscription, body #inscription, #app #inscription {
@@ -331,13 +246,8 @@ html #inscription, body #inscription, #app #inscription {
 }
 
 html #inscription .contentInscription, body #inscription .contentInscription, #app #inscription .contentInscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -354,23 +264,14 @@ html #inscription .contentInscription h1, body #inscription .contentInscription 
 }
 
 html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 @media only screen and (min-width: 1024px) {
   html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
   html #inscription .contentInscription form .sectionUn, body #inscription .contentInscription form .sectionUn, #app #inscription .contentInscription form .sectionUn {
     margin-left: 75px;
@@ -384,28 +285,16 @@ html #inscription .contentInscription form, body #inscription .contentInscriptio
 
 @media only screen and (max-width: 1023px) {
   html #inscription .contentInscription form, body #inscription .contentInscription form, #app #inscription .contentInscription form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html #inscription .contentInscription form .champs, body #inscription .contentInscription form .champs, #app #inscription .contentInscription form .champs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   html #inscription .contentInscription form .champs h2, body #inscription .contentInscription form .champs h2, #app #inscription .contentInscription form .champs h2 {
     margin-right: 15px;
@@ -436,23 +325,15 @@ html #modifProduit, body #modifProduit, #app #modifProduit {
 }
 
 html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
     height: 68%;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     overflow: scroll;
     text-align: center;
   }
@@ -460,32 +341,24 @@ html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit
 
 @media only screen and (min-width: 1023px) {
   html #modifProduit .contentModifProduit, body #modifProduit .contentModifProduit, #app #modifProduit .contentModifProduit {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 1023px) {
   html #modifProduit .contentModifProduit form, body #modifProduit .contentModifProduit form, #app #modifProduit .contentModifProduit form {
     width: 60%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -502,19 +375,10 @@ html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .co
 
 @media only screen and (min-width: 1024px) {
   html #modifProduit .contentModifProduit form .champs, body #modifProduit .contentModifProduit form .champs, #app #modifProduit .contentModifProduit form .champs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 45px;
   }
   html #modifProduit .contentModifProduit form .champs h2, body #modifProduit .contentModifProduit form .champs h2, #app #modifProduit .contentModifProduit form .champs h2 {
@@ -528,18 +392,10 @@ html #modifProduit .contentModifProduit form .produitImg, body #modifProduit .co
 
 @media only screen and (min-width: 1024px) {
   html #modifProduit .contentModifProduit form .buttons, body #modifProduit .contentModifProduit form .buttons, #app #modifProduit .contentModifProduit form .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
     margin-bottom: 14px;
   }
 }
@@ -548,9 +404,7 @@ html #modifProduit .contentModifProduit form .buttons .button, body #modifProdui
   height: 55px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
@@ -560,27 +414,15 @@ html #modifProduit .contentModifProduit form .buttons .annuler, body #modifProdu
 }
 
 html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProduit .contentModifProduit .choixProduit .carrousel, body #modifProduit .contentModifProduit .choixProduit .carrousel, #app #modifProduit .contentModifProduit .choixProduit .carrousel {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -589,17 +431,12 @@ html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails, bo
 }
 
 html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span, #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: 343px;
   }
 }
@@ -625,21 +462,18 @@ html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, htm
 }
 
 html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow, #app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -649,16 +483,9 @@ html #modifProfil, body #modifProfil, #app #modifProfil {
 }
 
 html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #app #modifProfil .contentModifProfil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -671,28 +498,20 @@ html #modifProfil .contentModifProfil, body #modifProfil .contentModifProfil, #a
 }
 
 html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   html #modifProfil .contentModifProfil form, body #modifProfil .contentModifProfil form, #app #modifProfil .contentModifProfil form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -701,28 +520,16 @@ html #modifProfil .contentModifProfil form .firstSection h2, body #modifProfil .
   padding-top: 15px;
   background-image: url("../images/potager.png");
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProfil .contentModifProfil form .firstSection .champs, body #modifProfil .contentModifProfil form .firstSection .champs, #app #modifProfil .contentModifProfil form .firstSection .champs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 45px;
   }
   html #modifProfil .contentModifProfil form .firstSection .champs h2, body #modifProfil .contentModifProfil form .firstSection .champs h2, #app #modifProfil .contentModifProfil form .firstSection .champs h2 {
@@ -738,9 +545,7 @@ html #modifProfil .contentModifProfil form .firstSection .champs .modifButton, b
   height: 25px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
@@ -750,27 +555,16 @@ html #modifProfil .contentModifProfil form .thirdSection h2, body #modifProfil .
   padding-top: 15px;
   background-image: url("../images/potager.png");
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProfil .contentModifProfil form .thirdSection .buttons, body #modifProfil .contentModifProfil form .thirdSection .buttons, #app #modifProfil .contentModifProfil form .thirdSection .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
     margin-bottom: 14px;
   }
 }
@@ -779,9 +573,7 @@ html #modifProfil .contentModifProfil form .thirdSection .buttons .button, body 
   height: 55px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
@@ -796,17 +588,10 @@ html #profil, body #profil, #app #profil {
 }
 
 html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentProfil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -820,41 +605,26 @@ html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentP
 
 html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (max-width: 1023px) {
   html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html #profil .contentProfil .contenu, body #profil .contentProfil .contenu, #app #profil .contentProfil .contenu {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil .contenu .secondSection, body #profil .contentProfil .contenu .firstSection, body #profil .contentProfil .contenu .secondSection, #app #profil .contentProfil .contenu .firstSection, #app #profil .contentProfil .contenu .secondSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -866,16 +636,9 @@ html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil 
 @media only screen and (max-width: 1023px) {
   html #profil .contentProfil .contenu .firstSection, html #profil .contentProfil .contenu .secondSection, body #profil .contentProfil .contenu .firstSection, body #profil .contentProfil .contenu .secondSection, #app #profil .contentProfil .contenu .firstSection, #app #profil .contentProfil .contenu .secondSection {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -885,52 +648,29 @@ html #profil .contentProfil .contenu .firstSection h2, html #profil .contentProf
   padding-top: 15px;
   background-image: url("../images/potager.png");
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 html #profil .contentProfil .contenu .thirdSection, body #profil .contentProfil .contenu .thirdSection, #app #profil .contentProfil .contenu .thirdSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
   html #profil .contentProfil .contenu .thirdSection form .buttons, body #profil .contentProfil .contenu .thirdSection form .buttons, #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html #profil .contentProfil .contenu .thirdSection form .buttons, body #profil .contentProfil .contenu .thirdSection form .buttons, #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
     margin-bottom: 14px;
   }
 }
@@ -939,35 +679,21 @@ html #profil .contentProfil .contenu .thirdSection form .buttons .button, body #
   height: 55px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
 
-html .footer, body .footer, #app .footer {
-  height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+html .newFooter, body .newFooter, #app .newFooter {
+  margin-top: 100px;
   width: 90%;
   margin-left: 5%;
-  position: relative;
-  top: 15%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-html .footer p, body .footer p, #app .footer p {
-  font-size: 18px;
+html .newFooter img, body .newFooter img, #app .newFooter img {
+  height: 120px;
 }
-/*# sourceMappingURL=styles.css.map */
