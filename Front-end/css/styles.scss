@@ -578,6 +578,73 @@ html, body, #app {
     }
 }
 
+/* Profil -----------------------------------------------------------------------------------*/
+#profil {
+    height: 100%;
+    width: 100%;
+
+    .contentProfil {
+        display: flex;
+
+       
+
+        @media only screen and (max-width: 1023px) {
+            height: 68%;
+            width: 100%;
+            overflow: scroll;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .firstSection, .secondSection {
+
+            h2 {
+                height: 75px;
+                width: 100%;
+                padding-top: 15px;
+                background-image: url("../images/potager.png");
+                color: $w;
+                display: flex;
+                align-self: flex-start;
+            }
+
+            @media only screen and (max-width: 1023px) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .thirdSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            form {
+
+                .buttons {
+
+                    @media only screen and (max-width: 1023px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+    
+                    .button {
+                        height: 55px;
+                        width: 200px;
+                        margin-top: 15px;
+                        align-self: center;
+                        background-color: $g;
+                        color: $w;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* Footer -----------------------------------------------------------------------------------*/
     footer {
         width: 100%;

@@ -10,6 +10,7 @@ html, body, #app {
   /* Inscription ------------------------------------------------------------------------------*/
   /* Modification de produit ------------------------------------------------------------------*/
   /* Modification de produit ------------------------------------------------------------------*/
+  /* Profil -----------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
 
@@ -797,6 +798,98 @@ html #modifProfil .contentModifProfil form .thirdSection .buttons .button, body 
 
 html #modifProfil .contentModifProfil form .thirdSection .buttons .annuler, body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler, #app #modifProfil .contentModifProfil form .thirdSection .buttons .annuler {
   background-color: red;
+}
+
+html #profil, body #profil, #app #profil {
+  height: 100%;
+  width: 100%;
+}
+
+html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentProfil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #profil .contentProfil, body #profil .contentProfil, #app #profil .contentProfil {
+    height: 68%;
+    width: 100%;
+    overflow: scroll;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+html #profil .contentProfil .firstSection h2, html #profil .contentProfil .secondSection h2, body #profil .contentProfil .firstSection h2, body #profil .contentProfil .secondSection h2, #app #profil .contentProfil .firstSection h2, #app #profil .contentProfil .secondSection h2 {
+  height: 75px;
+  width: 100%;
+  padding-top: 15px;
+  background-image: url("../images/potager.png");
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #profil .contentProfil .firstSection, html #profil .contentProfil .secondSection, body #profil .contentProfil .firstSection, body #profil .contentProfil .secondSection, #app #profil .contentProfil .firstSection, #app #profil .contentProfil .secondSection {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+html #profil .contentProfil .thirdSection, body #profil .contentProfil .thirdSection, #app #profil .contentProfil .thirdSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+  html #profil .contentProfil .thirdSection form .buttons, body #profil .contentProfil .thirdSection form .buttons, #app #profil .contentProfil .thirdSection form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html #profil .contentProfil .thirdSection form .buttons .button, body #profil .contentProfil .thirdSection form .buttons .button, #app #profil .contentProfil .thirdSection form .buttons .button {
+  height: 55px;
+  width: 200px;
+  margin-top: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #A4D626;
+  color: white;
 }
 
 html footer, body footer, #app footer {
