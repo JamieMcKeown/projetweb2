@@ -62,6 +62,7 @@ body header .submit,
 html header .logoContainer,
 body header .logoContainer,
 #app header .logoContainer {
+  margin-top: 10px;
   width: 34%;
 }
 
