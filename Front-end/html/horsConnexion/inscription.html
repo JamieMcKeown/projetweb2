@@ -1,10 +1,49 @@
 <div id="inscription">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
-        <div class="connexion">
-            <h3>Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div class="logoContainer">
+            <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
         </div>
+
+
+
+        <div class="searchSection">
+            <input type="text" value="Recherche Rapide" class="searchBar">
+            <form @submit.prevent >
+                <input type="radio" id="distance2" name="choix2" value="distance2" >
+                <label style="margin-right: 5px" for="distance2">distance</label>
+                <input type="radio" id="jardinier2" name="choix2" value="jardinier2">
+                <label style="margin-right: 5px"for="jardinier2">jardinier</label>
+                <input type="radio" id="potager2" name="choix2" value="potager2">
+                <label for="potager2">potager</label>
+                
+            </form>
+            <input type="button" value="soumettre" class="submit">
+            
+        </div>
+        <div class="connexion">     
+            <img  @click="connexionPage" class="menu" src="../../images/connexion.png" alt="menu">
+        </div>
+
+
+        <!-- mobile search and connect features -->
+
+        <!-- <div style="display: none" class="mobileSearch">
+            <button class="login" @click="connexionPage">Connexion</button>
+            <div class="searchFeatures">
+                <input type="text" value="Recherche Rapide" class="searchBar">
+                <input type="button" value="soumettre" class="submit">
+            </div>
+        </div> -->
+
+        <div   class="twoTomatoes">
+            <img  @click="connexionPage"  src="../../images/connexion.png" alt="menu">
+            <img   class="searchTomatoe" src="../../images/rechercheRapide.png" alt="menu">
+        </div>
+        
+       
+
+      
+       
     </header>
     <div class="contentInscription">
         <h1>Inscription</h1>
@@ -56,14 +95,8 @@
             </div>
         </form>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-            <h3>Suivez-nous sur Facebook</h3>
-        </div>
-        <div class="reseauxSociaux">
-            <img src="images/insta_mobile.png" alt="instagram">
-            <h3>Suivez-nous sur Instagram</h3>
-        </div>
-    </footer>
+    <div class="newFooter">
+        <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
+        <h3>une production DreamTeam</h3>
+    </div>
 </div>
