@@ -21,18 +21,19 @@ html header,
 body header,
 #app header {
   background-image: url("../images/footer.png");
-  background-position: center;
+  background-position: 35% 65%;
   object-fit: cover;
   width: 80%;
   margin-left: 10%;
   margin-top: 15px;
   margin-bottom: 15px;
-  border-radius: 25px;
+  border-radius: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 140px;
+  height: 160px;
 }
 
 html header button,
@@ -72,19 +73,45 @@ body header .dropdown-menu,
 html header .dropdown,
 body header .dropdown,
 #app header .dropdown {
-  width: 30%;
+  width: 20%;
 }
 
 html header .logoContainer,
 body header .logoContainer,
 #app header .logoContainer {
+  margin-top: -20px;
   background-image: url("../images/logoFinale(blanc).svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   margin-left: 25px;
-  width: 50%;
+  width: 80%;
   height: 125px;
+}
+
+html header .logoContainer p,
+body header .logoContainer p,
+#app header .logoContainer p {
+  font-size: 14px;
+  position: relative;
+  top: 92%;
+  left: 7%;
+}
+
+@media only screen and (min-width: 768px) {
+  html header .logoContainer,
+  body header .logoContainer,
+  #app header .logoContainer {
+    width: 400px;
+  }
+  html header .logoContainer p,
+  body header .logoContainer p,
+  #app header .logoContainer p {
+    font-size: 20px;
+    position: relative;
+    top: 92%;
+    left: 56%;
+  }
 }
 
 html header .redTomatoe,
@@ -835,7 +862,7 @@ body #profil .contentProfil .contenu .thirdSection form .buttons .button,
 html .newFooter,
 body .newFooter,
 #app .newFooter {
-  border-radius: 25px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
