@@ -22,13 +22,13 @@ body,
     /* Header -----------------------------------------------------------------------------------*/
     header {
         background-image: url("../images/footer.png");
-        filter: grayscale(0.1);
         background-position: center;
         object-fit: cover;
         width: 80%;
         margin-left: 10%;
         margin-top: 15px;
         margin-bottom: 15px;
+        border-radius: 25px;
 
         button,
         input,
@@ -39,164 +39,47 @@ body,
             ;
         }
 
+        .dropdown-menu {
+            min-width: 0rem!important;
+            margin-top: 10px!important;
+            left: -15px!important;
+        
+        }
+
+        @media only screen and (min-width: 992px){
+            .dropdown-menu {
+                left: 140px!important;
+            }
+        }
+        
+      
+
         display: flex;
         flex-direction: row;
         justify-content:space-between;
         align-items: center;
-        height: 130px;
-
-        .submit {
-            margin-top: 10px !important;
-        }
-
-        .logoContainer {
-            margin-top: 10px;
-            width: 34%;
-        }
-
-        .logo {
-            margin-left: 20px;
-            height: 125px;
-            width: 90%;
-
-        }
-
-        input[type="radio"] {
-            margin-left: 0 !important;
-            border: 2px solid #C5E388 !important;
-        }
-
-        .connexion {
-            img {
-                height: 125px;
-
-            }
-
-            margin-right: 20px;
+        height: 140px;
+        .dropdown {
             width: 30%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
         }
-
-        .searchTomatoe {
-            margin-left: 10px;
-        }
-
-        .searchSection {
-            display: flex;
-            flex-direction: column;
-            width: 15%;
-
-            .searchBar {
-                height: 20px;
-                width: 220px;
-                margin-bottom: 5px;
-                border: 2px solid #C5E388 !important;
-
-            }
-
-            form {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: -10px;
-                margin-left: 2px;
-            }
-
-            .submit {
-                color: white;
-                width: 220px;
-                background-color: #C5E388 !important;
-                border: 1px solid white;
-                font-size: 18px;
-                font-family: "GardensC";
-            }
-        }
-
-        .twoTomatoes {
-            display: none;
+        .logoContainer {
+            background-image: url("../images/logoFinale\(blanc\).svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-left: 25px;
+            width: 50%;
+            height: 125px;
         }
 
 
-
-        @media screen and (max-width: 992px) {
-
-            .connexion,
-            .searchSection {
-                display: none;
-            }
-
-            .twoTomatoes {
-                padding-right: 5%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .logoContainer {
-                width: 70%;
-            }
-
-            .mobileSearch {
-                .login {
-                    background: #C5E388 !important;
-                    color: white;
-                    width: 138px;
-                    border: 2px solid white;
-                }
-
-                .searchFeatures {
-                    display: flex;
-                    flex-direction: row;
-                }
-
-                .searchBar {
-                    border: 2px solid #C5E388 !important;
-                }
-
-                .submit {
-                    color: white;
-
-                    background-color: #C5E388 !important;
-                    border: 1px solid white;
-                    font-size: 18px;
-                    font-family: "GardensC";
-                }
-
-                display: block !important;
-            }
-
-        }
-
-
-
-
-
-
-        @media screen and (max-width: 767px) {
-            .twoTomatoes {
-                padding-right: 5%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                img {
-                    height: 100px;
-                }
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            .twoTomatoes {
-                padding-right: 5%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                img {
-                    height: 75px;
-                }
-            }
+        .redTomatoe {
+            background-image: url("../images/hamburger.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 125px;
+            width: 30%;
         }
 
     }
@@ -752,6 +635,7 @@ body,
 
 
     .newFooter {
+        border-radius: 25px;
         display: flex;
         flex-direction: row;
         box-shadow: 10px 10px rgba(0,0,0,0.2) ;
