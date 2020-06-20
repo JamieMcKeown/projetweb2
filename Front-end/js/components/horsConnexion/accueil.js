@@ -16,6 +16,9 @@ export default tpl({
         
         connexionPage() {
             this.$router.push("/connexion")
+        },
+        inscriptionPage() {
+            this.$router.push("/inscription")
         }
     },
 })
