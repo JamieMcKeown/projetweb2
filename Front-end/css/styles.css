@@ -53,6 +53,22 @@ body header textarea,
   margin: 2px !important;
 }
 
+html header .dropdown-menu,
+body header .dropdown-menu,
+#app header .dropdown-menu {
+  min-width: 0rem !important;
+  margin-top: 10px !important;
+  left: -15px !important;
+}
+
+@media only screen and (min-width: 992px) {
+  html header .dropdown-menu,
+  body header .dropdown-menu,
+  #app header .dropdown-menu {
+    left: 140px !important;
+  }
+}
+
 html header .dropdown,
 body header .dropdown,
 #app header .dropdown {
