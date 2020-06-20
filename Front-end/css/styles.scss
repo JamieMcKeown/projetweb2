@@ -29,10 +29,10 @@ body,
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
-        box-shadow: 10px 10px rgba(0,0,0,0.2);
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: row;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         height: 160px;
 
@@ -46,21 +46,22 @@ body,
         }
 
         .dropdown-menu {
-            min-width: 0rem!important;
-            margin-top: 10px!important;
-            left: -15px!important;
-        
+            min-width: 0rem !important;
+            margin-top: 10px !important;
+            left: -15px !important;
+
         }
 
-        @media only screen and (min-width: 992px){
+        @media only screen and (min-width: 992px) {
             .dropdown-menu {
-                left: 140px!important;
+                left: 140px !important;
             }
         }
-    
+
         .dropdown {
             width: 20%;
         }
+
         .logoContainer {
             margin-top: -20px;
             background-image: url("../images/logoFinale\(blanc\).svg");
@@ -70,6 +71,7 @@ body,
             margin-left: 25px;
             width: 80%;
             height: 125px;
+
             p {
                 font-size: 14px;
                 position: relative;
@@ -78,9 +80,10 @@ body,
             }
         }
 
-        @media only screen and (min-width: 768px){
+        @media only screen and (min-width: 768px) {
             .logoContainer {
                 width: 400px;
+
                 p {
                     font-size: 20px;
                     position: relative;
@@ -103,55 +106,21 @@ body,
     }
 
     /* Accueil ----------------------------------------------------------------------------------*/
-    #accueil {
-        height: 100%;
+    .container {
         width: 100%;
 
-        .contentAccueil {
+        justify-content: center;
 
+        .row {
+            width: 90%;
+            margin-left: 5%;
+        }
 
-
-
-
-            .potagers,
-            .jardiniers {
-                display: flex;
-                align-items: center;
-                text-align: center;
-
-                @media only screen and (max-width: 1023px) {
-                    flex-direction: column;
-                }
-
-                h2 {
-                    width: 20%;
-
-                    @media only screen and (max-width: 1023px) {
-                        width: auto;
-                    }
-                }
-
-                .sections {
-                    width: 80%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    justify-content: space-around;
-
-                    @media only screen and (max-width: 1023px) {
-                        width: 100%;
-                    }
-
-                    .potager,
-                    .jardinier {
-                        height: 140px;
-                        width: 160px;
-                        margin-bottom: 15px;
-                        background-color: black;
-                    }
-                }
-            }
-
+        .potagerTitle {
+            background-color: rgba(0, 0, 0, 0.05);
+           
+            border-radius: 10px;
+            font-size: 48px !important;
         }
     }
 
@@ -656,7 +625,7 @@ body,
         border-radius: 10px;
         display: flex;
         flex-direction: row;
-        box-shadow: 10px 10px rgba(0,0,0,0.2) ;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
         position: relative;
         top: 15%;
 
@@ -673,17 +642,17 @@ body,
             left: 5%;
         }
 
-        
-            h3 {
-                margin-left: 10%;      
+
+        h3 {
+            margin-left: 10%;
         }
     }
 
-    @media only screen and (min-width: 767px){
-       .newFooter {
-           h3 {
-               margin-left: 50%;
-           }
-       }
-       }
+    @media only screen and (min-width: 767px) {
+        .newFooter {
+            h3 {
+                margin-left: 50%;
+            }
+        }
+    }
 }

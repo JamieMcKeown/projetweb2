@@ -125,95 +125,26 @@ body header .redTomatoe,
   width: 30%;
 }
 
-html #accueil,
-body #accueil,
-#app #accueil {
-  height: 100%;
+html .container,
+body .container,
+#app .container {
   width: 100%;
-}
-
-html #accueil .contentAccueil .potagers,
-html #accueil .contentAccueil .jardiniers,
-body #accueil .contentAccueil .potagers,
-body #accueil .contentAccueil .jardiniers,
-#app #accueil .contentAccueil .potagers,
-#app #accueil .contentAccueil .jardiniers {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #accueil .contentAccueil .potagers,
-  html #accueil .contentAccueil .jardiniers,
-  body #accueil .contentAccueil .potagers,
-  body #accueil .contentAccueil .jardiniers,
-  #app #accueil .contentAccueil .potagers,
-  #app #accueil .contentAccueil .jardiniers {
-    flex-direction: column;
-  }
-}
-
-html #accueil .contentAccueil .potagers h2,
-html #accueil .contentAccueil .jardiniers h2,
-body #accueil .contentAccueil .potagers h2,
-body #accueil .contentAccueil .jardiniers h2,
-#app #accueil .contentAccueil .potagers h2,
-#app #accueil .contentAccueil .jardiniers h2 {
-  width: 20%;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #accueil .contentAccueil .potagers h2,
-  html #accueil .contentAccueil .jardiniers h2,
-  body #accueil .contentAccueil .potagers h2,
-  body #accueil .contentAccueil .jardiniers h2,
-  #app #accueil .contentAccueil .potagers h2,
-  #app #accueil .contentAccueil .jardiniers h2 {
-    width: auto;
-  }
-}
-
-html #accueil .contentAccueil .potagers .sections,
-html #accueil .contentAccueil .jardiniers .sections,
-body #accueil .contentAccueil .potagers .sections,
-body #accueil .contentAccueil .jardiniers .sections,
-#app #accueil .contentAccueil .potagers .sections,
-#app #accueil .contentAccueil .jardiniers .sections {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-around;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #accueil .contentAccueil .potagers .sections,
-  html #accueil .contentAccueil .jardiniers .sections,
-  body #accueil .contentAccueil .potagers .sections,
-  body #accueil .contentAccueil .jardiniers .sections,
-  #app #accueil .contentAccueil .potagers .sections,
-  #app #accueil .contentAccueil .jardiniers .sections {
-    width: 100%;
-  }
+html .container .row,
+body .container .row,
+#app .container .row {
+  width: 90%;
+  margin-left: 5%;
 }
 
-html #accueil .contentAccueil .potagers .sections .potager,
-html #accueil .contentAccueil .potagers .sections .jardinier,
-html #accueil .contentAccueil .jardiniers .sections .potager,
-html #accueil .contentAccueil .jardiniers .sections .jardinier,
-body #accueil .contentAccueil .potagers .sections .potager,
-body #accueil .contentAccueil .potagers .sections .jardinier,
-body #accueil .contentAccueil .jardiniers .sections .potager,
-body #accueil .contentAccueil .jardiniers .sections .jardinier,
-#app #accueil .contentAccueil .potagers .sections .potager,
-#app #accueil .contentAccueil .potagers .sections .jardinier,
-#app #accueil .contentAccueil .jardiniers .sections .potager,
-#app #accueil .contentAccueil .jardiniers .sections .jardinier {
-  height: 140px;
-  width: 160px;
-  margin-bottom: 15px;
-  background-color: black;
+html .container .potagerTitle,
+body .container .potagerTitle,
+#app .container .potagerTitle {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-size: 48px !important;
 }
 
 html .connexionBody,
