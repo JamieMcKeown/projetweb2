@@ -14,6 +14,7 @@ class CreatePotagersTable extends Migration
     public function up()
     {
         Schema::create('potagers', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->integer('rating');

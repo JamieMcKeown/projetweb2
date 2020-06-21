@@ -14,6 +14,7 @@ class CreateTyperecoltesTable extends Migration
     public function up()
     {
         Schema::create('typerecoltes', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->string('nom', 100);
             $table->string('cupcode', 100);

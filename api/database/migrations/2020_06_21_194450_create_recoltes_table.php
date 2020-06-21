@@ -14,6 +14,7 @@ class CreateRecoltesTable extends Migration
     public function up()
     {
         Schema::create('recoltes', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->foreignId('typerecolte_id')->constrained();
             $table->foreignId('potager_id')->constrained();
