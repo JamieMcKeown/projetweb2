@@ -3,71 +3,85 @@
         <div @click="homepageRoute" class="logoContainer">
             
         </div>
-        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              
-            
-          
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
-              <a class="dropdown-item" href="#">potager</a>
-              <a class="dropdown-item" href="#">jardinier</a>
-              <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
-            </div>
-          </div>
-        </header>
+        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+            <a class="dropdown-item" href="#">potager</a>
+            <a class="dropdown-item" href="#">jardinier</a>
+            <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
+        </div>
+    </div>
+</header>
 
-    <div class="contentInscription">
-        <h1>Inscription</h1>
-        <form action="">
-            <div class="sectionUn">
-                <div class="champs">
-                    <h2>Prénom</h2>
-                    <input type="text">
+<div class="jumbotron text-center">
+    <h1>inscription</h1>
+    <hr class="my-4">
+    <form @submit.prevent>
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="prenom">prenom</label>
+                    <input type="text" name="prenom" id="">
                 </div>
-                <div class="champs">
-                    <h2>Nom</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Courriel</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Mot de passe</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Confirmation</h2>
-                    <input type="text">
+                <div class="col-xs-12">
+                    <label for="address">addresse</label>
+                    <input type="text" name="addresse" id="">
                 </div>
             </div>
-            <div class="sectionDeux">
-                <div class="champs">
-                    <h2>Adresse</h2>
-                    <input type="text">
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="nom">nom</label>
+                    <input type="text" name="nom" id="">
                 </div>
-                <div class="champs">
-                    <h2>Ville</h2>
-                    <input type="text">
+                <div class="col-xs-12">
+                    <label for="ville">ville</label>
+                    <input type="text" name="ville" id="">
                 </div>
-                <div class="champs">
-                    <h2>Code postal</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Question secrète</h2>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <h2>Réponse</h2>
-                    <input type="text">
-                </div>
-                <input type="button" value="S'inscrire" class="button">
             </div>
-        </form>
-    </div>
-    <div class="newFooter">
-        <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
-        <h3>une production DreamTeam</h3>
-    </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="courriel">courriel</label>
+                    <input type="email" name="courriel" id="">
+                </div>
+                <div class="col-xs-12">
+                    <label for="code postale">code postale</label>
+                    <input type="text" name="code postale" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="mot de passe">mot de passe</label>
+                    <input type="password" name="motdepasse" id="">
+                </div>
+                <div class="col-xs-12">
+                    <label for="secretquestion">secret question</label>
+                    <input type="text" name="secretquestion" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="confirmation">confirmation</label>
+                    <input type="password" name="confirmation" id="">
+                </div>
+                <div class="col-xs-12">
+                    <label for="reponse">reponse</label>
+                    <input type="text" name="reponse" id="">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                
+                
+                    <button type="submit" class="btn">soumettre</button>
+                
+            </div>
+        </div>
+    </form>
+
+  </div>
+
+<div class="newFooter">
+    <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
+    <h3>une production DreamTeam</h3>
+</div>
 </div>

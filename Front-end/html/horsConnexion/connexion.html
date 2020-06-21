@@ -12,10 +12,11 @@
         </div>
     </header>
     
-    <div class="jumbotron text-center">
+    <div class="jumbotron connexionJumbo text-center">
         <h1>connexion</h1>
         <hr class="my-4">
-        <form>
+        <form @submit.prevent>
+            
             <div class="form-group">
               <label for="exampleInputEmail1">courriel</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

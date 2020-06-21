@@ -126,7 +126,7 @@ body,
 
 
     /* Connexion --------------------------------------------------------------------------------*/
-    .jumbotron {
+    .jumbotron  {
         width: 80%;
         margin-left: 10%;
         background-color: rgba(255, 255, 255, 0.6)!important;
@@ -138,89 +138,36 @@ body,
         }
         label {
             font-size: 24px!important;
+            
         }
         input, hr {
             border : 2px solid $green;
+            width: 40%!important;
+            margin-left: 30%!important;
+            justify-self: center;
         }
     }
 
 
 
     /* Inscription ------------------------------------------------------------------------------*/
-    #inscription {
-        height: 100%;
-        width: 100%;
-
-        .contentInscription {
-            display: flex;
-            flex-direction: column;
-
-            @media only screen and (max-width: 1023px) {
-                height: 68%;
-                width: 100%;
-                overflow: scroll;
-                text-align: center;
+    .jumbotron {
+        .container {
+            label {
+                font-size: 20px!important;
+                width: 150px!important;
             }
-
-            h1 {
-                text-align: center;
+            input {
+                width: 150px!important;
             }
-
-            form {
-                display: flex;
-                flex-direction: row;
-
-                @media only screen and (min-width: 1024px) {
-                    align-items: center;
-                    justify-content: center;
-
-                    .sectionUn {
-                        margin-left: 75px;
-                    }
-
-                    .sectionDeux {
-                        margin-right: 75px;
-                        margin-left: 50px;
-                        padding-top: 30px;
-                    }
-                }
-
-                @media only screen and (max-width: 1023px) {
-                    flex-direction: column;
-                }
-
-                .champs {
-
-                    @media only screen and (min-width: 1024px) {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        h2 {
-                            margin-right: 15px;
-                        }
-                    }
-
-                    input {
-                        height: 35px;
-                    }
-                }
-
-                .button {
-                    height: 35px;
-                    width: 176px;
-                    margin-top: 15px;
-                    background-color: $green;
-                    color: white;
-
-                    @media only screen and (min-width: 1024px) {
-                        margin-left: 192px;
-                    }
-                }
+            button {
+                width: 200px!important;
+                border: 5px solid white!important;
             }
         }
     }
+
+    
 
     /* Modification de produit ------------------------------------------------------------------*/
     #modifProduit {
