@@ -1,4 +1,4 @@
-<div id="connexion">
+<div>
     <header>
         <div @click="homepageRoute" class="logoContainer">         
         </div>
@@ -12,22 +12,25 @@
         </div>
     </header>
     
-    
-    <div class="connexionBody">
+    <div class="jumbotron text-center">
         <h1>connexion</h1>
-        <div class="inputArea">
-            <form @submit.prevent>
-                <label for="userCourriel">courriel</label><br>
-                <input class="userCourriel "type="text" name="courrielInput" ><br>
-                <label for="userMDP">mot de passe</label><br>
-                <input class="userMDP" type="text" name="courrielInput"><br>
-            </form>
-        </div>
-        <div class="concombre">
-            <img @click="inscriptionPage" src="../../images/inscrire.png" alt="">
-        </div>
-    </div>
-    
+        <hr class="my-4">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">courriel</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">mot de passe</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn">soumettre</button>
+            <button  @click="inscriptionPage" class="btn">inscrire</button>
+          </form>
+
+      </div>
+ 
+   
     
     
     <div class="newFooter">

@@ -147,50 +147,35 @@ body .container .potagerTitle,
   font-size: 48px !important;
 }
 
-html .connexionBody,
-body .connexionBody,
-#app .connexionBody {
+html .jumbotron,
+body .jumbotron,
+#app .jumbotron {
   width: 80%;
   margin-left: 10%;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 10px;
 }
 
-html .connexionBody .inputArea,
-body .connexionBody .inputArea,
-#app .connexionBody .inputArea {
-  margin-top: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 24px;
-  margin-bottom: 25px;
+html .jumbotron .btn,
+body .jumbotron .btn,
+#app .jumbotron .btn {
+  background-color: #A4D626 !important;
+  color: white !important;
+  width: 95px !important;
 }
 
-html .connexionBody .inputArea input,
-body .connexionBody .inputArea input,
-#app .connexionBody .inputArea input {
-  width: 240px;
-  height: 20px;
-  margin-top: 10px;
-  border: 2px solid #C5E388 !important;
+html .jumbotron label,
+body .jumbotron label,
+#app .jumbotron label {
+  font-size: 24px !important;
 }
 
-html .connexionBody h1,
-body .connexionBody h1,
-#app .connexionBody h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-html .connexionBody .concombre,
-body .connexionBody .concombre,
-#app .connexionBody .concombre {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+html .jumbotron input, html .jumbotron hr,
+body .jumbotron input,
+body .jumbotron hr,
+#app .jumbotron input,
+#app .jumbotron hr {
+  border: 2px solid #A4D626;
 }
 
 html #inscription,
