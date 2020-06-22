@@ -11,8 +11,10 @@ export default tpl({
         }
     },
     mounted(){
-       this.fetchRandomUser()
+       this.fetchRandomUser(4)
+       this.fetchRandomPotager(4)
        console.log(this.users)
+       console.log(this.potagers)
     },
     methods: {
         homepageRoute() {
@@ -26,11 +28,10 @@ export default tpl({
             this.$router.push("/inscription")
         },
 
-        fetchRandomUser() {
+        fetchRandomUser(amount) {
             let api_url = this.api + "user/random/4"
             http_get(api_url).then(data => {
-                //console.log(data)
-                for (let i = 0; i < 4; i++){
+                for (let i = 0; i < amount; i++){
                     let id = data[i].id
                     let prenom = data[i].prenom
                     let nom = data[i].nom
@@ -39,15 +40,26 @@ export default tpl({
                         firstname: prenom,
                         lastname: nom,
                     }
-                    //console.log(toAdd)
-                    this.users = this.users.concat(toAdd)
-                    console.log(this.users)
+                    Vue.set(this.users, i, toAdd)
                 }
             })
         },
 
-        fetchRandomPotager() {
+        fetchRandomPotager(amount) {
             let api_url = this.api + "potager/random/4"
+            http_get(api_url).then(data => {
+                for (let i = 0; i < amount; i++){
+                    let id = data[i].id
+                    let prenom = data[i].Prenom
+                    let nom = data[i].Nom
+                    let toAdd = {
+                        potagerID: id,
+                        firstname: prenom,
+                        lastname: nom,
+                    }
+                    Vue.set(this.potagers, i, toAdd)
+                }
+            })
         }
     },
 })
