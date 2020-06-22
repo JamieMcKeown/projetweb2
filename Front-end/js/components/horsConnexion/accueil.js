@@ -35,10 +35,12 @@ export default tpl({
                     let id = data[i].id
                     let prenom = data[i].prenom
                     let nom = data[i].nom
+                    let image = data[i].image
                     let toAdd = {
                         userID: id,
                         firstname: prenom,
                         lastname: nom,
+                        picture: image,
                     }
                     Vue.set(this.users, i, toAdd)
                 }
@@ -52,10 +54,12 @@ export default tpl({
                     let id = data[i].id
                     let prenom = data[i].Prenom
                     let nom = data[i].Nom
+                    let image = data[i].image
                     let toAdd = {
                         potagerID: id,
                         firstname: prenom,
                         lastname: nom,
+                        picture: image,
                     }
                     Vue.set(this.potagers, i, toAdd)
                 }
