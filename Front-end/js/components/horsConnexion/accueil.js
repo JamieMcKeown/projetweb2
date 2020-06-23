@@ -11,10 +11,14 @@ export default tpl({
         }
     },
     mounted(){
-       this.fetchRandomUser(4)
-       this.fetchRandomPotager(4)
-       console.log(this.users)
-       console.log(this.potagers)
+       this.fetchRandomUser(4).then(data => {
+           this.users = data
+           console.log(this.users[0].firstname)
+       })
+       this.fetchRandomPotager(4).then(data => {
+           this.potagers = data
+       })
+       
     },
     methods: {
         homepageRoute() {
@@ -29,8 +33,9 @@ export default tpl({
         },
 
         fetchRandomUser(amount) {
-            let api_url = this.api + "user/random/4"
-            http_get(api_url).then(data => {
+            let api_url = this.api + "user/random/" + amount
+            return http_get(api_url).then(data => {
+                const users = []
                 for (let i = 0; i < amount; i++){
                     let id = data[i].id
                     let prenom = data[i].prenom
@@ -42,14 +47,16 @@ export default tpl({
                         lastname: nom,
                         picture: image,
                     }
-                    Vue.set(this.users, i, toAdd)
+                    Vue.set(users, i, toAdd)
                 }
+                return users
             })
         },
 
         fetchRandomPotager(amount) {
-            let api_url = this.api + "potager/random/4"
-            http_get(api_url).then(data => {
+            let api_url = this.api + "potager/random/" + amount
+            return http_get(api_url).then(data => {
+                const potagers = []
                 for (let i = 0; i < amount; i++){
                     let id = data[i].id
                     let prenom = data[i].Prenom
@@ -61,8 +68,9 @@ export default tpl({
                         lastname: nom,
                         picture: image,
                     }
-                    Vue.set(this.potagers, i, toAdd)
+                    Vue.set(potagers, i, toAdd)
                 }
+                return potagers
             })
         }
     },
