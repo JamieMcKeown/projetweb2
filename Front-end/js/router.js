@@ -7,6 +7,7 @@ import profil from './components/admin/profil'
 import listePotagers from './components/horsConnexion/listePotagers'
 import listeJardiniers from './components/horsConnexion/listeJardiniers'
 import detailsPotager from './components/horsConnexion/detailsPotager'
+import detailsJardinier from './components/horsConnexion/detailsJardinier'
 
 export default new VueRouter({
     routes: [
@@ -19,5 +20,6 @@ export default new VueRouter({
         { path:'/listePotagers', component: listePotagers },
         { path:'/listeJardiniers', component: listeJardiniers },
         { path:'/detailsPotager', component: detailsPotager },
+        { path:'/detailsJardinier', component: detailsJardinier },
     ]
 })
