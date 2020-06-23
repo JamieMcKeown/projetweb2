@@ -2,7 +2,7 @@ import tpl from '../../utils/avecTemplateHtml'
 
 // export du object literal complet représentant le component
 export default tpl({
-    template: './html/horsConnexion/listePotagers.html',
+    template: './html/horsConnexion/listeJardiniers.html',
     data(){
         return {
 
@@ -19,8 +19,8 @@ export default tpl({
         inscriptionPage() {
             this.$router.push("/inscription")
         },
-        jardiniersPage() {
-            this.$router.push("/listeJardiniers")
+        potagerPage() {
+            this.$router.push("/listePotagers")
         },
       
 
