@@ -746,7 +746,25 @@ body .newFooter h3,
   width: 150px;
 }
 
+.jumbotron .carousel-control-next-icon, .jumbotron .carousel-control-prev-icon {
+  width: 25px;
+  height: 25px;
+  background-color: #A4D626 !important;
+}
+
 .jumbotron .potagerRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jumbotron .jardinierRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jumbotron .infoJardinier {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

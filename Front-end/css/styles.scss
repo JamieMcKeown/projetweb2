@@ -603,7 +603,22 @@ body,
 // detailsPotager
 
 .jumbotron {
-    .potagerRating{
+    .carousel-control-next-icon , .carousel-control-prev-icon{
+        width: 25px;
+        height: 25px;
+        background-color: $green!important;
+    }
+    .potagerRating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .jardinierRating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .infoJardinier {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
