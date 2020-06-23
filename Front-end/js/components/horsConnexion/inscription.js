@@ -33,6 +33,9 @@ export default tpl({
         addUser(email) {
             let api_url = this.api + "user/new"
             
+        },
+        potagerPage() {
+            this.$router.push("/listePotagers")
         }
     },
 })

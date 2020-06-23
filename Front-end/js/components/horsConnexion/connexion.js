@@ -20,6 +20,9 @@ export default tpl({
 
         inscriptionPage() {
             this.$router.push("/inscription")
+        },
+        potagerPage() {
+            this.$router.push("/listePotagers")
         }
     },
 })

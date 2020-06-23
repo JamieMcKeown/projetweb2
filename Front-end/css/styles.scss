@@ -580,3 +580,17 @@ body,
         }
     }
 }
+
+// listePotagers
+
+.carousel-item {
+    .btn {
+        position:relative;
+        top:-60px;
+        left: 5%;
+        background-color: $green;
+        border: 2px solid white;
+        margin: 5px 0 5px 0;
+        width: 150px;
+    }
+}
