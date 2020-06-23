@@ -30,6 +30,23 @@ class PotagerController extends Controller
         return $result;
     }
 
+    public function showRandom($amount){
+        $potagerToShow = Potager::all()->random($amount);
+        $result = [];
+        foreach ($potagerToShow as $potager) {
+            $item = [
+                "Prenom" => $potager->user->prenom,
+                "Nom" => $potager->user->nom,
+                "id" => $potager->id,
+                "user_id" => $potager->user_id,
+                "rating" => $potager->rating,
+                "vote" => $potager->vote,
+                "image" => $potager->image
+        ];
+            array_push($result, $item);
+        }
+        return $result;
+    }
     /**
      * Permet de créer le potager après la création d'un utilisateur. 
      * La request et le ID de l'utilisateur créer précédement

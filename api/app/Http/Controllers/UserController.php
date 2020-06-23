@@ -17,6 +17,11 @@ class UserController extends Controller
         return $userToShow;
     }
 
+    public function showRandom($amount){
+        $userToShow = User::all()->random($amount);
+        return $userToShow;
+    }
+
     /**
      * Utilisé pour vérifier si le email de l'utilisateur existe lors de la validation du login
      * Peut aussi être utilisé lors de la validation de l'inscription en javascript pour voir si le email existe déja
