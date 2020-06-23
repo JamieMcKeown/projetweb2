@@ -729,3 +729,13 @@ body .newFooter h3,
     margin-left: 50%;
   }
 }
+
+.carousel-item .btn {
+  position: relative;
+  top: -60px;
+  left: 5%;
+  background-color: #A4D626;
+  border: 2px solid white;
+  margin: 5px 0 5px 0;
+  width: 150px;
+}
