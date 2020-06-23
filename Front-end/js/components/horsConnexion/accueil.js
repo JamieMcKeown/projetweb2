@@ -30,6 +30,9 @@ export default tpl({
         potagerPage() {
             this.$router.push("/listePotagers")
         },
+        jardiniersPage() {
+            this.$router.push("/listeJardiniers")
+        },
 
         fetchRandomUser(amount) {
             let api_url = this.api + "user/random/4"

@@ -36,6 +36,9 @@ export default tpl({
         },
         potagerPage() {
             this.$router.push("/listePotagers")
-        }
+        },
+        jardiniersPage() {
+            this.$router.push("/listeJardiniers")
+        },
     },
 })
