@@ -6,6 +6,7 @@ import modificationProfil from './components/admin/modificationProfil'
 import profil from './components/admin/profil'
 import listePotagers from './components/horsConnexion/listePotagers'
 import listeJardiniers from './components/horsConnexion/listeJardiniers'
+import detailsPotager from './components/horsConnexion/detailsPotager'
 
 export default new VueRouter({
     routes: [
@@ -17,5 +18,6 @@ export default new VueRouter({
         { path:'/profil', component: profil },
         { path:'/listePotagers', component: listePotagers },
         { path:'/listeJardiniers', component: listeJardiniers },
+        { path:'/detailsPotager', component: detailsPotager },
     ]
 })
