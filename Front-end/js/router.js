@@ -4,6 +4,8 @@ import inscription from './components/horsConnexion/inscription'
 import modificationProduit from './components/admin/modificationProduit'
 import modificationProfil from './components/admin/modificationProfil'
 import profil from './components/admin/profil'
+import listePotagers from './components/horsConnexion/listePotagers'
+import listeJardiniers from './components/horsConnexion/listeJardiniers'
 
 export default new VueRouter({
     routes: [
@@ -13,5 +15,7 @@ export default new VueRouter({
         { path:'/modificationProduit', component: modificationProduit },
         { path:'/modificationProfil', component: modificationProfil },
         { path:'/profil', component: profil },
+        { path:'/listePotagers', component: listePotagers },
+        { path:'/listeJardiniers', component: listeJardiniers },
     ]
 })
