@@ -10,11 +10,20 @@ export default tpl({
     },
     methods: {
         homepageRoute() {
-            this.$router.push("/")
+            this.$router.push("/").catch(err => {})
         },
         
         connexionPage() {
             this.$router.push("/connexion")
+        },
+        inscriptionPage() {
+            this.$router.push("/inscription")
+        },
+        potagerPage() {
+            this.$router.push("/listePotagers")
+        },
+        jardiniersPage() {
+            this.$router.push("/listeJardiniers")
         },
     },
 })

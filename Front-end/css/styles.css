@@ -549,146 +549,47 @@ body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
   background-color: red;
 }
 
-html #profil,
-body #profil,
-#app #profil {
-  height: 100%;
-  width: 100%;
+html .profileContainer,
+body .profileContainer,
+#app .profileContainer {
+  margin: 15px 0px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-html #profil .contentProfil,
-body #profil .contentProfil,
-#app #profil .contentProfil {
+html .profileContainer img,
+body .profileContainer img,
+#app .profileContainer img {
+  width: 100%;
+  height: 150px;
+}
+
+html .profileContainer .ranking,
+body .profileContainer .ranking,
+#app .profileContainer .ranking {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+html .profileButtonsContainer,
+body .profileButtonsContainer,
+#app .profileButtonsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil,
-  body #profil .contentProfil,
-  #app #profil .contentProfil {
-    height: 68%;
-    width: 100%;
-    overflow: scroll;
-    text-align: center;
-  }
-}
-
-html #profil .contentProfil .contenu,
-body #profil .contentProfil .contenu,
-#app #profil .contentProfil .contenu {
   width: 100%;
-  display: flex;
+  justify-content: space-around;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu,
-  body #profil .contentProfil .contenu,
-  #app #profil .contentProfil .contenu {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu,
-  body #profil .contentProfil .contenu,
-  #app #profil .contentProfil .contenu {
-    justify-content: space-around;
-  }
-}
-
-html #profil .contentProfil .contenu .firstSection,
-html #profil .contentProfil .contenu .secondSection,
-body #profil .contentProfil .contenu .firstSection,
-body #profil .contentProfil .contenu .secondSection,
-#app #profil .contentProfil .contenu .firstSection,
-#app #profil .contentProfil .contenu .secondSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu .firstSection,
-  html #profil .contentProfil .contenu .secondSection,
-  body #profil .contentProfil .contenu .firstSection,
-  body #profil .contentProfil .contenu .secondSection,
-  #app #profil .contentProfil .contenu .firstSection,
-  #app #profil .contentProfil .contenu .secondSection {
-    width: 300px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu .firstSection,
-  html #profil .contentProfil .contenu .secondSection,
-  body #profil .contentProfil .contenu .firstSection,
-  body #profil .contentProfil .contenu .secondSection,
-  #app #profil .contentProfil .contenu .firstSection,
-  #app #profil .contentProfil .contenu .secondSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-html #profil .contentProfil .contenu .firstSection h2,
-html #profil .contentProfil .contenu .secondSection h2,
-body #profil .contentProfil .contenu .firstSection h2,
-body #profil .contentProfil .contenu .secondSection h2,
-#app #profil .contentProfil .contenu .firstSection h2,
-#app #profil .contentProfil .contenu .secondSection h2 {
-  height: 75px;
-  width: 100%;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: flex;
-  align-self: flex-start;
-}
-
-html #profil .contentProfil .contenu .thirdSection,
-body #profil .contentProfil .contenu .thirdSection,
-#app #profil .contentProfil .contenu .thirdSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu .thirdSection form .buttons,
-  body #profil .contentProfil .contenu .thirdSection form .buttons,
-  #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu .thirdSection form .buttons,
-  body #profil .contentProfil .contenu .thirdSection form .buttons,
-  #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-    margin-bottom: 14px;
-  }
-}
-
-html #profil .contentProfil .contenu .thirdSection form .buttons .button,
-body #profil .contentProfil .contenu .thirdSection form .buttons .button,
-#app #profil .contentProfil .contenu .thirdSection form .buttons .button {
+html .profileButtonsContainer a,
+body .profileButtonsContainer a,
+#app .profileButtonsContainer a {
   height: 55px;
-  width: 200px;
+  width: 100%;
   margin-top: 15px;
   align-self: center;
   background-color: #A4D626;
   color: white;
+  border: 2px solid white;
 }
 
 html .newFooter,
