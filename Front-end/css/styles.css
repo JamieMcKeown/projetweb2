@@ -243,16 +243,42 @@ body .jumbotron hr,
       justify-self: center;
 }
 
-html .jumbotron .container label,
-body .jumbotron .container label,
-#app .jumbotron .container label {
-  font-size: 20px !important;
-  width: 150px !important;
+html .jumbotron .container .row,
+body .jumbotron .container .row,
+#app .jumbotron .container .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-html .jumbotron .container input,
-body .jumbotron .container input,
-#app .jumbotron .container input {
+html .jumbotron .container .row .col-xs-12,
+body .jumbotron .container .row .col-xs-12,
+#app .jumbotron .container .row .col-xs-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+html .jumbotron .container .row .col-xs-12 label,
+body .jumbotron .container .row .col-xs-12 label,
+#app .jumbotron .container .row .col-xs-12 label {
+  font-size: 20px !important;
+  width: 150px !important;
+  text-align: center;
+}
+
+html .jumbotron .container .row .col-xs-12 input,
+body .jumbotron .container .row .col-xs-12 input,
+#app .jumbotron .container .row .col-xs-12 input {
   width: 150px !important;
 }
 
