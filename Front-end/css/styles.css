@@ -772,6 +772,38 @@ body .newFooter h3,
 
 .jumbotron img {
   height: 150px;
-  width: 95%;
+  width: 200px;
   margin-left: 2.5%;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.productImageContainer {
+  margin: 10px 0;
+}
+
+.potagerContainer img, .jardinierContainer img, .productContainer img {
+  width: 100%;
+  height: 200px;
+}
+
+.potagerContainer h4, .jardinierContainer h4, .productContainer h4 {
+  text-align: center;
+}
+
+.potagerContainer p, .jardinierContainer p, .productContainer p {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.potagerContainer .btn, .jardinierContainer .btn, .productContainer .btn {
+  background-color: #A4D626;
+  border: 2px solid white;
+  margin: 5px 0 5px 0;
+  width: 150px;
 }

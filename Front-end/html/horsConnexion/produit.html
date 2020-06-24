@@ -1,0 +1,54 @@
+<div id="accueil">
+    <header>
+        <div @click="homepageRoute" class="logoContainer">
+            <p>partagez notre potager</p>
+        </div>
+        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
+                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+                <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+                <a class="dropdown-item" href="#">jardiniers</a>
+                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col ">
+               <div class="productContainer">
+                   <div class="productImageContainer">
+                       
+                       <h4>carrottes</h4>
+                       <img src="../../images/bg420.jpg" alt="">
+                       <p>Saepe veniam doloremque nam quis illo accusantium. Atque labore est asperiores, aspernatur ipsam beatae quam cum sint explicabo officiis ducimus voluptatibus vero.</p>
+                       
+                       <a href="#" class="btn btn-primary">offre exchange</a>
+                   </div>
+               </div>
+            </div>
+            <div class="col">
+                <div class="imageContainer">
+                    <div class="potagerContainer">
+                        <h4>le potager</h4>
+                        <img src="../../images/bg420.jpg" alt="">
+                    </div>
+                    <div class="jardinierContainer">
+                        <h4>le jardinier</h4>
+                        <img src="../../images/bg420.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="newFooter">
+        <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
+        <h3>une production DreamTeam</h3>
+    </div>
+    
+    
+</div>
