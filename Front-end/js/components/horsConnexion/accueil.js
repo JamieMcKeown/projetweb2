@@ -7,6 +7,7 @@ export default tpl({
         return {
             users: [],
             potagers: [],
+            isActive: true,
             api: "http://api.test/api/"
         }
     },
@@ -36,6 +37,14 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+
+        stopAnimation() {
+           if( this.isActive == false) {
+               this.isActive = true
+           } else {
+               this.isActive = false
+           }
         },
 
         fetchRandomUser(amount) {
