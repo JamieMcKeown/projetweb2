@@ -1,72 +1,73 @@
 <div id="modifProfil">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
-        <div class="connexion">
-            <h3 @click="connexionPage">Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div @click="homepageRoute" class="logoContainer">
+            <p>partagez notre potager</p>
+        </div>
+        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+                <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+                <a class="dropdown-item" href="#">jardiniers</a>
+                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+            </div>
         </div>
     </header>
-    <div class="contentModifProfil">
-        <h1>Bienvenue Utilisateur</h1>
-        <form action="">
-            <div class="firstSection">
-                <h2>Votre potager</h2>
-                <div class="champs">
-                    <p>Prénom</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Nom</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Courriel</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Adresse</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Ville</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Code postal</p>
-                    <input type="text">
-                </div>
-                <div class="champs">
-                    <p>Mot de passe</p>
-                    <input type="button" value="modifier" class="modifButton button">
-                </div>
-                <div class="champs">
-                    <p>Question secrète</p>
-                    <input type="button" value="modifier" class="modifButton button">
-                </div>
-            </div>
-            <div class="secondSection">
-                <div class="champs">
-                    <p>Bio</p>
-                    <textarea name="bio" cols="30" rows="28"></textarea>
-                </div>
-            </div>
-            <div class="thirdSection">
-                <h2>Votre potager</h2>
-                <div class="buttons">
-                    <input type="button" value="Sauvegarder les changements" class="button">
-                    <input type="button" value="Annuler" class="button annuler">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>bienvenue Jade</h2>
+        </div>
+        <div class="row justify-content-left">
+            <div class="col">
+                <div class="jumbotron modifProfil">
+                    <form @submit.prevent action="">
+                        <div class="prenom">
+                            <label for="prenom">prenom</label>
+                            <input type="text" name="prenom">
+                        </div>
+                        <div class="nom">
+                            <label for="nom">nom</label>
+                            <input type="text" name="nom">
+                        </div>
+                        <div class="courriel">
+                            <label for="courriel">courriel</label>
+                            <input type="email" name="courriel">
+                        </div>
+                        <div class="addresse">
+                            <label for="addresse">addresse</label>
+                            <input type="text" name="addresse">
+                        </div>
+                        <div class="ville">
+                            <label for="ville">ville</label>
+                            <input type="text" name="ville">
+                        </div>
+                        <div class="codePostale">
+                            <label for="codePostale">code postale</label>
+                            <input type="text" name="codePostale">
+                        </div>
+                        <div class="motdePasse">
+                            <label for="mot de passe">mot de passe</label>
+                            <input class="btn" type="button" value="modifier">
+                        </div>
+                        <div class="questionSecret">
+                            <label for="questionSecret">question Secret</label>
+                            <input class="btn" type="button" value="modifer">
+                        </div>
+                        <div class="row Buttons">
+                            <div class="col ">
+                                <button class="save">sauvegarde</button>
+                                <button class="quit">annuller</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </form>
+        </div>
+        
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-            <h3>Suivez-nous sur Facebook</h3>
-        </div>
-        <div class="reseauxSociaux">
-            <img src="images/insta_mobile.png" alt="instagram">
-            <h3>Suivez-nous sur Instagram</h3>
-        </div>
-    </footer>
+    
+    <div class="newFooter">
+        <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
+        <h3>une production DreamTeam</h3>
+    </div>
+
 </div>
