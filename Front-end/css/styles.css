@@ -11,7 +11,7 @@ body,
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
   /* Inscription ------------------------------------------------------------------------------*/
-  /* Modification de produit ------------------------------------------------------------------*/
+  /* Modification de profile ------------------------------------------------------------------*/
   /* Modification de produit ------------------------------------------------------------------*/
   /* Profil -----------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
@@ -201,217 +201,141 @@ body .jumbotron .container button,
   border: 5px solid white !important;
 }
 
-html #modifProduit,
-body #modifProduit,
-#app #modifProduit {
-  height: 100%;
+html .modifProfil,
+body .modifProfil,
+#app .modifProfil {
   width: 100%;
 }
 
-html #modifProduit .contentModifProduit,
-body #modifProduit .contentModifProduit,
-#app #modifProduit .contentModifProduit {
+html .modifProfil .nom, html .modifProfil .prenom, html .modifProfil .courriel, html .modifProfil .bio, html .modifProfil .ville, html .modifProfil .addresse, html .modifProfil .codePostale, html .modifProfil .motdePasse, html .modifProfil .questionSecret,
+body .modifProfil .nom,
+body .modifProfil .prenom,
+body .modifProfil .courriel,
+body .modifProfil .bio,
+body .modifProfil .ville,
+body .modifProfil .addresse,
+body .modifProfil .codePostale,
+body .modifProfil .motdePasse,
+body .modifProfil .questionSecret,
+#app .modifProfil .nom,
+#app .modifProfil .prenom,
+#app .modifProfil .courriel,
+#app .modifProfil .bio,
+#app .modifProfil .ville,
+#app .modifProfil .addresse,
+#app .modifProfil .codePostale,
+#app .modifProfil .motdePasse,
+#app .modifProfil .questionSecret {
+  margin: 10px 0px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #modifProduit .contentModifProduit,
-  body #modifProduit .contentModifProduit,
-  #app #modifProduit .contentModifProduit {
-    height: 68%;
-    width: 100%;
-    flex-direction: column;
-    overflow: scroll;
-    text-align: center;
-  }
+html .modifProfil .nom label, html .modifProfil .prenom label, html .modifProfil .courriel label, html .modifProfil .bio label, html .modifProfil .ville label, html .modifProfil .addresse label, html .modifProfil .codePostale label, html .modifProfil .motdePasse label, html .modifProfil .questionSecret label,
+body .modifProfil .nom label,
+body .modifProfil .prenom label,
+body .modifProfil .courriel label,
+body .modifProfil .bio label,
+body .modifProfil .ville label,
+body .modifProfil .addresse label,
+body .modifProfil .codePostale label,
+body .modifProfil .motdePasse label,
+body .modifProfil .questionSecret label,
+#app .modifProfil .nom label,
+#app .modifProfil .prenom label,
+#app .modifProfil .courriel label,
+#app .modifProfil .bio label,
+#app .modifProfil .ville label,
+#app .modifProfil .addresse label,
+#app .modifProfil .codePostale label,
+#app .modifProfil .motdePasse label,
+#app .modifProfil .questionSecret label {
+  width: 25%;
 }
 
-@media only screen and (min-width: 1023px) {
-  html #modifProduit .contentModifProduit,
-  body #modifProduit .contentModifProduit,
-  #app #modifProduit .contentModifProduit {
-    justify-content: space-around;
-  }
+html .modifProfil .nom input, html .modifProfil .nom .btn, html .modifProfil .prenom input, html .modifProfil .prenom .btn, html .modifProfil .courriel input, html .modifProfil .courriel .btn, html .modifProfil .bio input, html .modifProfil .bio .btn, html .modifProfil .ville input, html .modifProfil .ville .btn, html .modifProfil .addresse input, html .modifProfil .addresse .btn, html .modifProfil .codePostale input, html .modifProfil .codePostale .btn, html .modifProfil .motdePasse input, html .modifProfil .motdePasse .btn, html .modifProfil .questionSecret input, html .modifProfil .questionSecret .btn,
+body .modifProfil .nom input,
+body .modifProfil .nom .btn,
+body .modifProfil .prenom input,
+body .modifProfil .prenom .btn,
+body .modifProfil .courriel input,
+body .modifProfil .courriel .btn,
+body .modifProfil .bio input,
+body .modifProfil .bio .btn,
+body .modifProfil .ville input,
+body .modifProfil .ville .btn,
+body .modifProfil .addresse input,
+body .modifProfil .addresse .btn,
+body .modifProfil .codePostale input,
+body .modifProfil .codePostale .btn,
+body .modifProfil .motdePasse input,
+body .modifProfil .motdePasse .btn,
+body .modifProfil .questionSecret input,
+body .modifProfil .questionSecret .btn,
+#app .modifProfil .nom input,
+#app .modifProfil .nom .btn,
+#app .modifProfil .prenom input,
+#app .modifProfil .prenom .btn,
+#app .modifProfil .courriel input,
+#app .modifProfil .courriel .btn,
+#app .modifProfil .bio input,
+#app .modifProfil .bio .btn,
+#app .modifProfil .ville input,
+#app .modifProfil .ville .btn,
+#app .modifProfil .addresse input,
+#app .modifProfil .addresse .btn,
+#app .modifProfil .codePostale input,
+#app .modifProfil .codePostale .btn,
+#app .modifProfil .motdePasse input,
+#app .modifProfil .motdePasse .btn,
+#app .modifProfil .questionSecret input,
+#app .modifProfil .questionSecret .btn {
+  width: 75%;
+  position: relative;
+  right: 2%;
 }
 
-html #modifProduit .contentModifProduit form,
-body #modifProduit .contentModifProduit form,
-#app #modifProduit .contentModifProduit form {
+html .Buttons,
+body .Buttons,
+#app .Buttons {
+  margin-top: 25px;
+}
+
+html .Buttons .save,
+body .Buttons .save,
+#app .Buttons .save {
+  background-color: #A4D626 !important;
+  color: white !important;
+  border: 2px solid white;
+  width: 75%;
+}
+
+html .Buttons .quit,
+body .Buttons .quit,
+#app .Buttons .quit {
+  background-color: red !important;
+  color: white !important;
+  border: 2px solid white;
+  width: 75%;
+}
+
+html .profileImagesModif,
+body .profileImagesModif,
+#app .profileImagesModif {
+  width: 90%;
+  margin-left: 15%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #modifProduit .contentModifProduit form,
-  body #modifProduit .contentModifProduit form,
-  #app #modifProduit .contentModifProduit form {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1023px) {
-  html #modifProduit .contentModifProduit form,
-  body #modifProduit .contentModifProduit form,
-  #app #modifProduit .contentModifProduit form {
-    width: 60%;
-    justify-content: space-between;
-  }
-}
-
-html #modifProduit .contentModifProduit form .produitImg,
-body #modifProduit .contentModifProduit form .produitImg,
-#app #modifProduit .contentModifProduit form .produitImg {
-  width: 400px;
-  height: 200px;
-}
-
-@media only screen and (min-width: 1023px) {
-  html #modifProduit .contentModifProduit form .produitImg,
-  body #modifProduit .contentModifProduit form .produitImg,
-  #app #modifProduit .contentModifProduit form .produitImg {
-    margin-bottom: 85px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProduit .contentModifProduit form .champs,
-  body #modifProduit .contentModifProduit form .champs,
-  #app #modifProduit .contentModifProduit form .champs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 45px;
-  }
-  html #modifProduit .contentModifProduit form .champs h2,
-  body #modifProduit .contentModifProduit form .champs h2,
-  #app #modifProduit .contentModifProduit form .champs h2 {
-    margin-right: 15px;
-  }
-  html #modifProduit .contentModifProduit form .champs input,
-  body #modifProduit .contentModifProduit form .champs input,
-  #app #modifProduit .contentModifProduit form .champs input {
-    height: 25px;
-    width: 245px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProduit .contentModifProduit form .buttons,
-  body #modifProduit .contentModifProduit form .buttons,
-  #app #modifProduit .contentModifProduit form .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-    margin-bottom: 14px;
-  }
-}
-
-html #modifProduit .contentModifProduit form .buttons .button,
-body #modifProduit .contentModifProduit form .buttons .button,
-#app #modifProduit .contentModifProduit form .buttons .button {
-  height: 55px;
-  width: 200px;
-  margin-top: 15px;
-  align-self: center;
-  background-color: #A4D626;
-  color: white;
-}
-
-html #modifProduit .contentModifProduit form .buttons .annuler,
-body #modifProduit .contentModifProduit form .buttons .annuler,
-#app #modifProduit .contentModifProduit form .buttons .annuler {
-  background-color: red;
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel,
-body #modifProduit .contentModifProduit .choixProduit .carrousel,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProduit .contentModifProduit .choixProduit .carrousel,
-  body #modifProduit .contentModifProduit .choixProduit .carrousel,
-  #app #modifProduit .contentModifProduit .choixProduit .carrousel {
-    flex-direction: row;
-  }
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails {
-  overflow: hidden;
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
-  display: flex;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span,
-  body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span,
-  #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span {
-    flex-direction: column;
-    height: 343px;
-  }
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
-  height: 100px;
-  width: 100px;
-  margin-bottom: 15px;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit,
-  body #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit,
-  #app #modifProduit .contentModifProduit .choixProduit .carrousel .thumbnails span .produit {
-    height: 80px;
-    width: 80px;
-    margin-right: 15px;
-    margin-bottom: 0px;
-  }
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
-  height: 50px;
-  width: 50px;
-}
-
-html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-#app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
-  transform: rotate(-90deg);
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-  body #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow,
-  #app #modifProduit .contentModifProduit .choixProduit .carrousel .leftArrow {
-    transform: rotate(180deg);
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow,
-  body #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow,
-  #app #modifProduit .contentModifProduit .choixProduit .carrousel .rightArrow {
-    transform: rotate(90deg);
-  }
+html .profileImagesModif .btn,
+body .profileImagesModif .btn,
+#app .profileImagesModif .btn {
+  background-color: #A4D626 !important;
+  color: white !important;
+  border: 2px solid white;
 }
 
 html #modifProfil,
@@ -549,146 +473,47 @@ body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
   background-color: red;
 }
 
-html #profil,
-body #profil,
-#app #profil {
-  height: 100%;
-  width: 100%;
+html .profileContainer,
+body .profileContainer,
+#app .profileContainer {
+  margin: 15px 0px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-html #profil .contentProfil,
-body #profil .contentProfil,
-#app #profil .contentProfil {
+html .profileContainer img,
+body .profileContainer img,
+#app .profileContainer img {
+  width: 100%;
+  height: 150px;
+}
+
+html .profileContainer .ranking,
+body .profileContainer .ranking,
+#app .profileContainer .ranking {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+html .profileButtonsContainer,
+body .profileButtonsContainer,
+#app .profileButtonsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil,
-  body #profil .contentProfil,
-  #app #profil .contentProfil {
-    height: 68%;
-    width: 100%;
-    overflow: scroll;
-    text-align: center;
-  }
-}
-
-html #profil .contentProfil .contenu,
-body #profil .contentProfil .contenu,
-#app #profil .contentProfil .contenu {
   width: 100%;
-  display: flex;
+  justify-content: space-around;
 }
 
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu,
-  body #profil .contentProfil .contenu,
-  #app #profil .contentProfil .contenu {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu,
-  body #profil .contentProfil .contenu,
-  #app #profil .contentProfil .contenu {
-    justify-content: space-around;
-  }
-}
-
-html #profil .contentProfil .contenu .firstSection,
-html #profil .contentProfil .contenu .secondSection,
-body #profil .contentProfil .contenu .firstSection,
-body #profil .contentProfil .contenu .secondSection,
-#app #profil .contentProfil .contenu .firstSection,
-#app #profil .contentProfil .contenu .secondSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu .firstSection,
-  html #profil .contentProfil .contenu .secondSection,
-  body #profil .contentProfil .contenu .firstSection,
-  body #profil .contentProfil .contenu .secondSection,
-  #app #profil .contentProfil .contenu .firstSection,
-  #app #profil .contentProfil .contenu .secondSection {
-    width: 300px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu .firstSection,
-  html #profil .contentProfil .contenu .secondSection,
-  body #profil .contentProfil .contenu .firstSection,
-  body #profil .contentProfil .contenu .secondSection,
-  #app #profil .contentProfil .contenu .firstSection,
-  #app #profil .contentProfil .contenu .secondSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-html #profil .contentProfil .contenu .firstSection h2,
-html #profil .contentProfil .contenu .secondSection h2,
-body #profil .contentProfil .contenu .firstSection h2,
-body #profil .contentProfil .contenu .secondSection h2,
-#app #profil .contentProfil .contenu .firstSection h2,
-#app #profil .contentProfil .contenu .secondSection h2 {
-  height: 75px;
-  width: 100%;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: flex;
-  align-self: flex-start;
-}
-
-html #profil .contentProfil .contenu .thirdSection,
-body #profil .contentProfil .contenu .thirdSection,
-#app #profil .contentProfil .contenu .thirdSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #profil .contentProfil .contenu .thirdSection form .buttons,
-  body #profil .contentProfil .contenu .thirdSection form .buttons,
-  #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  html #profil .contentProfil .contenu .thirdSection form .buttons,
-  body #profil .contentProfil .contenu .thirdSection form .buttons,
-  #app #profil .contentProfil .contenu .thirdSection form .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-    margin-bottom: 14px;
-  }
-}
-
-html #profil .contentProfil .contenu .thirdSection form .buttons .button,
-body #profil .contentProfil .contenu .thirdSection form .buttons .button,
-#app #profil .contentProfil .contenu .thirdSection form .buttons .button {
+html .profileButtonsContainer a,
+body .profileButtonsContainer a,
+#app .profileButtonsContainer a {
   height: 55px;
-  width: 200px;
+  width: 100%;
   margin-top: 15px;
   align-self: center;
   background-color: #A4D626;
   color: white;
+  border: 2px solid white;
 }
 
 html .newFooter,

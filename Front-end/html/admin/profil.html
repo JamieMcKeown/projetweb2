@@ -1,43 +1,56 @@
-<div id="profil">
+<div id="accueil">
     <header>
-        <img class="logo" src="../../images/logoFinale(blanc).svg" alt="logo" @click="homepageRoute">
-        <div class="connexion">
-            <h3 @click="connexionPage">Connexion</h3>
-            <img class="menu" src="../../images/tomate_mobile.png" alt="menu">
+        <div @click="homepageRoute" class="logoContainer">
+            <p>partagez notre potager</p>
+        </div>
+        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+                <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+                <a class="dropdown-item" href="#">jardiniers</a>
+                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+            </div>
         </div>
     </header>
-    <div class="contentProfil">
-        <h1>Bienvenue Utilisateur</h1>
-        <div class="contenu">
-            <div class="firstSection">
-                <h2>Votre potager</h2>
-                <p>Évaluation du potager</p>
-                <p>4.8/5</p><!-- Note dynamique --> 
-            </div>
-            <div class="secondSection">
-                <h2>Votre profil</h2>
-                <p>Votre évaluation</p>
-                <p>4.7/5</p><!-- Note dynamique -->
-            </div>
-            <div class="thirdSection">
-                <form action="">
-                    <div class="buttons">
-                        <input type="button" value="Modifier" class="button">
-                        <input type="button" value="Modifier" class="button">
-                        <input type="button" value="Vos offres" class="button">
+
+  <div class="container">
+      <div class="row">
+          <div class="col">
+            <div class="profileContainer">
+                <div class="potagerProfileContainer">
+                    <img src="../../images/bg69.jpg" alt="">
+                    <div class="ranking">
+                        <p>évaluation du potager</p>
+                        <p>4.5/5  (240)</p>
                     </div>
-                </form>
+                </div>
+                <div class="jardinierProfileContainer">
+                    <img src="../../images/bg69.jpg" alt="">
+                    <div class="ranking">
+                        <p>évaluation du jardinier</p>
+                        <p>4.5/5  (240)</p>
+                    </div>
+                </div>
             </div>
-        </div>
+          </div>
+          <div class="col">
+            <div class="profileButtonsContainer">
+                <a href="#" class="btn btn-primary">modifier profil</a>
+                <a href="#" class="btn btn-primary">modifier produits</a>
+                <a href="#" class="btn btn-primary">vos offres</a>
+            </div>
+          </div>
+          
+      </div>
+  </div>
+    
+    
+    
+    
+    <div class="newFooter">
+        <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
+        <h3>une production DreamTeam</h3>
     </div>
-    <footer>
-        <div class="reseauxSociaux">
-            <img src="images/fb_mobile.png" alt="facebook">
-            <h3>Suivez-nous sur Facebook</h3>
-        </div>
-        <div class="reseauxSociaux">
-            <img src="images/insta_mobile.png" alt="instagram">
-            <h3>Suivez-nous sur Instagram</h3>
-        </div>
-    </footer>
+    
+    
 </div>
