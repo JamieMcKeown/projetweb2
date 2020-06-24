@@ -171,7 +171,7 @@ body,
 
     /* Modification de profile ------------------------------------------------------------------*/
     .modifProfil {
-        .nom, .prenom, .courriel, .ville, .addresse, .codePostale, .motdePasse, .questionSecret {
+        .nom, .prenom, .courriel, .bio,  .ville, .addresse, .codePostale, .motdePasse, .questionSecret {
             margin: 10px 0px;
             label {
                 width: 25%;
@@ -189,18 +189,32 @@ body,
         width: 100%;
     }
     .Buttons {
+        margin-top: 25px;
         .save {
             background-color: $green!important;
             color: white!important;
             border: 2px solid white;
+            width: 75%;
         }
         .quit {
             background-color: red!important;
             color: white!important;
             border: 2px solid white;
+            width: 75%;
         }
     }
-   
+    .profileImagesModif {
+        .btn {
+            background-color: $green!important;
+            color: white!important;
+            border: 2px solid white;
+        }
+        width: 90%;
+        margin-left: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }   
 
     /* Modification de produit ------------------------------------------------------------------*/
     #modifProfil {

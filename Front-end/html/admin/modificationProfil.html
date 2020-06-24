@@ -5,6 +5,7 @@
         </div>
         <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
                 <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
                 <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
                 <a class="dropdown-item" href="#">jardiniers</a>
@@ -52,6 +53,10 @@
                             <label for="questionSecret">question Secret</label>
                             <input class="btn" type="button" value="modifer">
                         </div>
+                        <div class="bio">
+                            <label for="bio">bio</label>
+                            <input class="btn" type="button" value="modifer">
+                        </div>
                         <div class="row Buttons">
                             <div class="col ">
                                 <button class="save">sauvegarde</button>
@@ -59,6 +64,27 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col justify-content-center">
+                <div class="profileImagesModif">
+                    <div class="card" style="width:100%;">
+                        <img class="card-img-top" src="../../images/bg420.jpg" alt="Card image cap">
+                       
+                          
+                          
+                          <a href="#" class="btn">modifier</a>
+                       
+                      </div>
+                      <div class="card ml-2" style="width: 100%">
+                        <img class="card-img-top" src="../../images/bg420.jpg" alt="Card image cap">
+                       
+                         
+                          <a href="#" class="btn">modifier</a>
+                        
+                      </div>
                 </div>
             </div>
         </div>
