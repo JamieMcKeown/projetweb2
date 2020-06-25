@@ -86,33 +86,15 @@ body,
             .redTomatoe {
                 height: 125px;
                 width: 104px;
-            }
-    
-            .helloWorld {
-                animation-name: helloWorld;
-                animation-duration: 4s;
-                animation-iteration-count: infinite;
-            }
-    
-            @keyframes helloWorld {
-    
-                0% {
-                    transform: rotate(40deg);
-                }
-                25% {
-                    transform: rotate(-40deg);
-                }
-                50% {
-                    transform: rotate(40deg);
-                }
-                75% {
-                    transform: rotate(-40deg);
-                }
-                100% {
-                    transform: rotate(40deg);
-                }
+                margin-right: 25px;
+                background-color: rgba(255, 255, 255, 0.6);
+                border-radius: 5%;
+                box-sizing: content-box;
+                border: 10px solid rgba(164,214,38, 0.6);
                 
             }
+    
+           
         }
     }
 
