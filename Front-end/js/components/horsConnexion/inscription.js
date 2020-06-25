@@ -64,7 +64,6 @@ export default tpl({
                 nom: this.nom,
                 email: this.email,
                 password: this.password,
-                confirmation: this.confirmation,
                 numero_porte: this.numero_porte,
                 ville: this.ville,
                 code_postal: this.code_postal,
