@@ -7,6 +7,7 @@ export default tpl({
     template: './html/horsConnexion/inscription.html',
     data () {
         return {
+            isActive: true,
             error: "",
             prenom: "",
             nom: "",
@@ -38,11 +39,23 @@ export default tpl({
         //     let api_url = this.api + "user/new"
             
         // },
+        inscriptionPage() {
+            this.$router.push("/inscription").catch(err => {})
+        },
+
         potagerPage() {
             this.$router.push("/listePotagers")
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+
+        stopAnimation() {
+            if( this.isActive == false) {
+                this.isActive = true
+            } else {
+                this.isActive = false
+            }
         },
 
         formValidation(e) {

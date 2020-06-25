@@ -5,12 +5,12 @@ export default tpl({
     template: './html/horsConnexion/detailsPotager.html',
     data(){
         return{
-
+            isActive: true,
         }
     },// end data
     methods: {
         homepageRoute() {
-            this.$router.push("/").catch(err => {})
+            this.$router.push("/")
         },
         
         connexionPage() {
@@ -24,6 +24,13 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+        stopAnimation() {
+            if( this.isActive == false) {
+                this.isActive = true
+            } else {
+                this.isActive = false
+            }
         },
     }
 })
