@@ -211,156 +211,52 @@ body,
 
     
 
-    /* Modification de produit ------------------------------------------------------------------*/
-    #modifProduit {
-        height: 100%;
-        width: 100%;
-
-        .contentModifProduit {
+    /* Modification de profile ------------------------------------------------------------------*/
+    .modifProfil {
+        .nom, .prenom, .courriel, .bio,  .ville, .addresse, .codePostale, .motdePasse, .questionSecret {
+            margin: 10px 0px;
+            label {
+                width: 25%;
+            }
+            input, .btn {
+                width: 75%;
+                position: relative;
+                right: 2%;
+            }
             display: flex;
-            flex-direction: row-reverse;
-
-            @media only screen and (max-width: 1023px) {
-                height: 68%;
-                width: 100%;
-                flex-direction: column;
-                overflow: scroll;
-                text-align: center;
-            }
-
-            @media only screen and (min-width:1023px) {
-                justify-content: space-around;
-            }
-
-            form {
-                display: flex;
-
-                @media only screen and (max-width: 1023px) {
-                    flex-direction: column;
-                }
-
-                @media only screen and (min-width:1023px) {
-                    width: 60%;
-                    justify-content: space-between;
-                }
-
-                .produitImg {
-                    width: 400px;
-                    height: 200px;
-
-                    @media only screen and (min-width:1023px) {
-                        margin-bottom: 85px;
-                    }
-
-                }
-
-                .champs {
-
-                    @media only screen and (min-width: 1024px) {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-                        height: 45px;
-
-                        h2 {
-                            margin-right: 15px;
-                        }
-
-                        input {
-                            height: 25px;
-                            width: 245px;
-                        }
-                    }
-                }
-
-                .buttons {
-
-                    @media only screen and (min-width: 1024px) {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-self: flex-end;
-                        margin-bottom: 14px;
-                    }
-
-                    .button {
-                        height: 55px;
-                        width: 200px;
-                        margin-top: 15px;
-                        align-self: center;
-                        background-color: $green;
-                        color: white;
-                    }
-
-                    .annuler {
-                        background-color: red;
-                    }
-                }
-            }
-
-            .choixProduit {
-
-                .carrousel {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-
-                    @media only screen and (max-width: 1023px) {
-                        flex-direction: row;
-                    }
-
-                    .thumbnails {
-                        overflow: hidden;
-
-                        span {
-                            display: flex;
-
-                            @media only screen and (min-width: 1024px) {
-                                flex-direction: column;
-                                height: 343px;
-                            }
-
-                            .produit {
-                                height: 100px;
-                                width: 100px;
-                                margin-bottom: 15px;
-
-                                @media only screen and (max-width: 1023px) {
-                                    height: 80px;
-                                    width: 80px;
-                                    margin-right: 15px;
-                                    margin-bottom: 0px;
-                                }
-                            }
-                        }
-                    }
-
-                    .leftArrow,
-                    .rightArrow {
-                        height: 50px;
-                        width: 50px;
-                    }
-
-                    .leftArrow {
-                        transform: rotate(-90deg);
-
-                        @media only screen and (max-width: 1023px) {
-                            transform: rotate(180deg);
-                        }
-                    }
-
-                    .rightArrow {
-
-                        @media only screen and (min-width: 1024px) {
-                            transform: rotate(90deg);
-                        }
-                    }
-                }
-            }
+            flex-direction: row;
+            justify-content: space-between;
+           
+        }
+        width: 100%;
+    }
+    .Buttons {
+        margin-top: 25px;
+        .save {
+            background-color: $green!important;
+            color: white!important;
+            border: 2px solid white;
+            width: 75%;
+        }
+        .quit {
+            background-color: red!important;
+            color: white!important;
+            border: 2px solid white;
+            width: 75%;
         }
     }
+    .profileImagesModif {
+        .btn {
+            background-color: $green!important;
+            color: white!important;
+            border: 2px solid white;
+        }
+        width: 90%;
+        margin-left: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }   
 
     /* Modification de produit ------------------------------------------------------------------*/
     #modifProfil {
@@ -474,118 +370,39 @@ body,
     }
 
     /* Profil -----------------------------------------------------------------------------------*/
-    #profil {
-        height: 100%;
-        width: 100%;
-
-        .contentProfil {
+    .profileContainer {
+        margin: 15px 0px;
+        background-color: rgba(255, 255, 255, 0.6);
+        img {
+            width: 100%;
+            height: 150px;
+        }
+        .ranking {
             display: flex;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            @media only screen and (max-width: 1023px) {
-                height: 68%;
-                width: 100%;
-                overflow: scroll;
-                text-align: center;
-            }
-
-            .contenu {
-                width: 100%;
-                display: flex;
-
-                @media only screen and (max-width: 1023px) {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                @media only screen and (min-width: 1024px) {
-                    justify-content: space-around;
-                }
-
-                .firstSection,
-                .secondSection {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    @media only screen and (min-width: 1024px) {
-                        width: 300px;
-                    }
-
-                    @media only screen and (max-width: 1023px) {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    h2 {
-                        height: 75px;
-                        width: 100%;
-                        padding-top: 15px;
-                        background-image: url("../images/potager.png");
-                        color: white;
-                        display: flex;
-                        align-self: flex-start;
-                    }
-                }
-
-                .thirdSection {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    form {
-
-                        .buttons {
-
-                            @media only screen and (max-width: 1023px) {
-                                display: flex;
-                                flex-direction: column;
-                            }
-
-                            @media only screen and (min-width: 1024px) {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-self: flex-end;
-                                margin-bottom: 14px;
-                            }
-
-                            .button {
-                                height: 55px;
-                                width: 200px;
-                                margin-top: 15px;
-                                align-self: center;
-                                background-color: $green;
-                                color: white;
-                            }
-                        }
-                    }
-                }
-            }
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
+    .profileButtonsContainer {
+        a {
+            height: 55px;
+            width: 100%;
+            margin-top: 15px;
+            align-self: center;
+            background-color: $green;
+           
+            color: white;
+            border: 2px solid white;;
+    }       
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        
+}
 
     /* Footer -----------------------------------------------------------------------------------*/
-    //    .footer {
-    //        height: 75px;
-    //        display: flex;
-    //        flex-direction: column;
-    //        justify-content: center;
-    //        width: 90%;
-    //        margin-left: 5%;
-    //        position: relative;
-    //        top: 15%;
-    //        align-items: center;
-    //        p {
-    //            font-size: 18px;
-    //        }
-
-    //    }
-
 
     .newFooter {
         border-radius: 10px;
@@ -667,9 +484,42 @@ body,
     }
     img {
         height: 150px;
-        width: 95%;
+        width: 200px;
         margin-left: 2.5%;
         
 
     }
 }
+
+// produit
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.productImageContainer {
+    margin: 10px 0;;
+}
+
+.potagerContainer, .jardinierContainer, .productContainer {
+    img {
+        width: 100%;
+        height: 200px
+    }
+    h4 {
+        text-align: center;
+    }
+    p {
+        background-color: rgba(255, 255, 255, 0.95); 
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    .btn {
+        background-color: $green;
+        border: 2px solid white;
+        margin: 5px 0 5px 0;
+        width: 150px;
+    }
+}
+
