@@ -3,7 +3,7 @@
         <div @click="homepageRoute" class="logoContainer">
             <p>partagez notre potager</p>
         </div>
-        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
+        <div class="dropdown redTomatoe" role="button" :class="{ helloWorld: isActive }" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
                 <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
