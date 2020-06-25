@@ -37,7 +37,7 @@ export default tpl({
             http_get(getUserEmail).then(data => {
                 console.log(data)
                 if(data.email == this.email) {
-                    this.$router.push("/profil")
+                    this.$router.push("/")
                 } else {
                     return
                 }
