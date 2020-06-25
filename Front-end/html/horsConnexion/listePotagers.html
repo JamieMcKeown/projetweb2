@@ -1,17 +1,18 @@
 <div>
-    <header>
-        <div @click="homepageRoute" class="logoContainer">
-            <p>partagez notre potager</p>
+  <header>
+    <div @click="homepageRoute" class="logoContainer">
+        <p>partagez notre potager</p>
+    </div>
+    <div class="menu">
+        <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+            <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+            <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
+            <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
         </div>
-        <div class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">         
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
-                <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
-                <a @click="jardiniersPage"class="dropdown-item" href="#">jardinier</a>
-                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
-            </div>
-        </div>
-    </header>
+    </div>
+  </header>
 
     <div class="container">
         <div class="row justify-content-center">
