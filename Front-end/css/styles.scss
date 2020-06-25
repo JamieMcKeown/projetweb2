@@ -11,12 +11,6 @@ body,
     background-position: center;
     object-fit: cover;
 
-
-    // @media only screen and (max-width: 1023px) {
-    //     background-image: url("../images/mobile_background.png");
-    //     background-position-x: 500px;
-    // }
-
     /* Header -----------------------------------------------------------------------------------*/
     header {
         background-image: url("../images/footer.png");
@@ -89,19 +83,9 @@ body,
                 }
             }
     
-            // .dropdown {
-            //     width: 104px;
-            // }
-    
             .redTomatoe {
-                // background-image: url("../images/hamburgerTransparent.png");
-                // background-position: center;
-                // background-size: contain;
-                // background-repeat: no-repeat;
                 height: 125px;
                 width: 104px;
-                // width: 30%;
-                // box-shadow: 3px 3px 10px 10px lightgray;
             }
     
             .helloWorld {
