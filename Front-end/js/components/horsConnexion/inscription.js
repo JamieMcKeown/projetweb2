@@ -46,34 +46,33 @@ export default tpl({
         },
 
         formValidation(e) {
-            console.log(this.prenom)
-            console.log(this.nom)
-            console.log(this.email)
-            console.log(this.password)
-            console.log(this.confirmation)
-            console.log(this.numero_porte)
-            console.log(this.ville)
-            console.log(this.code_postal)
-            console.log(this.question_secrete)
-            console.log(this.reponse)
+            // console.log(this.prenom)
+            // console.log(this.nom)
+            // console.log(this.email)
+            // console.log(this.password)
+            // console.log(this.confirmation)
+            // console.log(this.numero_porte)
+            // console.log(this.ville)
+            // console.log(this.code_postal)
+            // console.log(this.question_secrete)
+            // console.log(this.reponse)
 
             let createUserUrl = "http://projetweb2api.localhost/api/user/new"
 
-              http_post(createUserUrl, {
-                prenom: this.prenom,
-                nom: this.nom,
-                email: this.email,
-                password: this.password,
-                numero_porte: this.numero_porte,
-                ville: this.ville,
-                code_postal: this.code_postal,
-                question_secrete: this.question_secrete,
-                reponse: this.reponse,
-              }).then(data => {
-                  console.log(data)
-              })
-
-              e.preventDefault()
+            http_post(createUserUrl, {
+              prenom: this.prenom,
+              nom: this.nom,
+              email: this.email,
+              password: this.password,
+              numero_porte: this.numero_porte,
+              ville: this.ville,
+              code_postal: this.code_postal,
+              question_secrete: this.question_secrete,
+              reponse: this.reponse,
+            }).then(data => {
+                this.$router.push("/connexion")
+            })
+            e.preventDefault()
 
         }
     },

@@ -315,9 +315,16 @@ body .modifProfil .questionSecret,
 #app .modifProfil .motdePasse,
 #app .modifProfil .questionSecret {
   margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 html .modifProfil .nom label, html .modifProfil .prenom label, html .modifProfil .courriel label, html .modifProfil .bio label, html .modifProfil .ville label, html .modifProfil .addresse label, html .modifProfil .codePostale label, html .modifProfil .motdePasse label, html .modifProfil .questionSecret label,
@@ -413,9 +420,16 @@ body .profileImagesModif,
 #app .profileImagesModif {
   width: 90%;
   margin-left: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 html .profileImagesModif .btn,
@@ -620,18 +634,31 @@ body .profileContainer img,
 html .profileContainer .ranking,
 body .profileContainer .ranking,
 #app .profileContainer .ranking {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 html .profileButtonsContainer,
 body .profileButtonsContainer,
 #app .profileButtonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 html .profileButtonsContainer a,
@@ -761,8 +788,13 @@ body .newFooter h3,
 }
 
 .imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10px 0;
 }
 
@@ -791,3 +823,4 @@ body .newFooter h3,
   margin: 5px 0 5px 0;
   width: 150px;
 }
+/*# sourceMappingURL=styles.css.map */
