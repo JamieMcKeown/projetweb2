@@ -17,63 +17,64 @@
 <div class="jumbotron text-center">
     <h1>inscription</h1>
     <hr class="my-4">
-    <form @submit.prevent>
+    <form @submit="formValidation" action="#" method="post">
         <div class="container justify-content-center">
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="prenom">prenom</label>
-                    <input type="text" name="prenom" id="">
+                    <label for="prenom">Prénom</label>
+                    <input v-model="prenom" type="text" name="prenom">
                 </div>
                 <div class="col-xs-12">
-                    <label for="address">addresse</label>
-                    <input type="text" name="addresse" id="">
+                    <label for="address">Adresse</label>
+                    <input v-model="numero_porte" type="text" name="adresse">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="nom">nom</label>
-                    <input type="text" name="nom" id="">
+                    <label for="nom">Nom</label>
+                    <input v-model="nom" type="text" name="nom">
                 </div>
                 <div class="col-xs-12">
-                    <label for="ville">ville</label>
-                    <input type="text" name="ville" id="">
+                    <label for="ville">Ville</label>
+                    <input v-model="ville" type="text" name="ville">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="courriel">courriel</label>
-                    <input type="email" name="courriel" id="">
+                    <label for="courriel">Courriel</label>
+                    <input v-model="email" type="email" name="courriel">
                 </div>
                 <div class="col-xs-12">
-                    <label for="code postale">code postale</label>
-                    <input type="text" name="code postale" id="">
+                    <label for="codePostal">Code postal</label>
+                    <input v-model="code_postal" type="text" name="codePostal">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="mot de passe">mot de passe</label>
-                    <input type="password" name="motdepasse" id="">
+                    <label for="password">Mot de passe</label>
+                    <input v-model="password" type="password" name="password">
                 </div>
                 <div class="col-xs-12">
-                    <label for="secretquestion">secret question</label>
-                    <input type="text" name="secretquestion" id="">
+                    <label for="secretquestion">Question secrète</label>
+                    <input v-model="question_secrete" type="text" name="secretquestion" list="questions">
+                    <datalist id="questions">
+                        <option value="Question1"></option>
+                        <option value="Question2"></option>
+                    </datalist>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="confirmation">confirmation</label>
-                    <input type="password" name="confirmation" id="">
+                    <label for="confirmation">Confirmation</label>
+                    <input v-model="confirmation" type="password" name="confirmation">
                 </div>
                 <div class="col-xs-12">
-                    <label for="reponse">reponse</label>
-                    <input type="text" name="reponse" id="">
+                    <label for="reponse">Réponse</label>
+                    <input v-model="reponse" type="text" name="reponse">
                 </div>
             </div>
-            <div class="row justify-content-center mt-5">
-                
-                
-                    <button type="submit" class="btn">soumettre</button>
-                
+            <div class="row justify-content-center mt-5"> 
+                <button type="submit" class="btn">soumettre</button>  
             </div>
         </div>
     </form>

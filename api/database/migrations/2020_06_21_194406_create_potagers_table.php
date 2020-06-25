@@ -19,7 +19,7 @@ class CreatePotagersTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->integer('rating');
             $table->integer('vote');
-            $table->string('image', 200);
+            $table->string('image', 200)->nullable();
             $table->timestamps();
         });
     }

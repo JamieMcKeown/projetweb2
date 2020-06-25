@@ -43,23 +43,6 @@ body,
             ;
         }
 
-        .dropdown-menu {
-            min-width: 0rem !important;
-            margin-top: 10px !important;
-            left: -15px !important;
-
-        }
-
-        @media only screen and (min-width: 992px) {
-            .dropdown-menu {
-                left: 140px !important;
-            }
-        }
-
-        .dropdown {
-            width: 20%;
-        }
-
         .logoContainer {
             margin-top: -20px;
             background-image: url("../images/logoFinale\(blanc\).svg");
@@ -91,16 +74,62 @@ body,
             }
         }
 
-
-        .redTomatoe {
-            background-image: url("../images/hamburger.png");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 125px;
-            width: 30%;
+        .menu {
+            
+            
+            .dropdown-menu {
+                min-width: 0rem !important;
+                margin-top: 10px !important;
+                left: -15px !important;
+            }
+    
+            @media only screen and (min-width: 992px) {
+                .dropdown-menu {
+                    left: -8px !important;
+                }
+            }
+    
+            // .dropdown {
+            //     width: 104px;
+            // }
+    
+            .redTomatoe {
+                // background-image: url("../images/hamburgerTransparent.png");
+                // background-position: center;
+                // background-size: contain;
+                // background-repeat: no-repeat;
+                height: 125px;
+                width: 104px;
+                // width: 30%;
+                // box-shadow: 3px 3px 10px 10px lightgray;
+            }
+    
+            .helloWorld {
+                animation-name: helloWorld;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+    
+            @keyframes helloWorld {
+    
+                0% {
+                    transform: rotate(40deg);
+                }
+                25% {
+                    transform: rotate(-40deg);
+                }
+                50% {
+                    transform: rotate(40deg);
+                }
+                75% {
+                    transform: rotate(-40deg);
+                }
+                100% {
+                    transform: rotate(40deg);
+                }
+                
+            }
         }
-
     }
 
     /* Accueil ----------------------------------------------------------------------------------*/
@@ -153,12 +182,25 @@ body,
     /* Inscription ------------------------------------------------------------------------------*/
     .jumbotron {
         .container {
-            label {
-                font-size: 20px!important;
-                width: 150px!important;
-            }
-            input {
-                width: 150px!important;
+            .row {
+                justify-content: center;
+
+                .col-xs-12 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin-left: 40px;
+                    margin-right: 40px;
+
+                    label {
+                        font-size: 20px!important;
+                        width: 150px!important;
+                        text-align: center;
+                    }
+                    input {
+                        width: 150px!important;
+                    }
+                }
             }
             button {
                 width: 200px!important;

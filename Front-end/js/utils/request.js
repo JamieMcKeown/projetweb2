@@ -38,7 +38,7 @@ export function http_post(url, information) {
             method: 'POST',
             mode: 'cors',
             headers: {
-                'Content-Type' : 'applcation/json'
+                'Content-Type' : 'application/json'
             },
             body: JSON.stringify(information)
         }

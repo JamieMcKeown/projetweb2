@@ -1,0 +1,22 @@
+{
+  "name": "projetweb2",
+  "version": "1.0.0",
+  "description": "www.portagerquebec.ca",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieMcKeown/projetweb2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamieMcKeown/projetweb2/issues"
+  },
+  "homepage": "https://github.com/JamieMcKeown/projetweb2#readme",
+  "dependencies": {
+    "validator": "^13.1.1"
+  }
+}
