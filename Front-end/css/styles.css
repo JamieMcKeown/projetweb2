@@ -6,8 +6,7 @@ body,
   font-family: "GardensC";
   background-image: url("../images/bg69.jpg");
   background-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
@@ -23,28 +22,17 @@ body header,
 #app header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 80%;
   margin-left: 10%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 160px;
 }
 
@@ -125,72 +113,17 @@ body header .menu .redTomatoe,
 #app header .menu .redTomatoe {
   height: 125px;
   width: 104px;
-}
-
-html header .menu .helloWorld,
-body header .menu .helloWorld,
-#app header .menu .helloWorld {
-  -webkit-animation-name: helloWorld;
-          animation-name: helloWorld;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes helloWorld {
-  0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-}
-
-@keyframes helloWorld {
-  0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
+  margin-right: 15px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5%;
+  border: 10px solid rgba(164, 214, 38, 0.6);
 }
 
 html .container,
 body .container,
 #app .container {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 html .container .row,
@@ -239,31 +172,21 @@ body .jumbotron hr,
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 html .jumbotron .container .row,
 body .jumbotron .container .row,
 #app .jumbotron .container .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 html .jumbotron .container .row .col-xs-12,
 body .jumbotron .container .row .col-xs-12,
 #app .jumbotron .container .row .col-xs-12 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -315,16 +238,9 @@ body .modifProfil .questionSecret,
 #app .modifProfil .motdePasse,
 #app .modifProfil .questionSecret {
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 html .modifProfil .nom label, html .modifProfil .prenom label, html .modifProfil .courriel label, html .modifProfil .bio label, html .modifProfil .ville label, html .modifProfil .addresse label, html .modifProfil .codePostale label, html .modifProfil .motdePasse label, html .modifProfil .questionSecret label,
@@ -420,16 +336,9 @@ body .profileImagesModif,
 #app .profileImagesModif {
   width: 90%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 html .profileImagesModif .btn,
@@ -450,16 +359,9 @@ body #modifProfil,
 html #modifProfil .contentModifProfil,
 body #modifProfil .contentModifProfil,
 #app #modifProfil .contentModifProfil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -476,8 +378,6 @@ body #modifProfil .contentModifProfil,
 html #modifProfil .contentModifProfil form,
 body #modifProfil .contentModifProfil form,
 #app #modifProfil .contentModifProfil form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -486,8 +386,7 @@ body #modifProfil .contentModifProfil form,
   body #modifProfil .contentModifProfil form,
   #app #modifProfil .contentModifProfil form {
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
@@ -495,13 +394,8 @@ body #modifProfil .contentModifProfil form,
   html #modifProfil .contentModifProfil form,
   body #modifProfil .contentModifProfil form,
   #app #modifProfil .contentModifProfil form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -512,30 +406,18 @@ body #modifProfil .contentModifProfil form .firstSection h2,
   padding-top: 15px;
   background-image: url("../images/potager.png");
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProfil .contentModifProfil form .firstSection .champs,
   body #modifProfil .contentModifProfil form .firstSection .champs,
   #app #modifProfil .contentModifProfil form .firstSection .champs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 45px;
   }
   html #modifProfil .contentModifProfil form .firstSection .champs h2,
@@ -557,9 +439,7 @@ body #modifProfil .contentModifProfil form .firstSection .champs .modifButton,
   height: 25px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
@@ -571,29 +451,18 @@ body #modifProfil .contentModifProfil form .thirdSection h2,
   padding-top: 15px;
   background-image: url("../images/potager.png");
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 1024px) {
   html #modifProfil .contentModifProfil form .thirdSection .buttons,
   body #modifProfil .contentModifProfil form .thirdSection .buttons,
   #app #modifProfil .contentModifProfil form .thirdSection .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
     margin-bottom: 14px;
   }
 }
@@ -604,9 +473,7 @@ body #modifProfil .contentModifProfil form .thirdSection .buttons .button,
   height: 55px;
   width: 200px;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #A4D626;
   color: white;
 }
@@ -634,31 +501,18 @@ body .profileContainer img,
 html .profileContainer .ranking,
 body .profileContainer .ranking,
 #app .profileContainer .ranking {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 html .profileButtonsContainer,
 body .profileButtonsContainer,
 #app .profileButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: center;
 }
 
 html .profileButtonsContainer a,
@@ -667,10 +521,8 @@ body .profileButtonsContainer a,
   height: 55px;
   width: 100%;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #A4D626;
+  align-self: center;
+  background-color: rgba(164, 214, 38, 0.65);
   color: white;
   border: 2px solid white;
 }
@@ -679,15 +531,9 @@ html .newFooter,
 body .newFooter,
 #app .newFooter {
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 15%;
   height: 100px;
@@ -743,42 +589,21 @@ body .newFooter h3,
 }
 
 .jumbotron .potagerRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .jardinierRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .infoJardinier {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron img {
@@ -788,13 +613,8 @@ body .newFooter h3,
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 10px 0;
 }
 
@@ -823,4 +643,3 @@ body .newFooter h3,
   margin: 5px 0 5px 0;
   width: 150px;
 }
-/*# sourceMappingURL=styles.css.map */

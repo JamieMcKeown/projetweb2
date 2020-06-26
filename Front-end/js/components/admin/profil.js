@@ -4,6 +4,7 @@ export default tpl({
     template: './html/admin/profil.html',
     data () {
         return {
+            isActive: true,
         }
     },
     mounted(){

@@ -8,6 +8,7 @@ export default tpl({
     template: './html/admin/modificationProduit.html',
     data () {
         return {
+            isActive: true,
             css: {
                 transform: "translate(0px)",
             },
@@ -20,11 +21,28 @@ export default tpl({
     },
     methods: {
         homepageRoute() {
-            this.$router.push("/")
+            this.$router.push("/").catch(err => {})
         },
         
         connexionPage() {
             this.$router.push("/connexion")
+        },
+        inscriptionPage() {
+            this.$router.push("/inscription")
+        },
+        potagerPage() {
+            this.$router.push("/listePotagers")
+        },
+        jardiniersPage() {
+            this.$router.push("/listeJardiniers")
+        },
+
+        stopAnimation() {
+           if( this.isActive == false) {
+               this.isActive = true
+           } else {
+               this.isActive = false
+           }
         },
 
         arrowClickR() {
