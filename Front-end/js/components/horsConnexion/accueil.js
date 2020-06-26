@@ -8,7 +8,7 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
-            api: "http://api.test/api/"
+            api: "http://projetweb2api.localhost/api/user/random/"  
         }
     },
     mounted(){
@@ -19,6 +19,7 @@ export default tpl({
     //    this.fetchRandomPotager(4).then(data => {
     //        this.potagers = data
     //    })
+    this.fetchRandomUser(4)
        
     },
     methods: {
@@ -46,6 +47,18 @@ export default tpl({
                this.isActive = false
            }
         },
+
+        fetchRandomUser(amount) {
+            let url = this.api + amount
+
+            console.log(url)
+
+            http_get(url).then(data => {
+                this.users = data
+                console.log(this.users)
+                console.log(this.number)
+            })
+        }
 
         // fetchRandomUser(amount) {
         //     let api_url = this.api + "user/random/" + amount
