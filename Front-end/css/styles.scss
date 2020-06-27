@@ -223,116 +223,7 @@ body,
         justify-content: space-evenly;
     }   
 
-    /* Modification de produit ------------------------------------------------------------------*/
-    #modifProfil {
-        height: 100%;
-        width: 100%;
-
-        .contentModifProfil {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-
-            @media only screen and (max-width: 1023px) {
-                height: 68%;
-                width: 100%;
-                overflow: scroll;
-                text-align: center;
-            }
-
-            form {
-                display: flex;
-
-                @media only screen and (min-width: 1024px) {
-                    width: 100%;
-                    justify-content: space-around;
-                }
-
-                @media only screen and (max-width: 1023px) {
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                .firstSection {
-
-                    h2 {
-                        height: 75px;
-                        padding-top: 15px;
-                        background-image: url("../images/potager.png");
-                        color: white;
-                        display: flex;
-                        align-self: flex-start;
-                    }
-
-                    .champs {
-
-                        @media only screen and (min-width: 1024px) {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-between;
-                            height: 45px;
-
-                            h2 {
-                                margin-right: 15px;
-                            }
-
-                            input {
-                                height: 25px;
-                                width: 245px;
-                            }
-                        }
-
-                        .modifButton {
-                            height: 25px;
-                            width: 200px;
-                            margin-top: 15px;
-                            align-self: center;
-                            background-color: $green;
-                            color: white;
-                        }
-                    }
-                }
-
-                .thirdSection {
-
-                    h2 {
-                        height: 75px;
-                        padding-top: 15px;
-                        background-image: url("../images/potager.png");
-                        color: white;
-                        display: flex;
-                        align-self: flex-start;
-                    }
-
-                    .buttons {
-
-                        @media only screen and (min-width: 1024px) {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-self: flex-end;
-                            margin-bottom: 14px;
-                        }
-
-                        .button {
-                            height: 55px;
-                            width: 200px;
-                            margin-top: 15px;
-                            align-self: center;
-                            background-color: $green;
-                            color: white;
-                        }
-
-                        .annuler {
-                            background-color: red;
-                        }
-                    }
-                }
-            }
-        }
-    }
+   
 
     /* Profil -----------------------------------------------------------------------------------*/
     .profileContainer {
@@ -406,6 +297,10 @@ body,
 }
 
 // listePotagers
+
+.vote {
+    display: flex;
+}
 
 .carousel-control-next-icon , .carousel-control-prev-icon{
     width: 50px;
@@ -486,5 +381,18 @@ body,
         margin: 5px 0 5px 0;
         width: 150px;
     }
+}
+
+// modificationProduit
+
+.addProduct {
+    background-color: rgba(255, 255, 255, 0.2);
+    .btn {
+        width: 150px;
+        background-color: $green;
+        color: white;
+        border : 2px solid white;
+    }
+ 
 }
 

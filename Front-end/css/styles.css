@@ -12,7 +12,6 @@ body,
   /* Connexion --------------------------------------------------------------------------------*/
   /* Inscription ------------------------------------------------------------------------------*/
   /* Modification de profile ------------------------------------------------------------------*/
-  /* Modification de produit ------------------------------------------------------------------*/
   /* Profil -----------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
@@ -349,141 +348,6 @@ body .profileImagesModif .btn,
   border: 2px solid white;
 }
 
-html #modifProfil,
-body #modifProfil,
-#app #modifProfil {
-  height: 100%;
-  width: 100%;
-}
-
-html #modifProfil .contentModifProfil,
-body #modifProfil .contentModifProfil,
-#app #modifProfil .contentModifProfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProfil .contentModifProfil,
-  body #modifProfil .contentModifProfil,
-  #app #modifProfil .contentModifProfil {
-    height: 68%;
-    width: 100%;
-    overflow: scroll;
-    text-align: center;
-  }
-}
-
-html #modifProfil .contentModifProfil form,
-body #modifProfil .contentModifProfil form,
-#app #modifProfil .contentModifProfil form {
-  display: flex;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form,
-  body #modifProfil .contentModifProfil form,
-  #app #modifProfil .contentModifProfil form {
-    width: 100%;
-    justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProfil .contentModifProfil form,
-  body #modifProfil .contentModifProfil form,
-  #app #modifProfil .contentModifProfil form {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-html #modifProfil .contentModifProfil form .firstSection h2,
-body #modifProfil .contentModifProfil form .firstSection h2,
-#app #modifProfil .contentModifProfil form .firstSection h2 {
-  height: 75px;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: flex;
-  align-self: flex-start;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form .firstSection .champs,
-  body #modifProfil .contentModifProfil form .firstSection .champs,
-  #app #modifProfil .contentModifProfil form .firstSection .champs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 45px;
-  }
-  html #modifProfil .contentModifProfil form .firstSection .champs h2,
-  body #modifProfil .contentModifProfil form .firstSection .champs h2,
-  #app #modifProfil .contentModifProfil form .firstSection .champs h2 {
-    margin-right: 15px;
-  }
-  html #modifProfil .contentModifProfil form .firstSection .champs input,
-  body #modifProfil .contentModifProfil form .firstSection .champs input,
-  #app #modifProfil .contentModifProfil form .firstSection .champs input {
-    height: 25px;
-    width: 245px;
-  }
-}
-
-html #modifProfil .contentModifProfil form .firstSection .champs .modifButton,
-body #modifProfil .contentModifProfil form .firstSection .champs .modifButton,
-#app #modifProfil .contentModifProfil form .firstSection .champs .modifButton {
-  height: 25px;
-  width: 200px;
-  margin-top: 15px;
-  align-self: center;
-  background-color: #A4D626;
-  color: white;
-}
-
-html #modifProfil .contentModifProfil form .thirdSection h2,
-body #modifProfil .contentModifProfil form .thirdSection h2,
-#app #modifProfil .contentModifProfil form .thirdSection h2 {
-  height: 75px;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: flex;
-  align-self: flex-start;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form .thirdSection .buttons,
-  body #modifProfil .contentModifProfil form .thirdSection .buttons,
-  #app #modifProfil .contentModifProfil form .thirdSection .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-    margin-bottom: 14px;
-  }
-}
-
-html #modifProfil .contentModifProfil form .thirdSection .buttons .button,
-body #modifProfil .contentModifProfil form .thirdSection .buttons .button,
-#app #modifProfil .contentModifProfil form .thirdSection .buttons .button {
-  height: 55px;
-  width: 200px;
-  margin-top: 15px;
-  align-self: center;
-  background-color: #A4D626;
-  color: white;
-}
-
-html #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
-body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
-#app #modifProfil .contentModifProfil form .thirdSection .buttons .annuler {
-  background-color: red;
-}
-
 html .profileContainer,
 body .profileContainer,
 #app .profileContainer {
@@ -566,6 +430,10 @@ body .newFooter h3,
   }
 }
 
+.vote {
+  display: flex;
+}
+
 .carousel-control-next-icon, .carousel-control-prev-icon {
   width: 50px;
   height: 50px;
@@ -642,4 +510,15 @@ body .newFooter h3,
   border: 2px solid white;
   margin: 5px 0 5px 0;
   width: 150px;
+}
+
+.addProduct {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.addProduct .btn {
+  width: 150px;
+  background-color: #A4D626;
+  color: white;
+  border: 2px solid white;
 }
