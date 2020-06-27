@@ -8,14 +8,18 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
-            api: "http://api.test/api/"  
+            api: "http://pw2/public/api/user/random/"  
         }
     },
     mounted(){
-       this.fetchRandomUser(4).then(data => {
-           this.users = data
-           console.log(this.users[0].firstname)
-       }),
+    //    this.fetchRandomUser(4).then(data => {
+    //        this.users = data
+    //        console.log(this.users[0].firstname)
+    //    })
+    //    this.fetchRandomPotager(4).then(data => {
+    //        this.potagers = data
+    //    })
+    this.fetchRandomUser(2)
        
        this.fetchRandomPotager(4).then(data => {
            this.potagers = data
