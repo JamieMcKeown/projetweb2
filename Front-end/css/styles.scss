@@ -395,4 +395,16 @@ body,
     }
  
 }
+// admin
+
+.supprimerUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .btn {
+        background-color: red!important;
+        color: white;
+        border: 2px solid white;
+    }
+}
 
