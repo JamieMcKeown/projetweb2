@@ -120,7 +120,7 @@ body,
 
 
     /* Connexion --------------------------------------------------------------------------------*/
-    .jumbotron  {
+    .jumbotron.connexionJumbo  {
         width: 80%;
         margin-left: 10%;
         background-color: rgba(255, 255, 255, 0.6)!important;
@@ -408,3 +408,23 @@ body,
     }
 }
 
+// pageOffres
+
+.jumbotron.outboundOffers{
+    background-color: rgba(255, 255, 255, 0.6);
+    .alert{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .btn {
+        background-color: red!important;
+        border: 2px solid white;
+        color: white;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .accept {
+        background-color: $green!important;;
+    }
+}
