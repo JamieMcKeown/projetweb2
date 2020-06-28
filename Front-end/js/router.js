@@ -11,6 +11,7 @@ import detailsJardinier from './components/horsConnexion/detailsJardinier'
 import produit from './components/horsConnexion/produit'
 import admin from './components/admin/admin'
 import pageOffres from './components/admin/pageOffres'
+import offreEchange from './components/admin/offreEchange'
 
 export default new VueRouter({
     routes: [
@@ -27,5 +28,6 @@ export default new VueRouter({
         { path:'/produit', component: produit },
         { path:'/admin', component: admin },
         { path:'/pageOffres', component: pageOffres },
+        { path:'/offreEchange', component: offreEchange },
     ]
 })
