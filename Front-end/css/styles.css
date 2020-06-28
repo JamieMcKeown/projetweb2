@@ -140,34 +140,34 @@ body .container .potagerTitle,
   font-size: 48px !important;
 }
 
-html .jumbotron,
-body .jumbotron,
-#app .jumbotron {
+html .jumbotron.connexionJumbo,
+body .jumbotron.connexionJumbo,
+#app .jumbotron.connexionJumbo {
   width: 80%;
   margin-left: 10%;
   background-color: rgba(255, 255, 255, 0.6) !important;
   border-radius: 10px;
 }
 
-html .jumbotron .btn,
-body .jumbotron .btn,
-#app .jumbotron .btn {
+html .jumbotron.connexionJumbo .btn,
+body .jumbotron.connexionJumbo .btn,
+#app .jumbotron.connexionJumbo .btn {
   background-color: #A4D626 !important;
   color: white !important;
   width: 95px !important;
 }
 
-html .jumbotron label,
-body .jumbotron label,
-#app .jumbotron label {
+html .jumbotron.connexionJumbo label,
+body .jumbotron.connexionJumbo label,
+#app .jumbotron.connexionJumbo label {
   font-size: 24px !important;
 }
 
-html .jumbotron input, html .jumbotron hr,
-body .jumbotron input,
-body .jumbotron hr,
-#app .jumbotron input,
-#app .jumbotron hr {
+html .jumbotron.connexionJumbo input, html .jumbotron.connexionJumbo hr,
+body .jumbotron.connexionJumbo input,
+body .jumbotron.connexionJumbo hr,
+#app .jumbotron.connexionJumbo input,
+#app .jumbotron.connexionJumbo hr {
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
@@ -533,4 +533,26 @@ body .newFooter h3,
   background-color: red !important;
   color: white;
   border: 2px solid white;
+}
+
+.jumbotron.outboundOffers {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.jumbotron.outboundOffers .alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jumbotron.outboundOffers .btn {
+  background-color: red !important;
+  border: 2px solid white;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.jumbotron.outboundOffers .accept {
+  background-color: #A4D626 !important;
 }
