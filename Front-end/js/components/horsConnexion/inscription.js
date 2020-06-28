@@ -70,7 +70,7 @@ export default tpl({
             // console.log(this.question_secrete)
             // console.log(this.reponse)
 
-            let createUserUrl = "http://projetweb2api.localhost/api/user/new"
+            let createUserUrl = "http://pw2/public/api/user/new"
 
             http_post(createUserUrl, {
               prenom: this.prenom,

@@ -8,7 +8,7 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
-            api: "http://projetweb2api.localhost/api/user/random/"  
+            api: "http://pw2/public/api/user/random/"  
         }
     },
     mounted(){
