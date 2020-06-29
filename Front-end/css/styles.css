@@ -5,9 +5,9 @@ body,
   height: 100%;
   margin: 0px;
   font-family: "GardensC";
-  background-image: url("../images/bg69.jpg");
+  background-image: url("../images/bg1986.jpg");
   background-position: center;
-  object-fit: cover;
+  object-fit: contain;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/

@@ -19,7 +19,7 @@ export default tpl({
     //    this.fetchRandomPotager(4).then(data => {
     //        this.potagers = data
     //    })
-    this.fetchRandomUser(2)
+    this.fetchRandomUser(4)
        
        this.fetchRandomPotager(4).then(data => {
            this.potagers = data
