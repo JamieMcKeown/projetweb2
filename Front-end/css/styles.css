@@ -7,7 +7,8 @@ body,
   font-family: "GardensC";
   background-image: url("../images/bg1986.jpg");
   background-position: center;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
@@ -22,7 +23,8 @@ body header,
 #app header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 90%;
   margin-left: 5%;
   margin-top: 15px;
@@ -123,10 +125,63 @@ body header .menu .redTomatoe,
 #app header .menu .redTomatoe {
   height: 125px;
   width: 104px;
-  margin-right: 15px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 5%;
-  border: 10px solid rgba(164, 214, 38, 0.6);
+}
+
+html header .menu .helloWorld,
+body header .menu .helloWorld,
+#app header .menu .helloWorld {
+  -webkit-animation-name: helloWorld;
+          animation-name: helloWorld;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+@-webkit-keyframes helloWorld {
+  0% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  25% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  50% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  75% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  100% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+}
+
+@keyframes helloWorld {
+  0% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  25% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  50% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  75% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  100% {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
 }
 
 html .container,
@@ -490,6 +545,8 @@ body .newFooter h3,
 }
 
 .vote {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -612,9 +669,16 @@ body .newFooter h3,
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .supprimerUser .btn {
@@ -637,9 +701,16 @@ body .newFooter h3,
 }
 
 .jumbotron.outboundOffers .alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .jumbotron.outboundOffers .btn {
@@ -707,3 +778,4 @@ body .newFooter h3,
   margin-left: 12.5%;
   border: 2px solid white;
 }
+/*# sourceMappingURL=styles.css.map */

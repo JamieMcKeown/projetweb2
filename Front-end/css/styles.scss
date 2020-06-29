@@ -83,13 +83,44 @@ body,
                 }
             }
     
+            // .redTomatoe {
+            //     height: 125px;
+            //     width: 104px;
+            //     margin-right: 15px;
+            //     background-color: rgba(255, 255, 255, 0.6);
+            //     border-radius: 5%;
+            //     border: 10px solid rgba(164,214,38, 0.6);
+                
+            // }
+
             .redTomatoe {
                 height: 125px;
                 width: 104px;
-                margin-right: 15px;
-                background-color: rgba(255, 255, 255, 0.6);
-                border-radius: 5%;
-                border: 10px solid rgba(164,214,38, 0.6);
+            }
+    
+            .helloWorld {
+                animation-name: helloWorld;
+                animation-duration: 4s;
+                animation-iteration-count: 2;
+            }
+    
+            @keyframes helloWorld {
+    
+                0% {
+                    transform: rotate(40deg);
+                }
+                25% {
+                    transform: rotate(-40deg);
+                }
+                50% {
+                    transform: rotate(40deg);
+                }
+                75% {
+                    transform: rotate(-40deg);
+                }
+                100% {
+                    transform: rotate(40deg);
+                }
                 
             }
     
