@@ -10,6 +10,7 @@ body,
     background-image: url("../images/bg1986.jpg");
     background-position: center;
     object-fit: contain;
+}
 
     /* Header -----------------------------------------------------------------------------------*/
     header {
@@ -57,6 +58,7 @@ body,
         }
 
         @media only screen and (min-width: 768px) {
+        
             .logoContainer {
                 width: 400px;
 
@@ -278,7 +280,7 @@ body,
         width:100%;
         justify-content: center;
         
-}
+    }
 
     /* Footer -----------------------------------------------------------------------------------*/
 
@@ -307,71 +309,73 @@ body,
         h3 {
             margin-left: 10%;
         }
-    }
 
-    @media only screen and (min-width: 767px) {
-        .newFooter {
-            h3 {
-                margin-left: 50%;
+
+        @media only screen and (min-width: 767px) {
+            .newFooter {
+                h3 {
+                    margin-left: 50%;
+                }
             }
         }
     }
-}
+
+
 
 // listePotagers
 
-.vote {
-    display: flex;
-}
-
-.carousel-control-next-icon , .carousel-control-prev-icon{
-    width: 50px;
-    height: 50px;
-    background-color: $green!important;
-}
-.carousel-item {
-    .btn {
-        position:relative;
-        top:-60px;
-        left: 5%;
-        background-color: $green;
-        border: 2px solid white;
-        margin: 5px 0 5px 0;
-        width: 150px;
+    .vote {
+        display: flex;
     }
-}
+
+    .carousel-control-next-icon , .carousel-control-prev-icon{
+        width: 50px;
+        height: 50px;
+        background-color: $green!important;
+    }
+    .carousel-item {
+        .btn {
+            position:relative;
+            top:-60px;
+            left: 5%;
+            background-color: $green;
+            border: 2px solid white;
+            margin: 5px 0 5px 0;
+            width: 150px;
+        }
+    }
 
 // detailsPotager
 
-.jumbotron {
-    .carousel-control-next-icon , .carousel-control-prev-icon{
-        width: 25px;
-        height: 25px;
-        background-color: $green!important;
-    }
-    .potagerRating {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .jardinierRating {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .infoJardinier {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    img {
-        height: 150px;
-        width: 200px;
-        margin-left: 2.5%;
-        
+    .jumbotron {
+        .carousel-control-next-icon , .carousel-control-prev-icon{
+            width: 25px;
+            height: 25px;
+            background-color: $green!important;
+        }
+        .potagerRating {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .jardinierRating {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .infoJardinier {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        img {
+            height: 150px;
+            width: 200px;
+            margin-left: 2.5%;
+            
 
+        }
     }
-}
 
 // produit
 .imageContainer {
@@ -555,3 +559,4 @@ body,
         
     }
 }
+
