@@ -4,11 +4,10 @@ body,
   width: 100%;
   height: 100%;
   margin: 0px;
-  font-family: "GardensC";
+  font-family: sans-serif;
   background-image: url("../images/bg1986.jpg");
   background-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
@@ -23,29 +22,19 @@ body header,
 #app header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 90%;
   margin-left: 5%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 160px;
+  font-family: sans-serif;
 }
 
 html header button,
@@ -82,7 +71,7 @@ body header .logoContainer,
 html header .logoContainer p,
 body header .logoContainer p,
 #app header .logoContainer p {
-  font-size: 14px;
+  font-size: 18px;
   position: relative;
   top: 92%;
   left: 7%;
@@ -130,57 +119,26 @@ body header .menu .redTomatoe,
 html header .menu .helloWorld,
 body header .menu .helloWorld,
 #app header .menu .helloWorld {
-  -webkit-animation-name: helloWorld;
-          animation-name: helloWorld;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-}
-
-@-webkit-keyframes helloWorld {
-  0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
+  animation-name: helloWorld;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
 }
 
 @keyframes helloWorld {
   0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
 }
 
@@ -188,9 +146,7 @@ html .container,
 body .container,
 #app .container {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 html .container .row,
@@ -239,31 +195,21 @@ body .jumbotron.connexionJumbo hr,
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 html .jumbotron .container .row,
 body .jumbotron .container .row,
 #app .jumbotron .container .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 html .jumbotron .container .row .col-xs-12,
 body .jumbotron .container .row .col-xs-12,
 #app .jumbotron .container .row .col-xs-12 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -315,16 +261,9 @@ body .modifProfil .questionSecret,
 #app .modifProfil .motdePasse,
 #app .modifProfil .questionSecret {
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 html .modifProfil .nom label, html .modifProfil .prenom label, html .modifProfil .courriel label, html .modifProfil .bio label, html .modifProfil .ville label, html .modifProfil .addresse label, html .modifProfil .codePostale label, html .modifProfil .motdePasse label, html .modifProfil .questionSecret label,
@@ -420,16 +359,9 @@ body .profileImagesModif,
 #app .profileImagesModif {
   width: 90%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 html .profileImagesModif .btn,
@@ -457,32 +389,18 @@ body .profileContainer img,
 html .profileContainer .ranking,
 body .profileContainer .ranking,
 #app .profileContainer .ranking {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 html .profileButtonsContainer,
 body .profileButtonsContainer,
 #app .profileButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 html .profileButtonsContainer a,
@@ -491,9 +409,7 @@ body .profileButtonsContainer a,
   height: 55px;
   width: 100%;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: rgba(164, 214, 38, 0.65);
   color: white;
   border: 2px solid white;
@@ -503,15 +419,9 @@ html .newFooter,
 body .newFooter,
 #app .newFooter {
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 15%;
   height: 100px;
@@ -545,8 +455,6 @@ body .newFooter h3,
 }
 
 .vote {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -573,42 +481,21 @@ body .newFooter h3,
 }
 
 .jumbotron .potagerRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .jardinierRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .infoJardinier {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron img {
@@ -618,13 +505,8 @@ body .newFooter h3,
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 10px 0;
 }
 
@@ -669,16 +551,9 @@ body .newFooter h3,
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .supprimerUser .btn {
@@ -701,16 +576,9 @@ body .newFooter h3,
 }
 
 .jumbotron.outboundOffers .alert {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jumbotron.outboundOffers .btn {
@@ -778,4 +646,38 @@ body .newFooter h3,
   margin-left: 12.5%;
   border: 2px solid white;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.search {
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 10px;
+}
+
+.search label {
+  width: 80px;
+}
+
+.search .btn {
+  background-color: #A4D626 !important;
+  width: 40%;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.search input {
+  margin-top: 10px;
+}
+
+.search .xButton {
+  background-color: red !important;
+  color: white;
+  border: 2px solid white;
+  width: 15%;
+}
+
+.search .searchButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
