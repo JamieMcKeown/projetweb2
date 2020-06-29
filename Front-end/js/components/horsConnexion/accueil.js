@@ -8,6 +8,7 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
+            searchOption: false,
             api: "http://api.test/api/"  
         }
     },
@@ -56,6 +57,13 @@ export default tpl({
                 this.potagers = data
                 console.log(this.potagers)
             })
+        },
+        searchClicked(){
+            this.searchOption = true;
+        },
+        
+        closeSearch(){
+            this.searchOption = false;
         }
     },
 })

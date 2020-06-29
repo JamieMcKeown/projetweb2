@@ -4,71 +4,40 @@ body,
   width: 100%;
   height: 100%;
   margin: 0px;
-  font-family: "GardensC";
+  font-family: sans-serif;
   background-image: url("../images/bg1986.jpg");
   background-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
-  /* Header -----------------------------------------------------------------------------------*/
-  /* Accueil ----------------------------------------------------------------------------------*/
-  /* Connexion --------------------------------------------------------------------------------*/
-  /* Inscription ------------------------------------------------------------------------------*/
-  /* Modification de profile ------------------------------------------------------------------*/
-  /* Profil -----------------------------------------------------------------------------------*/
-  /* Footer -----------------------------------------------------------------------------------*/
+  object-fit: contain;
 }
 
-html header,
-body header,
-#app header {
+/* Header -----------------------------------------------------------------------------------*/
+header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 90%;
   margin-left: 5%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 160px;
+  font-family: sans-serif;
 }
 
-html header button,
-html header input,
-html header optgroup,
-html header select,
-html header textarea,
-body header button,
-body header input,
-body header optgroup,
-body header select,
-body header textarea,
-#app header button,
-#app header input,
-#app header optgroup,
-#app header select,
-#app header textarea {
+header button,
+header input,
+header optgroup,
+header select,
+header textarea {
   margin: 2px !important;
 }
 
-html header .logoContainer,
-body header .logoContainer,
-#app header .logoContainer {
+header .logoContainer {
   margin-top: -20px;
   background-image: url("../images/logoFinale(blanc).svg");
   background-repeat: no-repeat;
@@ -79,24 +48,18 @@ body header .logoContainer,
   height: 125px;
 }
 
-html header .logoContainer p,
-body header .logoContainer p,
-#app header .logoContainer p {
-  font-size: 14px;
+header .logoContainer p {
+  font-size: 18px;
   position: relative;
   top: 92%;
   left: 7%;
 }
 
 @media only screen and (min-width: 768px) {
-  html header .logoContainer,
-  body header .logoContainer,
-  #app header .logoContainer {
+  header .logoContainer {
     width: 400px;
   }
-  html header .logoContainer p,
-  body header .logoContainer p,
-  #app header .logoContainer p {
+  header .logoContainer p {
     font-size: 20px;
     position: relative;
     top: 92%;
@@ -104,414 +67,211 @@ body header .logoContainer p,
   }
 }
 
-html header .menu .dropdown-menu,
-body header .menu .dropdown-menu,
-#app header .menu .dropdown-menu {
+header .menu .dropdown-menu {
   min-width: 0rem !important;
   margin-top: 10px !important;
   left: -15px !important;
 }
 
 @media only screen and (min-width: 992px) {
-  html header .menu .dropdown-menu,
-  body header .menu .dropdown-menu,
-  #app header .menu .dropdown-menu {
+  header .menu .dropdown-menu {
     left: -8px !important;
   }
 }
 
-html header .menu .redTomatoe,
-body header .menu .redTomatoe,
-#app header .menu .redTomatoe {
+header .menu .redTomatoe {
   height: 125px;
   width: 104px;
 }
 
-html header .menu .helloWorld,
-body header .menu .helloWorld,
-#app header .menu .helloWorld {
-  -webkit-animation-name: helloWorld;
-          animation-name: helloWorld;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-}
-
-@-webkit-keyframes helloWorld {
-  0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
+header .menu .helloWorld {
+  animation-name: helloWorld;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
 }
 
 @keyframes helloWorld {
   0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
 }
 
-html .container,
-body .container,
-#app .container {
+/* Accueil ----------------------------------------------------------------------------------*/
+.container {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
-html .container .row,
-body .container .row,
-#app .container .row {
+.container .row {
   width: 90%;
   margin-left: 5%;
 }
 
-html .container .potagerTitle,
-body .container .potagerTitle,
-#app .container .potagerTitle {
+.container .potagerTitle {
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   font-size: 48px !important;
 }
 
-html .jumbotron.connexionJumbo,
-body .jumbotron.connexionJumbo,
-#app .jumbotron.connexionJumbo {
+/* Connexion --------------------------------------------------------------------------------*/
+.jumbotron.connexionJumbo {
   width: 80%;
   margin-left: 10%;
   background-color: rgba(255, 255, 255, 0.6) !important;
   border-radius: 10px;
 }
 
-html .jumbotron.connexionJumbo .btn,
-body .jumbotron.connexionJumbo .btn,
-#app .jumbotron.connexionJumbo .btn {
+.jumbotron.connexionJumbo .btn {
   background-color: #A4D626 !important;
   color: white !important;
   width: 95px !important;
 }
 
-html .jumbotron.connexionJumbo label,
-body .jumbotron.connexionJumbo label,
-#app .jumbotron.connexionJumbo label {
+.jumbotron.connexionJumbo label {
   font-size: 24px !important;
 }
 
-html .jumbotron.connexionJumbo input, html .jumbotron.connexionJumbo hr,
-body .jumbotron.connexionJumbo input,
-body .jumbotron.connexionJumbo hr,
-#app .jumbotron.connexionJumbo input,
-#app .jumbotron.connexionJumbo hr {
+.jumbotron.connexionJumbo input, .jumbotron.connexionJumbo hr {
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
-html .jumbotron .container .row,
-body .jumbotron .container .row,
-#app .jumbotron .container .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* Inscription ------------------------------------------------------------------------------*/
+.jumbotron .container .row {
+  justify-content: center;
 }
 
-html .jumbotron .container .row .col-xs-12,
-body .jumbotron .container .row .col-xs-12,
-#app .jumbotron .container .row .col-xs-12 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.jumbotron .container .row .col-xs-12 {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: 40px;
   margin-right: 40px;
 }
 
-html .jumbotron .container .row .col-xs-12 label,
-body .jumbotron .container .row .col-xs-12 label,
-#app .jumbotron .container .row .col-xs-12 label {
+.jumbotron .container .row .col-xs-12 label {
   font-size: 20px !important;
   width: 150px !important;
   text-align: center;
 }
 
-html .jumbotron .container .row .col-xs-12 input,
-body .jumbotron .container .row .col-xs-12 input,
-#app .jumbotron .container .row .col-xs-12 input {
+.jumbotron .container .row .col-xs-12 input {
   width: 150px !important;
 }
 
-html .jumbotron .container button,
-body .jumbotron .container button,
-#app .jumbotron .container button {
+.jumbotron .container button {
   width: 200px !important;
   border: 5px solid white !important;
 }
 
-html .modifProfil,
-body .modifProfil,
-#app .modifProfil {
+/* Modification de profile ------------------------------------------------------------------*/
+.modifProfil {
   width: 100%;
 }
 
-html .modifProfil .nom, html .modifProfil .prenom, html .modifProfil .courriel, html .modifProfil .bio, html .modifProfil .ville, html .modifProfil .addresse, html .modifProfil .codePostale, html .modifProfil .motdePasse, html .modifProfil .questionSecret,
-body .modifProfil .nom,
-body .modifProfil .prenom,
-body .modifProfil .courriel,
-body .modifProfil .bio,
-body .modifProfil .ville,
-body .modifProfil .addresse,
-body .modifProfil .codePostale,
-body .modifProfil .motdePasse,
-body .modifProfil .questionSecret,
-#app .modifProfil .nom,
-#app .modifProfil .prenom,
-#app .modifProfil .courriel,
-#app .modifProfil .bio,
-#app .modifProfil .ville,
-#app .modifProfil .addresse,
-#app .modifProfil .codePostale,
-#app .modifProfil .motdePasse,
-#app .modifProfil .questionSecret {
+.modifProfil .nom, .modifProfil .prenom, .modifProfil .courriel, .modifProfil .bio, .modifProfil .ville, .modifProfil .addresse, .modifProfil .codePostale, .modifProfil .motdePasse, .modifProfil .questionSecret {
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-html .modifProfil .nom label, html .modifProfil .prenom label, html .modifProfil .courriel label, html .modifProfil .bio label, html .modifProfil .ville label, html .modifProfil .addresse label, html .modifProfil .codePostale label, html .modifProfil .motdePasse label, html .modifProfil .questionSecret label,
-body .modifProfil .nom label,
-body .modifProfil .prenom label,
-body .modifProfil .courriel label,
-body .modifProfil .bio label,
-body .modifProfil .ville label,
-body .modifProfil .addresse label,
-body .modifProfil .codePostale label,
-body .modifProfil .motdePasse label,
-body .modifProfil .questionSecret label,
-#app .modifProfil .nom label,
-#app .modifProfil .prenom label,
-#app .modifProfil .courriel label,
-#app .modifProfil .bio label,
-#app .modifProfil .ville label,
-#app .modifProfil .addresse label,
-#app .modifProfil .codePostale label,
-#app .modifProfil .motdePasse label,
-#app .modifProfil .questionSecret label {
+.modifProfil .nom label, .modifProfil .prenom label, .modifProfil .courriel label, .modifProfil .bio label, .modifProfil .ville label, .modifProfil .addresse label, .modifProfil .codePostale label, .modifProfil .motdePasse label, .modifProfil .questionSecret label {
   width: 25%;
 }
 
-html .modifProfil .nom input, html .modifProfil .nom .btn, html .modifProfil .prenom input, html .modifProfil .prenom .btn, html .modifProfil .courriel input, html .modifProfil .courriel .btn, html .modifProfil .bio input, html .modifProfil .bio .btn, html .modifProfil .ville input, html .modifProfil .ville .btn, html .modifProfil .addresse input, html .modifProfil .addresse .btn, html .modifProfil .codePostale input, html .modifProfil .codePostale .btn, html .modifProfil .motdePasse input, html .modifProfil .motdePasse .btn, html .modifProfil .questionSecret input, html .modifProfil .questionSecret .btn,
-body .modifProfil .nom input,
-body .modifProfil .nom .btn,
-body .modifProfil .prenom input,
-body .modifProfil .prenom .btn,
-body .modifProfil .courriel input,
-body .modifProfil .courriel .btn,
-body .modifProfil .bio input,
-body .modifProfil .bio .btn,
-body .modifProfil .ville input,
-body .modifProfil .ville .btn,
-body .modifProfil .addresse input,
-body .modifProfil .addresse .btn,
-body .modifProfil .codePostale input,
-body .modifProfil .codePostale .btn,
-body .modifProfil .motdePasse input,
-body .modifProfil .motdePasse .btn,
-body .modifProfil .questionSecret input,
-body .modifProfil .questionSecret .btn,
-#app .modifProfil .nom input,
-#app .modifProfil .nom .btn,
-#app .modifProfil .prenom input,
-#app .modifProfil .prenom .btn,
-#app .modifProfil .courriel input,
-#app .modifProfil .courriel .btn,
-#app .modifProfil .bio input,
-#app .modifProfil .bio .btn,
-#app .modifProfil .ville input,
-#app .modifProfil .ville .btn,
-#app .modifProfil .addresse input,
-#app .modifProfil .addresse .btn,
-#app .modifProfil .codePostale input,
-#app .modifProfil .codePostale .btn,
-#app .modifProfil .motdePasse input,
-#app .modifProfil .motdePasse .btn,
-#app .modifProfil .questionSecret input,
-#app .modifProfil .questionSecret .btn {
+.modifProfil .nom input, .modifProfil .nom .btn, .modifProfil .prenom input, .modifProfil .prenom .btn, .modifProfil .courriel input, .modifProfil .courriel .btn, .modifProfil .bio input, .modifProfil .bio .btn, .modifProfil .ville input, .modifProfil .ville .btn, .modifProfil .addresse input, .modifProfil .addresse .btn, .modifProfil .codePostale input, .modifProfil .codePostale .btn, .modifProfil .motdePasse input, .modifProfil .motdePasse .btn, .modifProfil .questionSecret input, .modifProfil .questionSecret .btn {
   width: 75%;
   position: relative;
   right: 2%;
 }
 
-html .Buttons,
-body .Buttons,
-#app .Buttons {
+.Buttons {
   margin-top: 25px;
 }
 
-html .Buttons .save,
-body .Buttons .save,
-#app .Buttons .save {
+.Buttons .save {
   background-color: #A4D626 !important;
   color: white !important;
   border: 2px solid white;
   width: 75%;
 }
 
-html .Buttons .quit,
-body .Buttons .quit,
-#app .Buttons .quit {
+.Buttons .quit {
   background-color: red !important;
   color: white !important;
   border: 2px solid white;
   width: 75%;
 }
 
-html .profileImagesModif,
-body .profileImagesModif,
-#app .profileImagesModif {
+.profileImagesModif {
   width: 90%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-html .profileImagesModif .btn,
-body .profileImagesModif .btn,
-#app .profileImagesModif .btn {
+.profileImagesModif .btn {
   background-color: #A4D626 !important;
   color: white !important;
   border: 2px solid white;
 }
 
-html .profileContainer,
-body .profileContainer,
-#app .profileContainer {
+/* Profil -----------------------------------------------------------------------------------*/
+.profileContainer {
   margin: 15px 0px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-html .profileContainer img,
-body .profileContainer img,
-#app .profileContainer img {
+.profileContainer img {
   width: 100%;
   height: 150px;
 }
 
-html .profileContainer .ranking,
-body .profileContainer .ranking,
-#app .profileContainer .ranking {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.profileContainer .ranking {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-html .profileButtonsContainer,
-body .profileButtonsContainer,
-#app .profileButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.profileButtonsContainer {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
-html .profileButtonsContainer a,
-body .profileButtonsContainer a,
-#app .profileButtonsContainer a {
+.profileButtonsContainer a {
   height: 55px;
   width: 100%;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: rgba(164, 214, 38, 0.65);
   color: white;
   border: 2px solid white;
 }
 
-html .newFooter,
-body .newFooter,
-#app .newFooter {
+/* Footer -----------------------------------------------------------------------------------*/
+.newFooter {
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 15%;
   height: 100px;
@@ -521,32 +281,24 @@ body .newFooter,
   background-position: center;
 }
 
-html .newFooter img,
-body .newFooter img,
-#app .newFooter img {
+.newFooter img {
   position: relative;
   height: 75px;
   top: 10%;
   left: 5%;
 }
 
-html .newFooter h3,
-body .newFooter h3,
-#app .newFooter h3 {
+.newFooter h3 {
   margin-left: 10%;
 }
 
 @media only screen and (min-width: 767px) {
-  html .newFooter h3,
-  body .newFooter h3,
-  #app .newFooter h3 {
+  .newFooter .newFooter h3 {
     margin-left: 50%;
   }
 }
 
 .vote {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -573,42 +325,21 @@ body .newFooter h3,
 }
 
 .jumbotron .potagerRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .jardinierRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron .infoJardinier {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .jumbotron img {
@@ -618,13 +349,8 @@ body .newFooter h3,
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 10px 0;
 }
 
@@ -669,16 +395,9 @@ body .newFooter h3,
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .supprimerUser .btn {
@@ -701,16 +420,9 @@ body .newFooter h3,
 }
 
 .jumbotron.outboundOffers .alert {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jumbotron.outboundOffers .btn {
@@ -778,4 +490,38 @@ body .newFooter h3,
   margin-left: 12.5%;
   border: 2px solid white;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.search {
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 10px;
+}
+
+.search label {
+  width: 80px;
+}
+
+.search .btn {
+  background-color: #A4D626 !important;
+  width: 40%;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.search input {
+  margin-top: 10px;
+}
+
+.search .xButton {
+  background-color: red !important;
+  color: white;
+  border: 2px solid white;
+  width: 15%;
+}
+
+.search .searchButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
