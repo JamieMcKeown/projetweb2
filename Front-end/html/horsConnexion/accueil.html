@@ -23,7 +23,7 @@
         <div v-for="potager in potagers" class="row justify-content-center my-2">
             <div class="col-xs-5 col-sm-6 col-md-3 my-2">
                 <div class="card"  >
-                    <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
+                    <img :src="potager.image" class="card-img-top" alt="Image de profil du potager">
                     <div class="card-body">              
                       <a href="#" class="btn btn-primary">Potager de {{ potager.Prenom }}</a>
                     </div>
