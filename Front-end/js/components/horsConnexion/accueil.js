@@ -8,25 +8,18 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
-            api: "http://projetweb2api.localhost/api/user/random/"  
+            api: "http://api.test/api/"  
         }
     },
     mounted(){
-    //    this.fetchRandomUser(4).then(data => {
-    //        this.users = data
-    //        console.log(this.users[0].firstname)
-    //    })
-    //    this.fetchRandomPotager(4).then(data => {
-    //        this.potagers = data
-    //    })
     this.fetchRandomUser(4)
-       
+    this.fetchRandomPotager(4)
     },
+
     methods: {
         homepageRoute() {
             this.$router.push("/").catch(err => {})
-        },
-        
+        }, 
         connexionPage() {
             this.$router.push("/connexion")
         },
@@ -49,57 +42,20 @@ export default tpl({
         },
 
         fetchRandomUser(amount) {
-            let url = this.api + amount
-
-            console.log(url)
+            let url = this.api + "user/random/" + amount
 
             http_get(url).then(data => {
                 this.users = data
-                console.log(this.users)
-                console.log(this.number)
+
+            })
+        },
+        fetchRandomPotager(amount) {
+            let url = this.api + "potager/random/" + amount
+
+            http_get(url).then(data => {
+                this.potagers = data
+                console.log(this.potagers)
             })
         }
-
-        // fetchRandomUser(amount) {
-        //     let api_url = this.api + "user/random/" + amount
-        //     return http_get(api_url).then(data => {
-        //         const users = []
-        //         for (let i = 0; i < amount; i++){
-        //             let id = data[i].id
-        //             let prenom = data[i].prenom
-        //             let nom = data[i].nom
-        //             let image = data[i].image
-        //             let toAdd = {
-        //                 userID: id,
-        //                 firstname: prenom,
-        //                 lastname: nom,
-        //                 picture: image,
-        //             }
-        //             Vue.set(users, i, toAdd)
-        //         }
-        //         return users
-        //     })
-        // },
-
-        // fetchRandomPotager(amount) {
-        //     let api_url = this.api + "potager/random/" + amount
-        //     return http_get(api_url).then(data => {
-        //         const potagers = []
-        //         for (let i = 0; i < amount; i++){
-        //             let id = data[i].id
-        //             let prenom = data[i].Prenom
-        //             let nom = data[i].Nom
-        //             let image = data[i].image
-        //             let toAdd = {
-        //                 potagerID: id,
-        //                 firstname: prenom,
-        //                 lastname: nom,
-        //                 picture: image,
-        //             }
-        //             Vue.set(potagers, i, toAdd)
-        //         }
-        //         return potagers
-        //     })
-        // }
     },
 })

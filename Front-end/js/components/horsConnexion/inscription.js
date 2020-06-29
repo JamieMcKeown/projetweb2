@@ -20,7 +20,7 @@ export default tpl({
             question_secrete: "",
             reponse: "",
             verifEmail: "",
-            api: "",
+            api: "http://api.test/api/",
         }
     },
     mounted(){
@@ -70,7 +70,7 @@ export default tpl({
             // console.log(this.question_secrete)
             // console.log(this.reponse)
 
-            let createUserUrl = "http://projetweb2api.localhost/api/user/new"
+            let createUserUrl = this.api + "user/new"
 
             http_post(createUserUrl, {
               prenom: this.prenom,
@@ -85,7 +85,7 @@ export default tpl({
             }).then(data => {
                 this.$router.push("/connexion")
             })
-            e.preventDefault()
+            
 
         }
     },

@@ -1,19 +1,18 @@
 html,
 body,
 #app {
+  width: 100%;
   height: 100%;
   margin: 0px;
   font-family: "GardensC";
-  background-image: url("../images/bg69.jpg");
+  background-image: url("../images/bg1986.jpg");
   background-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: contain;
   /* Header -----------------------------------------------------------------------------------*/
   /* Accueil ----------------------------------------------------------------------------------*/
   /* Connexion --------------------------------------------------------------------------------*/
   /* Inscription ------------------------------------------------------------------------------*/
   /* Modification de profile ------------------------------------------------------------------*/
-  /* Modification de produit ------------------------------------------------------------------*/
   /* Profil -----------------------------------------------------------------------------------*/
   /* Footer -----------------------------------------------------------------------------------*/
 }
@@ -23,10 +22,9 @@ body header,
 #app header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 80%;
-  margin-left: 10%;
+  object-fit: cover;
+  width: 90%;
+  margin-left: 5%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -155,34 +153,34 @@ body .container .potagerTitle,
   font-size: 48px !important;
 }
 
-html .jumbotron,
-body .jumbotron,
-#app .jumbotron {
+html .jumbotron.connexionJumbo,
+body .jumbotron.connexionJumbo,
+#app .jumbotron.connexionJumbo {
   width: 80%;
   margin-left: 10%;
   background-color: rgba(255, 255, 255, 0.6) !important;
   border-radius: 10px;
 }
 
-html .jumbotron .btn,
-body .jumbotron .btn,
-#app .jumbotron .btn {
+html .jumbotron.connexionJumbo .btn,
+body .jumbotron.connexionJumbo .btn,
+#app .jumbotron.connexionJumbo .btn {
   background-color: #A4D626 !important;
   color: white !important;
   width: 95px !important;
 }
 
-html .jumbotron label,
-body .jumbotron label,
-#app .jumbotron label {
+html .jumbotron.connexionJumbo label,
+body .jumbotron.connexionJumbo label,
+#app .jumbotron.connexionJumbo label {
   font-size: 24px !important;
 }
 
-html .jumbotron input, html .jumbotron hr,
-body .jumbotron input,
-body .jumbotron hr,
-#app .jumbotron input,
-#app .jumbotron hr {
+html .jumbotron.connexionJumbo input, html .jumbotron.connexionJumbo hr,
+body .jumbotron.connexionJumbo input,
+body .jumbotron.connexionJumbo hr,
+#app .jumbotron.connexionJumbo input,
+#app .jumbotron.connexionJumbo hr {
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
@@ -387,183 +385,6 @@ body .profileImagesModif .btn,
   border: 2px solid white;
 }
 
-html #modifProfil,
-body #modifProfil,
-#app #modifProfil {
-  height: 100%;
-  width: 100%;
-}
-
-html #modifProfil .contentModifProfil,
-body #modifProfil .contentModifProfil,
-#app #modifProfil .contentModifProfil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProfil .contentModifProfil,
-  body #modifProfil .contentModifProfil,
-  #app #modifProfil .contentModifProfil {
-    height: 68%;
-    width: 100%;
-    overflow: scroll;
-    text-align: center;
-  }
-}
-
-html #modifProfil .contentModifProfil form,
-body #modifProfil .contentModifProfil form,
-#app #modifProfil .contentModifProfil form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form,
-  body #modifProfil .contentModifProfil form,
-  #app #modifProfil .contentModifProfil form {
-    width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  html #modifProfil .contentModifProfil form,
-  body #modifProfil .contentModifProfil form,
-  #app #modifProfil .contentModifProfil form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-html #modifProfil .contentModifProfil form .firstSection h2,
-body #modifProfil .contentModifProfil form .firstSection h2,
-#app #modifProfil .contentModifProfil form .firstSection h2 {
-  height: 75px;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form .firstSection .champs,
-  body #modifProfil .contentModifProfil form .firstSection .champs,
-  #app #modifProfil .contentModifProfil form .firstSection .champs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 45px;
-  }
-  html #modifProfil .contentModifProfil form .firstSection .champs h2,
-  body #modifProfil .contentModifProfil form .firstSection .champs h2,
-  #app #modifProfil .contentModifProfil form .firstSection .champs h2 {
-    margin-right: 15px;
-  }
-  html #modifProfil .contentModifProfil form .firstSection .champs input,
-  body #modifProfil .contentModifProfil form .firstSection .champs input,
-  #app #modifProfil .contentModifProfil form .firstSection .champs input {
-    height: 25px;
-    width: 245px;
-  }
-}
-
-html #modifProfil .contentModifProfil form .firstSection .champs .modifButton,
-body #modifProfil .contentModifProfil form .firstSection .champs .modifButton,
-#app #modifProfil .contentModifProfil form .firstSection .champs .modifButton {
-  height: 25px;
-  width: 200px;
-  margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #A4D626;
-  color: white;
-}
-
-html #modifProfil .contentModifProfil form .thirdSection h2,
-body #modifProfil .contentModifProfil form .thirdSection h2,
-#app #modifProfil .contentModifProfil form .thirdSection h2 {
-  height: 75px;
-  padding-top: 15px;
-  background-image: url("../images/potager.png");
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-@media only screen and (min-width: 1024px) {
-  html #modifProfil .contentModifProfil form .thirdSection .buttons,
-  body #modifProfil .contentModifProfil form .thirdSection .buttons,
-  #app #modifProfil .contentModifProfil form .thirdSection .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-bottom: 14px;
-  }
-}
-
-html #modifProfil .contentModifProfil form .thirdSection .buttons .button,
-body #modifProfil .contentModifProfil form .thirdSection .buttons .button,
-#app #modifProfil .contentModifProfil form .thirdSection .buttons .button {
-  height: 55px;
-  width: 200px;
-  margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #A4D626;
-  color: white;
-}
-
-html #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
-body #modifProfil .contentModifProfil form .thirdSection .buttons .annuler,
-#app #modifProfil .contentModifProfil form .thirdSection .buttons .annuler {
-  background-color: red;
-}
-
 html .profileContainer,
 body .profileContainer,
 #app .profileContainer {
@@ -639,8 +460,8 @@ body .newFooter,
   position: relative;
   top: 15%;
   height: 100px;
-  width: 70%;
-  margin-left: 15%;
+  width: 80%;
+  margin-left: 10%;
   background-image: url("../images/footer.png");
   background-position: center;
 }
@@ -666,6 +487,10 @@ body .newFooter h3,
   #app .newFooter h3 {
     margin-left: 50%;
   }
+}
+
+.vote {
+  display: flex;
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -771,4 +596,114 @@ body .newFooter h3,
   margin: 5px 0 5px 0;
   width: 150px;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.addProduct {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.addProduct .btn {
+  width: 150px;
+  background-color: #A4D626;
+  color: white;
+  border: 2px solid white;
+}
+
+.supprimerUser {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.supprimerUser .btn {
+  background-color: red !important;
+  color: white;
+  border: 2px solid white;
+}
+
+.admin {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.jumbotron.outboundOffers {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.jumbotron.outboundOffers .alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jumbotron.outboundOffers .btn {
+  background-color: red !important;
+  border: 2px solid white;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.jumbotron.outboundOffers .accept {
+  background-color: #A4D626 !important;
+}
+
+.sectionEchange .card-body {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.sectionEchange .btn {
+  background-color: #A4D626;
+  color: white;
+  border: 2px solid white;
+}
+
+.carousel-inner.offre {
+  margin-top: -40px;
+  z-index: 0;
+}
+
+.carousel-inner.offre h4 {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
+}
+
+.echange .card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.echange .btn {
+  width: 75%;
+  margin-left: 12.5%;
+  background-color: #A4D626 !important;
+  color: white;
+  border: 2px solid white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.echange .warning {
+  background-color: #e9890c !important;
+  color: white;
+  width: 75%;
+  margin-left: 12.5%;
+  border: 2px solid white;
+}
+
+.echange .decline {
+  background-color: red !important;
+  color: white;
+  width: 75%;
+  margin-left: 12.5%;
+  border: 2px solid white;
+}

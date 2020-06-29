@@ -6,6 +6,7 @@
     <div class="menu">
         <img src="../../images/hamburger.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
             <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
             <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
             <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
@@ -55,6 +56,9 @@
                     <p>évaluation du jardinier</p>
                     <p> 1 / 5 (666 votes)</p>
                 </div>
+                <div class="vote">
+                  <button type="submit" class="btn">votez</button>  
+                </div>
               </div>
            </div>
            <div class="col-lg-6">
@@ -66,7 +70,10 @@
                 <div class="potagerRating mt-2 py-5">
                     <p>évaluation du potager</p>
                     <p> 5 / 5 (69 votes)</p>
-                </div>
+                  </div>
+                      <div class="vote">
+                        <button type="submit" class="btn">votez</button>  
+                      </div>
                 
               </div>
            </div>
