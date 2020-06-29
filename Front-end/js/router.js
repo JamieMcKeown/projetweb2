@@ -12,6 +12,7 @@ import produit from './components/horsConnexion/produit'
 import admin from './components/admin/admin'
 import pageOffres from './components/admin/pageOffres'
 import offreEchange from './components/admin/offreEchange'
+import evaluationOffre from './components/admin/evaluationOffre'
 
 export default new VueRouter({
     routes: [
@@ -29,5 +30,6 @@ export default new VueRouter({
         { path:'/admin', component: admin },
         { path:'/pageOffres', component: pageOffres },
         { path:'/offreEchange', component: offreEchange },
+        { path:'/evaluationOffre', component: evaluationOffre },
     ]
 })
