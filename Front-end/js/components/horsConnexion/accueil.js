@@ -21,6 +21,9 @@ export default tpl({
     //    })
     this.fetchRandomUser(2)
        
+       this.fetchRandomPotager(4).then(data => {
+           this.potagers = data
+       })
     },
     methods: {
         homepageRoute() {
@@ -49,12 +52,24 @@ export default tpl({
         },
 
         fetchRandomUser(amount) {
-            let url = this.api + amount
+            let url = this.api + "user/random/" + amount
 
             console.log(url)
 
             http_get(url).then(data => {
                 this.users = data
+                console.log(this.users)
+                console.log(this.number)
+            })
+        },
+
+        fetchRandomPotager(amount) {
+            let url = this.api + "potager/random/" + amount
+
+            console.log(url)
+
+            http_get(url).then(data => {
+                // this.potagers = data
                 console.log(this.users)
                 console.log(this.number)
             })
