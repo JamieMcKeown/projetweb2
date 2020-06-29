@@ -26,8 +26,10 @@ class UserController extends Controller
      * Utilisé pour vérifier si le email de l'utilisateur existe lors de la validation du login
      * Peut aussi être utilisé lors de la validation de l'inscription en javascript pour voir si le email existe déja
      */
-    public function getWithEmail($email){
-        $user = User::where('email', $email)->first();
+    public function getWithEmail($email, $password){
+        $user = User::where('email', $email)
+        ->where('password', $password)
+        ->first();
         return $user;
     }
 
