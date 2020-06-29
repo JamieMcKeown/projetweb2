@@ -23,8 +23,8 @@ body header,
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
   object-fit: cover;
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -402,8 +402,8 @@ body .newFooter,
   position: relative;
   top: 15%;
   height: 100px;
-  width: 70%;
-  margin-left: 15%;
+  width: 80%;
+  margin-left: 10%;
   background-image: url("../images/footer.png");
   background-position: center;
 }
@@ -525,6 +525,9 @@ body .newFooter h3,
 }
 
 .supprimerUser {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -534,6 +537,15 @@ body .newFooter h3,
   background-color: red !important;
   color: white;
   border: 2px solid white;
+}
+
+.admin {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
 .jumbotron.outboundOffers {
@@ -568,14 +580,46 @@ body .newFooter h3,
   border: 2px solid white;
 }
 
-.carousel-inner {
+.carousel-inner.offre {
   margin-top: -40px;
   z-index: 0;
 }
 
-.carousel-inner h4 {
+.carousel-inner.offre h4 {
   position: relative;
   top: 40px;
   left: 20px;
   z-index: 1;
+}
+
+.echange .card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.echange .btn {
+  width: 75%;
+  margin-left: 12.5%;
+  background-color: #A4D626 !important;
+  color: white;
+  border: 2px solid white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.echange .warning {
+  background-color: #e9890c !important;
+  color: white;
+  width: 75%;
+  margin-left: 12.5%;
+  border: 2px solid white;
+}
+
+.echange .decline {
+  background-color: red !important;
+  color: white;
+  width: 75%;
+  margin-left: 12.5%;
+  border: 2px solid white;
 }
