@@ -16,6 +16,12 @@ class PotagerController extends Controller
         $potagerToShow = Potager::all();
         $result = [];
         foreach ($potagerToShow as $potager) {
+            $img = "";
+            if ($potager->image == "") {
+                $img = "../../images/mobile_background.png";
+            } else {
+                $img = $potager->image;
+            }
             $item = [
                 "Prenom" => $potager->user->prenom,
                 "Nom" => $potager->user->nom,
@@ -23,7 +29,7 @@ class PotagerController extends Controller
                 "user_id" => $potager->user_id,
                 "rating" => $potager->rating,
                 "vote" => $potager->vote,
-                "image" => $potager->image
+                "image" => $img
         ];
             array_push($result, $item);
         }
