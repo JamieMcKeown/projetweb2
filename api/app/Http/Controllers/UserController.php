@@ -82,6 +82,40 @@ class UserController extends Controller
         return $result;
     }
 
+    public function showWithId($id){
+        $user = User::where("id", $id)->first();
+        $result = [];
+        
+        if ($user->vote != 0 && $user->rating != 0){
+            $calcRating = $user->rating / $user->vote;
+        } else {
+            $calcRating = $user->rating;
+        }
+
+        $img ="";
+        if($user->image == "") {
+            $img = "../../images/mobile_background.png";
+        } else {
+            $img = $user->image;
+        }
+        $item = [
+            "id" => $user->id,
+            "prenom" => $user->prenom,
+            "nom" => $user->nom,
+            "email" => $user->email,
+            "truerating" => $calcRating,
+            "vote" => $user->vote,
+            "ville" => $user->ville,
+            "code_postal" => $user->code_postal,
+            "admin" => $user->admin,
+            "question_secrete" => $user->question_secrete,
+            "image" => $img,
+            "bio" => $user->bio
+        ];
+        array_push($result, $item);
+        
+        return $result;
+    }
     /**
      * Utilisé pour vérifier si le email de l'utilisateur existe lors de la validation du login
      * Peut aussi être utilisé lors de la validation de l'inscription en javascript pour voir si le email existe déja

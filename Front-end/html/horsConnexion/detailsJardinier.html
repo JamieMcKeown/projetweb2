@@ -19,12 +19,12 @@
        <div class="row">
            <div class="col-lg-6">
             <div class="jumbotron">
-                <h2>le jardinier</h2>
-                <img src="../../images/bg69.jpg" alt="">
+                <h2>Le jardinier</h2>
+                <img :src="image" alt="">
                 
                 <div class="infoJardinier">
-                    <p>Gaston Greenthumb</p>
-                    <p>Lac St Jean</p>
+                    <p>{{ prenom }} {{ nom }}</p>
+                    <p>{{ ville }}</p>
                 </div>
                 <hr class="my-2">
                 <div class="jardinierProduit">
@@ -53,26 +53,26 @@
                 </div>
                 <hr class="my-2">
                 <div class="jardinierRating my-2 py-5">
-                    <p>évaluation du jardinier</p>
-                    <p> 1 / 5 (666 votes)</p>
+                    <p>Évaluation du jardinier</p>
+                    <p> {{ rating }} / 5 ({{ vote }})</p>
                 </div>
                 <div class="vote">
-                  <button type="submit" class="btn">votez</button>  
+                  <button type="submit" class="btn">Votez!</button>  
                 </div>
               </div>
            </div>
            <div class="col-lg-6">
             <div class="jumbotron">
-                <h2>le potager</h2>
+                <h2>Le potager</h2>
                 <img src="../../images/bg69.jpg" alt="">
-                <p class="lead">(BIO)Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique veritatis soluta odit exercitationem necessitatibus distinctio laboriosam eos consequatur reprehenderit voluptates dolorem, facere error ea nisi, deleniti repellat, ex suscipit totam!</p>
+                <p class="lead">(BIO){{ bio }}</p>
                 <hr class="my-2">
                 <div class="potagerRating mt-2 py-5">
-                    <p>évaluation du potager</p>
+                    <p>Évaluation du potager</p>
                     <p> 5 / 5 (69 votes)</p>
                   </div>
                       <div class="vote">
-                        <button type="submit" class="btn">votez</button>  
+                        <button type="submit" class="btn">Votez!</button>  
                       </div>
                 
               </div>
@@ -84,7 +84,7 @@
     
     <div class="newFooter">
         <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
-        <h3>une production DreamTeam</h3>
+        <h3>Une production DreamTeam</h3>
     </div>
     
     
