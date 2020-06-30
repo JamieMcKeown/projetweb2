@@ -6,10 +6,11 @@ body,
     width: 100%;
     height: 100%;
     margin: 0px;
-    font-family: "GardensC";
+    font-family: sans-serif;
     background-image: url("../images/bg1986.jpg");
     background-position: center;
     object-fit: contain;
+}
 
     /* Header -----------------------------------------------------------------------------------*/
     header {
@@ -27,6 +28,7 @@ body,
         justify-content: space-between;
         align-items: center;
         height: 160px;
+        font-family:  sans-serif;
 
         button,
         input,
@@ -48,7 +50,7 @@ body,
             height: 125px;
 
             p {
-                font-size: 14px;
+                font-size: 18px;
                 position: relative;
                 top: 92%;
                 left: 7%;
@@ -56,6 +58,7 @@ body,
         }
 
         @media only screen and (min-width: 768px) {
+        
             .logoContainer {
                 width: 400px;
 
@@ -82,14 +85,35 @@ body,
                     left: -8px !important;
                 }
             }
-    
+
             .redTomatoe {
                 height: 125px;
                 width: 104px;
-                margin-right: 15px;
-                background-color: rgba(255, 255, 255, 0.6);
-                border-radius: 5%;
-                border: 10px solid rgba(164,214,38, 0.6);
+            }
+    
+            .helloWorld {
+                animation-name: helloWorld;
+                animation-duration: 4s;
+                animation-iteration-count: 2;
+            }
+    
+            @keyframes helloWorld {
+    
+                0% {
+                    transform: rotate(40deg);
+                }
+                25% {
+                    transform: rotate(-40deg);
+                }
+                50% {
+                    transform: rotate(40deg);
+                }
+                75% {
+                    transform: rotate(-40deg);
+                }
+                100% {
+                    transform: rotate(40deg);
+                }
                 
             }
     
@@ -256,7 +280,7 @@ body,
         width:100%;
         justify-content: center;
         
-}
+    }
 
     /* Footer -----------------------------------------------------------------------------------*/
 
@@ -285,71 +309,73 @@ body,
         h3 {
             margin-left: 10%;
         }
-    }
 
-    @media only screen and (min-width: 767px) {
-        .newFooter {
-            h3 {
-                margin-left: 50%;
+
+        @media only screen and (min-width: 767px) {
+            .newFooter {
+                h3 {
+                    margin-left: 50%;
+                }
             }
         }
     }
-}
+
+
 
 // listePotagers
 
-.vote {
-    display: flex;
-}
-
-.carousel-control-next-icon , .carousel-control-prev-icon{
-    width: 50px;
-    height: 50px;
-    background-color: $green!important;
-}
-.carousel-item {
-    .btn {
-        position:relative;
-        top:-60px;
-        left: 5%;
-        background-color: $green;
-        border: 2px solid white;
-        margin: 5px 0 5px 0;
-        width: 150px;
+    .vote {
+        display: flex;
     }
-}
+
+    .carousel-control-next-icon , .carousel-control-prev-icon{
+        width: 50px;
+        height: 50px;
+        background-color: $green!important;
+    }
+    .carousel-item {
+        .btn {
+            position:relative;
+            top:-60px;
+            left: 5%;
+            background-color: $green;
+            border: 2px solid white;
+            margin: 5px 0 5px 0;
+            width: 150px;
+        }
+    }
 
 // detailsPotager
 
-.jumbotron {
-    .carousel-control-next-icon , .carousel-control-prev-icon{
-        width: 25px;
-        height: 25px;
-        background-color: $green!important;
-    }
-    .potagerRating {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .jardinierRating {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .infoJardinier {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    img {
-        height: 150px;
-        width: 200px;
-        margin-left: 2.5%;
-        
+    .jumbotron {
+        .carousel-control-next-icon , .carousel-control-prev-icon{
+            width: 25px;
+            height: 25px;
+            background-color: $green!important;
+        }
+        .potagerRating {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .jardinierRating {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .infoJardinier {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        img {
+            height: 150px;
+            width: 200px;
+            margin-left: 2.5%;
+            
 
+        }
     }
-}
 
 // produit
 .imageContainer {
@@ -498,3 +524,39 @@ body,
     }
 
 }
+
+// section recherche
+
+.search {
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.6)!important;
+    border-radius: 10px;
+    label {
+        width: 80px;
+    }
+    .btn {
+        background-color: $green!important;
+        width: 40%;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+       
+    }
+    input {
+        margin-top: 10px;
+    }
+    .xButton {
+        background-color: red!important;
+        color: white;
+        border: 2px solid white;
+        width: 15%;
+    
+    }
+    .searchButtonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+

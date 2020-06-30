@@ -4,7 +4,7 @@
             <p>partagez votre potager</p>
         </div>
         <div class="menu">
-            <img src="../../images/hamburger.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
+            <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
                 <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
@@ -15,44 +15,49 @@
     </header>
 
     <div class="container">
+        <div v-if="searchOption == false"class="row cucumber my-3">
+            <div @click="searchClicked" class="col text-center">
+                <img src="../../images/rechercheRapide.png" alt="" srcset="">
+            </div>
+        </div>
+        <div v-if="searchOption" class="row">
+            <div class="col search">
+                <form>
+                    <div class="form-group text-center">
+                     
+                      <input  value="recherche" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+            
+                    <div class="form-group form-check">
+                        <div class="bi"></div>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">distance</label>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">jardinier</label>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">potager</label>
+                    </div>
+                    <div class="searchButtonContainer">
+                        <button type="submit" class="btn">soumettre</button>
+                        <button @click="closeSearch"type="submit" class="btn xButton">x</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
         <div class="row ">
             <div class="col potagerTitle text-center ">
                 Potagers
             </div>
         </div>
-        <div v-for="potager in potagers" class="row justify-content-center my-2">
-            <div class="col-xs-5 col-sm-6 col-md-3 my-2">
+        <div class="row justify-content-center my-2">
+            <div v-for="potager in potagers" class="col-xs-5 col-sm-6 col-md-3 my-2">
                 <div class="card"  >
-                    <img :src="potager.image" class="card-img-top" alt="Image de profil du potager">
+                    <img src="../../images/mobile_background.png" class="card-img-top" alt="Image de profil du potager">
                     <div class="card-body">              
                       <a href="#" class="btn btn-primary">Potager de {{ potager.Prenom }}</a>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-xs-5 col-sm-6 col-md-3 my-2">
-                <div class="card"  >
-                    <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
-                    <div class="card-body">              
-                      <a href="#" class="btn btn-primary">voir potager</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-5 col-sm-6 col-md-3 my-2">
-                <div class="card"  >
-                    <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
-                    <div class="card-body">              
-                      <a href="#" class="btn btn-primary">voir potager</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-5 col-sm-6 col-md-3 my-2">
-                <div class="card"  >
-                    <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
-                    <div class="card-body">              
-                      <a href="#" class="btn btn-primary">voir potager</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
     <div class="container">
@@ -61,8 +66,8 @@
                 Jardiniers
             </div>
         </div>
-        <div v-for="user in users" class="row justify-content-center my-2">
-            <div class="col-xs-5 col-sm-6 col-md-3 my-2">
+        <div class="row justify-content-center my-2">
+            <div v-for="user in users" class="col-xs-5 col-sm-6 col-md-3 my-2">
                 <div class="card"  >
                     <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
                     <div class="card-body">              
