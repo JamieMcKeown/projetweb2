@@ -6,8 +6,13 @@ export default tpl({
     data(){
         return{
             isActive: true,
+            connected: false,
+            user: "",
         }
     },// end data
+    mounted() {
+        this.checkIfUserIsConnected()
+    },
     methods: {
         homepageRoute() {
             this.$router.push("/")
@@ -25,11 +30,35 @@ export default tpl({
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
         },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
+        },
         stopAnimation() {
             if( this.isActive == false) {
                 this.isActive = true
             } else {
                 this.isActive = false
+            }
+        },
+
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
             }
         },
     }

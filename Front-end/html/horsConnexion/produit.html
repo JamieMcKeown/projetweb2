@@ -11,6 +11,8 @@
                 <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
                 <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
                 <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+                <a @click="pageProfil" v-if="connected" class="dropdown-item" href="#">mon profil</a>
+                <a @click="deconnexion" v-if="connected" class="dropdown-item" href="#">déconnexion</a>
             </div>
         </div>
     </header>

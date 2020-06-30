@@ -20,7 +20,7 @@ export default tpl({
             question_secrete: "",
             reponse: "",
             verifEmail: "",
-            api: "http://api.test/api/",
+            api: "http://projetweb2api.localhost/api/",
         }
     },
     mounted(){

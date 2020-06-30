@@ -9,12 +9,15 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://api.test/api/"  
+            api: "http://projetweb2api.localhost/api/",  
+            connected: false,
+            user: "",
         }
     },
     mounted(){
-    this.fetchRandomUser(4)
-    this.fetchRandomPotager(4)
+        this.fetchRandomUser(4)
+        this.fetchRandomPotager(4)
+        this.checkIfUserIsConnected()
     },
 
     methods: {
@@ -32,6 +35,15 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
         },
 
         stopAnimation() {
@@ -64,6 +76,23 @@ export default tpl({
         
         closeSearch(){
             this.searchOption = false;
-        }
+        },
+
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
+        },
+
     },
 })

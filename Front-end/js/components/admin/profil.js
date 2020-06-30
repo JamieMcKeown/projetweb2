@@ -5,9 +5,11 @@ export default tpl({
     data () {
         return {
             isActive: true,
+
         }
     },
     mounted(){
+        this.getInfos()
     },
     methods: {
         homepageRoute() {
@@ -26,5 +28,33 @@ export default tpl({
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
         },
+
+        modificationProfil() {
+            this.$router.push("/modificationProfil")
+        },
+
+        modificationAjoutProduit() {
+            this.$router.push("/modificationProduit")
+        },
+
+        offres() {
+            this.$router.push("/pageOffres")
+        },
+
+        stopAnimation() {
+            if( this.isActive == false) {
+                this.isActive = true
+            } else {
+                this.isActive = false
+            }
+        },
+
+        getInfos() {
+            let retrievedObject = localStorage.getItem('data')
+            let parseObject =  JSON.parse(retrievedObject)
+            console.log(parseObject)
+        }
+
+
     },
 })

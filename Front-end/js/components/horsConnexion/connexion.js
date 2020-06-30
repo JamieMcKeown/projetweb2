@@ -38,14 +38,15 @@ export default tpl({
             } else {
                 this.isActive = false
             }
-         },
+        },
 
         connexion(e) {
-            let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
+            let getUserEmail = "http://projetweb2api.localhost/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
-                console.log(data)
+                // console.log(data)
                 this.$router.push("/profil")
+                localStorage.setItem('data', JSON.stringify(data))
             })
 
             e.preventDefault()

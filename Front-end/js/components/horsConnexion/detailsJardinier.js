@@ -15,8 +15,10 @@ export default tpl({
             vote: "",
             bio: "",
             isActive: true,
-            user: this.$route.params.id,
-            api: "http://api.test/api/user/"
+            User: this.$route.params.id,
+            api: "http://api.test/api/user/",
+            connected: false,
+            user: "",
         }
     },// end data
     methods: {
@@ -35,6 +37,14 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
         },
         stopAnimation() {
             if( this.isActive == false) {
@@ -60,7 +70,24 @@ export default tpl({
         }
     },
 
+    checkIfUserIsConnected() {
+        let checkStorage = window.localStorage.length
+        console.log(checkStorage)
+        if(checkStorage != 0) {
+            this.connected = true
+            console.log(this.connected)
+            let retrievedObject = localStorage.getItem('data')
+            let parseObject =  JSON.parse(retrievedObject)
+            console.log(parseObject)
+
+            this.user = parseObject.prenom
+
+            console.log(this.user)
+        }
+    },
+
     mounted() {
         this.fetchTheUser(this.user)
+        this.checkIfUserIsConnected()
     }
 })

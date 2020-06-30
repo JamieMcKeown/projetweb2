@@ -8,7 +8,9 @@ export default tpl({
         return {
             potagers: [],
             isActive: true,
-            api: "http://api.test/api/potager"
+            api: "http://api.test/api/potager",
+            connected: false,
+            user: "",
         }
     }, //end of data
     methods:  {
@@ -27,6 +29,14 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
         },
         stopAnimation() {
             if( this.isActive == false) {
@@ -47,12 +57,29 @@ export default tpl({
 
         moveToPotager(id) {
             this.$router.push("/detailsPotager/" + id)
-        }
+        },
+
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
+        },
       
 
     },// end of mounted
 
     mounted() {
         this.fetchAllPotager()
+        this.checkIfUserIsConnected()
     }
 })
