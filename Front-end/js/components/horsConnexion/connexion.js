@@ -1,6 +1,11 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get } from '../../utils/request'
 
+
+
+
+
+
 export default tpl({
     template: './html/horsConnexion/connexion.html',
     data () {
@@ -8,10 +13,11 @@ export default tpl({
             isActive: true,
             email: "",
             password: "",
+            errorMessage: null,
         }
     },
     mounted(){
-       
+       this.validation()
     },
     methods: {
         homepageRoute() {
@@ -40,6 +46,18 @@ export default tpl({
             }
          },
 
+        validation() {
+             // Validation
+ 
+             let validation = true
+ 
+             if (validator.isEmpty(this.email)){
+                 this.errorMessage = "Ca ne peut pas etre vide"
+                 validation = false
+             }
+ 
+             return validation
+         },
         connexion(e) {
             let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
 
@@ -48,6 +66,7 @@ export default tpl({
             })
 
             e.preventDefault()
-        }
+        },
+
     },
 })

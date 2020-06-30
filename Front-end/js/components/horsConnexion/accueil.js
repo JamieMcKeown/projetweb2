@@ -1,6 +1,7 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get } from '../../utils/request'
 
+
 export default tpl({
     template: './html/horsConnexion/accueil.html',
     data () {
