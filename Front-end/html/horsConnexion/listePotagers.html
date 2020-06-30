@@ -28,7 +28,7 @@
                   </div>
                   <div v-for="potager in potagers" class="carousel-item">
                     <img class="d-block w-100" :src=potager.image alt="Third slide">
-                    <a href="#" class="btn btn-primary">Voir potager de {{ potager.Prenom }} {{ potager.Nom }}</a>
+                    <a href="#" @click="moveToPotager(potager.id)" class="btn btn-primary">Voir potager de {{ potager.Prenom }} {{ potager.Nom }}</a>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
