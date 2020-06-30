@@ -27,6 +27,7 @@ Route::put('/user/editSecret/{id}', 'UserController@editUserSecret');
 Route::delete('/user/delete/{id}', 'UserController@delete');
 
 Route::get('/potager', 'PotagerController@show');
+Route::get('/potager/{id}', "PotagerController@showWithId");
 Route::get('/potager/random/{amount}', 'PotagerController@showRandom');
 //Route::post('/potager/new', 'PotagerController@create');
 Route::put('/potager/vote/{id}', 'PotagerController@addRating');

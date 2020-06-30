@@ -44,6 +44,10 @@ export default tpl({
                 console.log(this.potagers)
             })
         },
+
+        moveToPotager(id) {
+            this.$router.push("/detailsPotager/" + id)
+        }
       
 
     },// end of mounted
