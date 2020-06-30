@@ -92,7 +92,7 @@ export default tpl({
     
                 console.log(this.user)
             }
-        }
+        },
 
     },
 })
