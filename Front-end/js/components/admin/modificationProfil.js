@@ -5,9 +5,11 @@ export default tpl({
     data () {
         return {
             isActive: true,
+            user: "",
         }
     },
     mounted(){
+        this.getInfos()
     },
     methods: {
         homepageRoute() {
@@ -34,5 +36,13 @@ export default tpl({
                this.isActive = false
            }
         },
+
+        getInfos() {
+            let retrievedObject = localStorage.getItem('data')
+            let parseObject =  JSON.parse(retrievedObject)
+            console.log(parseObject)
+
+            this.user = parseObject.prenom
+        }
     },
 })
