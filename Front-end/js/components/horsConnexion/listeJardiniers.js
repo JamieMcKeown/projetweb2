@@ -36,27 +36,25 @@ export default tpl({
             }
         },
 
-        // fetchAllUser(){
-        //     let url = this.api
+        fetchAllUser(){
+            let url = this.api
 
-        //     http_get(url).then(data => {
-        //         for (let i = 0; i <= data.lenght; i++) {
-        //             if (data[i].image == null) {
-        //                 data[i].image = "test"
-        //                 console.log(data)
-                        
-        //             }
-                    
-        //         }
-                
-                
-        //     })
-        // }
+            http_get(url).then(data => {
+                this.jardiniers = data
+                console.log(this.jardiniers)
+            })
+        },
+
+        moveToJardinier(id) {
+            this.$router.push("/detailsJardinier/" + id)
+        }
       
 
     },
     
     mounted(){
+        console.log("Loading")
         this.fetchAllUser()
+        
     }// end of mounted
 })

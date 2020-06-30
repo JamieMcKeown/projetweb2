@@ -25,7 +25,7 @@ export default new VueRouter({
         { path:'/listePotagers', component: listePotagers },
         { path:'/listeJardiniers', component: listeJardiniers },
         { path:'/detailsPotager', component: detailsPotager },
-        { path:'/detailsJardinier', component: detailsJardinier },
+        { path:'/detailsJardinier/:id', component: detailsJardinier },
         { path:'/produit', component: produit },
         { path:'/admin', component: admin },
         { path:'/pageOffres', component: pageOffres },
