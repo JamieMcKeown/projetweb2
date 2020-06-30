@@ -41,15 +41,10 @@ export default tpl({
          },
 
         connexion(e) {
-            let getUserEmail = "http://projetweb2api.localhost/api/user/" + this.email
+            let getUserEmail = "http://projetweb2api.localhost/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
                 console.log(data)
-                if(data.email == this.email) {
-                    this.$router.push("/")
-                } else {
-                    return
-                }
             })
 
             e.preventDefault()
