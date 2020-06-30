@@ -8,7 +8,12 @@ export default tpl({
             users: [],
             potagers: [],
             isActive: true,
+<<<<<<< HEAD
             api: "http://projetweb2api.localhost/api/"  
+=======
+            searchOption: false,
+            api: "http://api.test/api/"  
+>>>>>>> 6d05588167f201d08f0fce9d14db11fe66da65bf
         }
     },
     mounted(){
@@ -56,6 +61,13 @@ export default tpl({
                 this.potagers = data
                 console.log(this.potagers)
             })
+        },
+        searchClicked(){
+            this.searchOption = true;
+        },
+        
+        closeSearch(){
+            this.searchOption = false;
         }
     },
 })

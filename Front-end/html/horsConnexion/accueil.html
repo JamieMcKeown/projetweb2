@@ -15,6 +15,35 @@
     </header>
 
     <div class="container">
+        <div v-if="searchOption == false"class="row cucumber my-3">
+            <div @click="searchClicked" class="col text-center">
+                <img src="../../images/rechercheRapide.png" alt="" srcset="">
+            </div>
+        </div>
+        <div v-if="searchOption" class="row">
+            <div class="col search">
+                <form>
+                    <div class="form-group text-center">
+                     
+                      <input  value="recherche" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+            
+                    <div class="form-group form-check">
+                        <div class="bi"></div>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">distance</label>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">jardinier</label>
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">potager</label>
+                    </div>
+                    <div class="searchButtonContainer">
+                        <button type="submit" class="btn">soumettre</button>
+                        <button @click="closeSearch"type="submit" class="btn xButton">x</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
         <div class="row ">
             <div class="col potagerTitle text-center ">
                 Potagers
@@ -29,6 +58,10 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d05588167f201d08f0fce9d14db11fe66da65bf
         </div>
     </div>
     <div class="container">
