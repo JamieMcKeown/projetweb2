@@ -16,6 +16,12 @@ class PotagerController extends Controller
         $potagerToShow = Potager::all();
         $result = [];
         foreach ($potagerToShow as $potager) {
+            $img = "";
+            if ($potager->image == "") {
+                $img = "../../images/mobile_background.png";
+            } else {
+                $img = $potager->image;
+            }
             $item = [
                 "Prenom" => $potager->user->prenom,
                 "Nom" => $potager->user->nom,
@@ -23,7 +29,7 @@ class PotagerController extends Controller
                 "user_id" => $potager->user_id,
                 "rating" => $potager->rating,
                 "vote" => $potager->vote,
-                "image" => $potager->image
+                "image" => $img
         ];
             array_push($result, $item);
         }
@@ -51,6 +57,36 @@ class PotagerController extends Controller
         ];
             array_push($result, $item);
         }
+        return $result;
+    }
+
+    public function showWithId($id){
+        $potager = Potager::where("id", $id)->first();
+        $result = [];
+
+        if ($potager->vote != 0 && $potager->rating != 0){
+            $calcRating = $potager->rating / $potager->vote;
+        } else {
+            $calcRating = $potager->rating;
+        }
+
+        $img = "";
+        if ($potager->image == "") {
+            $img = "../../images/mobile_background.png";
+        } else {
+            $img = $potager->image;
+        }
+        $item = [
+            "Prenom" => $potager->user->prenom,
+            "Nom" => $potager->user->nom,
+            "id" => $potager->id,
+            "user_id" => $potager->user_id,
+            "rating" => $potager->rating,
+            "vote" => $potager->vote,
+            "image" => $img,
+        ];
+        array_push($result, $item);
+        
         return $result;
     }
     /**

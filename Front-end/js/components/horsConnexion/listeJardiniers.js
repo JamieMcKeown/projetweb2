@@ -1,4 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
+import { http_get } from '../../utils/request'
 
 // export du object literal complet représentant le component
 export default tpl({
@@ -6,6 +7,8 @@ export default tpl({
     data(){
         return {
             isActive: true,
+            jardiniers: [],
+            api: "http://api.test/api/user"
         }
     }, //end of data
     methods:  {
@@ -32,7 +35,26 @@ export default tpl({
                 this.isActive = false
             }
         },
+
+        fetchAllUser(){
+            let url = this.api
+
+            http_get(url).then(data => {
+                this.jardiniers = data
+                console.log(this.jardiniers)
+            })
+        },
+
+        moveToJardinier(id) {
+            this.$router.push("/detailsJardinier/" + id)
+        }
       
 
-    },// end of mounted
+    },
+    
+    mounted(){
+        console.log("Loading")
+        this.fetchAllUser()
+        
+    }// end of mounted
 })
