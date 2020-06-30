@@ -45,6 +45,7 @@ export default tpl({
 
             http_get(getUserEmail).then(data => {
                 console.log(data)
+                this.$router.push("/")
             })
 
             e.preventDefault()
