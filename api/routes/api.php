@@ -18,6 +18,7 @@ use App\User;
 Route::get('/user', 'UserController@show');
 Route::get('/user/random/{amount}', 'UserController@showRandom');
 Route::get('/user/{email}&{password}', 'UserController@getWithEmail');
+Route::get('/user/{id}', 'UserController@showWithId');
 Route::post('/user/new', 'UserController@create');
 Route::put('/user/vote/{id}', 'UserController@addRating');
 Route::put('/user/edit/{id}', 'UserController@editUser');
