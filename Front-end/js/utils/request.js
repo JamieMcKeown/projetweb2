@@ -48,3 +48,19 @@ export function http_post(url, information) {
     })
 }
 
+export function http_put(url, information) {
+    return new Promise(function(resolve, reject) {
+        const options = {
+            method: 'PUT',
+            mode: 'cors',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(information)
+        }
+        fetch(url, options).then(resp => {
+            resp.json().then(resolve)
+        })
+    })
+}
+
