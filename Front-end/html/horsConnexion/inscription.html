@@ -74,10 +74,13 @@
                     <input v-model="reponse" type="text" name="reponse">
                 </div>
             </div>
+            <p  v-if="errorMessage !== ''">{{ errorMessage }}</p>
             <div class="row justify-content-center mt-5"> 
-                <p  v-if="errorMessage !== ''">{{ errorMessage }}</p>
-                <button type="submit" class="btn">soumettre</button>  
-                <input  type="button" @click="refresh" v-if="errorMessage !== '' " class="btn" value="actualiser"></input>
+                <div class="col">
+                    <button type="submit" class="btn">soumettre</button>  
+                    <button  type="button" @click="refresh" v-if="errorMessage !== '' " class="btn" >actualiser</button>
+
+                </div>
             </div>
         </div>
     </form>

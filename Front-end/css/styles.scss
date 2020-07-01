@@ -89,6 +89,7 @@ body,
             .redTomatoe {
                 height: 125px;
                 width: 104px;
+                margin-right: 10px;
             }
     
             .helloWorld {
@@ -191,12 +192,18 @@ body,
                         width: 150px!important;
                     }
                 }
+
+                .inscription {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
             }
             .btn {
                 background-color: $green!important;
                 color:white;
                 border-radius: 10px;
-                width: 45%!important;
+                width: 50%!important;
                 justify-content: center;
                
                 border: 2px solid white!important;
