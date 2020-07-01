@@ -10,12 +10,12 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://api.test/api/"  
+            api: "http://pw2/public/api/"  
         }
     },
     mounted(){
     this.fetchRandomUser(4)
-    this.fetchRandomPotager(4)
+    this.fetchRandomPotager(1)
     },
 
     methods: {

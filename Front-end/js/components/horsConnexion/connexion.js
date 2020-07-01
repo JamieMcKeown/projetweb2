@@ -1,5 +1,9 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get } from '../../utils/request'
+import validator from "../../../node_modules/validator/es/index"
+
+
+
 
 
 
@@ -13,11 +17,11 @@ export default tpl({
             isActive: true,
             email: "",
             password: "",
-            errorMessage: null,
+            errorMessage: "",
         }
     },
     mounted(){
-       this.validation()
+       
     },
     methods: {
         homepageRoute() {
@@ -46,19 +50,19 @@ export default tpl({
             }
          },
 
-        validation() {
-             // Validation
- 
-             let validation = true
+        connexion(e) {
+            
+            let validation = true
  
              if (validator.isEmpty(this.email)){
                  this.errorMessage = "Ca ne peut pas etre vide"
                  validation = false
              }
+             
  
              return validation
-         },
-        connexion(e) {
+            
+
             let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
