@@ -504,13 +504,17 @@ header .menu .helloWorld {
 }
 
 .search {
+  height: 140px;
   margin: 10px 0;
-  background-color: rgba(255, 255, 255, 0.6) !important;
+  background-image: url("../images/searchBG.jpg");
+  background-position: center;
   border-radius: 10px;
+  color: white;
 }
 
 .search label {
-  width: 80px;
+  width: 32%;
+  font-size: 16px;
 }
 
 .search .btn {
@@ -519,6 +523,8 @@ header .menu .helloWorld {
   color: white;
   border: 2px solid white;
   border-radius: 10px;
+  height: 30px;
+  text-align: top;
 }
 
 .search input {
@@ -530,6 +536,9 @@ header .menu .helloWorld {
   color: white;
   border: 2px solid white;
   width: 15%;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .search .searchButtonContainer {
