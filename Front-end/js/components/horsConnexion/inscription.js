@@ -21,13 +21,9 @@ export default tpl({
             question_secrete: "",
             reponse: "",
             verifEmail: "",
-<<<<<<< HEAD
-            api: "http://projetweb2api.localhost/api/",
-=======
             errorMessage: "",
             api: "http://api.test/api/",
 
->>>>>>> e5bf2644043a753d205831e1173b7bf13d1dacb3
         }
     },
     mounted(){
