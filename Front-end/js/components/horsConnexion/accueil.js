@@ -10,7 +10,8 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://pw2/public/api/"  
+            api: "http://pw2/public/api/",  
+            connected: false,
         }
     },
     mounted(){
