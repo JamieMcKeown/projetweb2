@@ -22,41 +22,41 @@
         <div class="container justify-content-center">
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="prenom">Prénom</label>
+                    <label for="prenom">prénom</label>
                     <input v-model="prenom" type="text" name="prenom">
                 </div>
                 <div class="col-xs-12">
-                    <label for="address">Adresse</label>
+                    <label for="address">adresse</label>
                     <input v-model="numero_porte" type="text" name="adresse">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="nom">Nom</label>
+                    <label for="nom">nom</label>
                     <input v-model="nom" type="text" name="nom">
                 </div>
                 <div class="col-xs-12">
-                    <label for="ville">Ville</label>
+                    <label for="ville">ville</label>
                     <input v-model="ville" type="text" name="ville">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="courriel">Courriel</label>
+                    <label for="courriel">courriel</label>
                     <input v-model="email" type="email" name="courriel">
                 </div>
                 <div class="col-xs-12">
-                    <label for="codePostal">Code postal</label>
+                    <label for="codePostal">code postal</label>
                     <input v-model="code_postal" type="text" name="codePostal">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">mot de passe</label>
                     <input v-model="password" type="password" name="password">
                 </div>
                 <div class="col-xs-12">
-                    <label for="secretquestion">Question secrète</label>
+                    <label for="secretquestion">question secrète</label>
                     <input v-model="question_secrete" type="text" name="secretquestion" list="questions">
                     <datalist id="questions">
                         <option value="Question1"></option>
@@ -66,16 +66,18 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="confirmation">Confirmation</label>
+                    <label for="confirmation">confirmation</label>
                     <input v-model="confirmation" type="password" name="confirmation">
                 </div>
                 <div class="col-xs-12">
-                    <label for="reponse">Réponse</label>
+                    <label for="reponse">réponse</label>
                     <input v-model="reponse" type="text" name="reponse">
                 </div>
             </div>
             <div class="row justify-content-center mt-5"> 
+                <p  v-if="errorMessage !== ''">{{ errorMessage }}</p>
                 <button type="submit" class="btn">soumettre</button>  
+                <input  type="button" @click="refresh" v-if="errorMessage !== '' " class="btn" value="actualiser"></input>
             </div>
         </div>
     </form>

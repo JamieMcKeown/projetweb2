@@ -1,6 +1,7 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get } from '../../utils/request'
 
+
 export default tpl({
     template: './html/horsConnexion/accueil.html',
     data () {
@@ -9,15 +10,12 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://projetweb2api.localhost/api/",  
-            connected: false,
-            user: "",
+            api: "http://pw2/public/api/"  
         }
     },
     mounted(){
-        this.fetchRandomUser(4)
-        this.fetchRandomPotager(4)
-        this.checkIfUserIsConnected()
+    this.fetchRandomUser(4)
+    this.fetchRandomPotager(1)
     },
 
     methods: {

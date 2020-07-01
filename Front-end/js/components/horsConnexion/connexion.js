@@ -1,5 +1,14 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get } from '../../utils/request'
+import validator from "../../../node_modules/validator/es/index"
+
+
+
+
+
+
+
+
 
 export default tpl({
     template: './html/horsConnexion/connexion.html',
@@ -8,10 +17,11 @@ export default tpl({
             isActive: true,
             email: "",
             password: "",
+            errorMessage: "",
         }
     },
     mounted(){
-       
+      
     },
     methods: {
         homepageRoute() {
@@ -19,7 +29,7 @@ export default tpl({
         },
 
         connexionPage() {
-            this.$router.push("/connexion").catch(err => {})
+            this.$router.push("/connexion")
         },
 
         inscriptionPage() {
@@ -40,8 +50,31 @@ export default tpl({
             }
         },
 
-        connexion(e) {
-            let getUserEmail = "http://projetweb2api.localhost/api/user/" + this.email + "&" + this.password
+        refresh(){
+            this.errorMessage = ""
+        },
+
+        
+
+         connexion(e) {
+             e.preventDefault()
+            let validation = true
+   
+             if (validator.isEmpty(this.email)){
+                 this.errorMessage = "Ca ne peut pas etre vide"
+                 validation = false
+                 
+                 
+                 return validation
+                }
+                
+                
+
+
+
+             
+            
+            let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
                 // console.log(data)
@@ -49,7 +82,6 @@ export default tpl({
                 localStorage.setItem('data', JSON.stringify(data))
             })
 
-            e.preventDefault()
-        }
+        },
     },
 })
