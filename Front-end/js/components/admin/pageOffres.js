@@ -9,7 +9,7 @@ export default tpl({
         }
     }, //end of data
     mounted(){
-
+        this.preventDisconnectedUser()
     },//end of mounted
     methods: {
         homepageRoute() {
@@ -27,6 +27,11 @@ export default tpl({
         },
         jardiniersPage() {
             this.$router.push("/listeJardiniers")
+        },
+        preventDisconnectedUser() {
+            if(window.localStorage.length == 0) {
+                this.$router.push("/")
+            }
         },
     }//end of methods
 })
