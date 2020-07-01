@@ -10,13 +10,14 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://pw2/public/api/",  
+            api: "http://projetweb2api.localhost/api/",  
             connected: false,
         }
     },
     mounted(){
     this.fetchRandomUser(4)
-    this.fetchRandomPotager(1)
+    this.fetchRandomPotager(4)
+    this.checkIfUserIsConnected()
     },
 
     methods: {

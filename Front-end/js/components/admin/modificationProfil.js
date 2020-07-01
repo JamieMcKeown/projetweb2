@@ -10,6 +10,7 @@ export default tpl({
     },
     mounted(){
         this.getInfos()
+        this.preventDisconnectedUser()
     },
     methods: {
         homepageRoute() {
@@ -43,6 +44,11 @@ export default tpl({
             console.log(parseObject)
 
             this.user = parseObject.prenom
-        }
+        },
+        preventDisconnectedUser() {
+            if(window.localStorage.length == 0) {
+                this.$router.push("/")
+            }
+        },
     },
 })

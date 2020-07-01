@@ -9,6 +9,7 @@ export default tpl({
         }
     },
     mounted(){
+        this.preventDisconnectedUser()
         this.getInfos()
     },
     methods: {
@@ -53,7 +54,14 @@ export default tpl({
             let retrievedObject = localStorage.getItem('data')
             let parseObject =  JSON.parse(retrievedObject)
             console.log(parseObject)
-        }
+        },
+
+        preventDisconnectedUser() {
+            console.log(window.localStorage.length)
+            if(window.localStorage.length == 0) {
+                this.$router.push("/")
+            }
+        },
 
 
     },
