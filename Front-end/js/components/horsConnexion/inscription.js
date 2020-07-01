@@ -1,6 +1,7 @@
 import tpl from '../../utils/avecTemplateHtml'
 import { http_get, http_post } from '../../utils/request'
-// import validator from '../node_modules/validator/es/index'
+import validator from "../../../node_modules/validator/es/index"
+
 
 
 export default tpl({
@@ -20,7 +21,9 @@ export default tpl({
             question_secrete: "",
             reponse: "",
             verifEmail: "",
+            errorMessage: "",
             api: "http://api.test/api/",
+
         }
     },
     mounted(){
@@ -35,10 +38,6 @@ export default tpl({
             this.$router.push("/connexion")
         },
 
-        // addUser(email) {
-        //     let api_url = this.api + "user/new"
-            
-        // },
         inscriptionPage() {
             this.$router.push("/inscription").catch(err => {})
         },
@@ -57,18 +56,22 @@ export default tpl({
                 this.isActive = false
             }
         },
+        refresh(){
+            location.reload()
+        },
 
         formValidation(e) {
-            // console.log(this.prenom)
-            // console.log(this.nom)
-            // console.log(this.email)
-            // console.log(this.password)
-            // console.log(this.confirmation)
-            // console.log(this.numero_porte)
-            // console.log(this.ville)
-            // console.log(this.code_postal)
-            // console.log(this.question_secrete)
-            // console.log(this.reponse)
+            let validation = true
+   
+            if (validator.isEmpty(this.email)){
+                this.errorMessage = "Ca ne peut pas etre vide"
+                validation = false
+                
+                
+               }
+               
+               return validation
+
 
             let createUserUrl = this.api + "user/new"
 
@@ -83,7 +86,7 @@ export default tpl({
               question_secrete: this.question_secrete,
               reponse: this.reponse,
             }).then(data => {
-                this.$router.push("/connexion")
+                this.$router.push("/")
             })
             
 

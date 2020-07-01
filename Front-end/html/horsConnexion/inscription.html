@@ -18,7 +18,7 @@
 <div class="jumbotron connexionJumbo text-center">
     <h1>inscription</h1>
     <hr class="my-4">
-    <form @submit="formValidation" action="#" method="post">
+    <form @submit.prevent="formValidation" action="#" method="post">
         <div class="container justify-content-center">
             <div class="row">
                 <div class="col-xs-12">
@@ -75,7 +75,9 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5"> 
+                <p  v-if="errorMessage !== ''">{{ errorMessage }}</p>
                 <button type="submit" class="btn">soumettre</button>  
+                <button  @click="refresh" v-if="errorMessage !== '' " class="btn">refresh</button>
             </div>
         </div>
     </form>

@@ -178,7 +178,8 @@ header .menu .helloWorld {
   background-color: #A4D626 !important;
   color: white;
   border-radius: 10px;
-  width: 40% !important;
+  width: 45% !important;
+  justify-content: center;
   border: 2px solid white !important;
 }
 
