@@ -30,6 +30,7 @@
               <p  v-if="errorMessage !== ''">{{ errorMessage }}</p>
             </div>
             <button type="submit" class="btn">soumettre</button>
+            <button  @click="refresh" v-if="errorMessage !== ''" class="btn">refresh</button>
             <button  @click="inscriptionPage" class="btn">s'inscrire</button>
           </form>
 

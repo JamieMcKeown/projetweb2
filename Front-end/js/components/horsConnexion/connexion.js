@@ -21,7 +21,7 @@ export default tpl({
         }
     },
     mounted(){
-       
+      
     },
     methods: {
         homepageRoute() {
@@ -29,7 +29,7 @@ export default tpl({
         },
 
         connexionPage() {
-            this.$router.push("/connexion").catch(err => {})
+            this.$router.push("/connexion")
         },
 
         inscriptionPage() {
@@ -50,19 +50,29 @@ export default tpl({
             }
          },
 
-        connexion(e) {
-            
+        refresh(){
+            this.errorMessage = ""
+        },
+
+        
+
+         connexion(e) {
             let validation = true
- 
+   
              if (validator.isEmpty(this.email)){
                  this.errorMessage = "Ca ne peut pas etre vide"
                  validation = false
-             }
-             
- 
-             return validation
-            
+                 
+                 
+                }
+                
+                return validation
+                
 
+
+
+             
+            
             let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
@@ -71,6 +81,5 @@ export default tpl({
 
             e.preventDefault()
         },
-
     },
 })

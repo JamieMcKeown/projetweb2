@@ -134,6 +134,7 @@ header .menu .helloWorld {
 }
 
 .jumbotron.connexionJumbo .btn {
+  margin: 5px 5px;
   background-color: #A4D626 !important;
   color: white !important;
   width: 95px !important;
@@ -173,9 +174,12 @@ header .menu .helloWorld {
   width: 150px !important;
 }
 
-.jumbotron .container button {
-  width: 200px !important;
-  border: 5px solid white !important;
+.jumbotron .container .btn {
+  background-color: #A4D626 !important;
+  color: white;
+  border-radius: 10px;
+  width: 40% !important;
+  border: 2px solid white !important;
 }
 
 /* Modification de profile ------------------------------------------------------------------*/
