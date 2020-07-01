@@ -82,7 +82,7 @@ export default tpl({
                 ville: this.ville,
                 code_postal: this.code_postal,
             }).then(data => {
-                console.log("changements réussi!")
+                this.$router.push("/profil")
             })
             e.preventDefault()
         }
