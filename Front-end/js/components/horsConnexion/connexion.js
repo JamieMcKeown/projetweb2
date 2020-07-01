@@ -57,6 +57,7 @@ export default tpl({
         
 
          connexion(e) {
+             e.preventDefault()
             let validation = true
    
              if (validator.isEmpty(this.email)){
@@ -64,9 +65,9 @@ export default tpl({
                  validation = false
                  
                  
+                 return validation
                 }
                 
-                return validation
                 
 
 
@@ -79,7 +80,6 @@ export default tpl({
                 console.log(data)
             })
 
-            e.preventDefault()
         },
     },
 })

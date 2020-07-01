@@ -56,21 +56,23 @@ export default tpl({
                 this.isActive = false
             }
         },
-        refresh(){
-            location.reload()
+        refresh(){ 
+           
+            this.errorMessage = ""
+            
         },
 
         formValidation(e) {
+            e.preventDefault()
+          
             let validation = true
    
             if (validator.isEmpty(this.email)){
                 this.errorMessage = "Ca ne peut pas etre vide"
                 validation = false
-                
-                
+                return validation
                }
                
-               return validation
 
 
             let createUserUrl = this.api + "user/new"
