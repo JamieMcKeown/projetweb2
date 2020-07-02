@@ -21,30 +21,30 @@
         <div class="row justify-content-left">
             <div class="col">
                 <div class="jumbotron modifProfil">
-                    <form @submit.prevent action="">
+                    <form @submit="modifProfil">
                         <div class="prenom">
                             <label for="prenom">prenom</label>
-                            <input type="text" name="prenom">
+                            <input v-model="prenom" type="text" name="prenom">
                         </div>
                         <div class="nom">
                             <label for="nom">nom</label>
-                            <input type="text" name="nom">
+                            <input v-model="nom" type="text" name="nom">
                         </div>
                         <div class="courriel">
                             <label for="courriel">courriel</label>
-                            <input type="email" name="courriel">
+                            <input v-model="email" type="email" name="courriel">
                         </div>
                         <div class="addresse">
                             <label for="addresse">addresse</label>
-                            <input type="text" name="addresse">
+                            <input v-model="numero_porte" type="text" name="addresse">
                         </div>
                         <div class="ville">
                             <label for="ville">ville</label>
-                            <input type="text" name="ville">
+                            <input v-model="ville" type="text" name="ville">
                         </div>
                         <div class="codePostale">
                             <label for="codePostale">code postale</label>
-                            <input type="text" name="codePostale">
+                            <input v-model="code_postal" type="text" name="codePostale">
                         </div>
                         <div class="motdePasse">
                             <label for="mot de passe">mot de passe</label>
@@ -60,8 +60,8 @@
                         </div>
                         <div class="row Buttons">
                             <div class="col ">
-                                <button class="save">sauvegarde</button>
-                                <button class="quit">annuller</button>
+                                <button type="submit" class="save">sauvegarde</button>
+                                <button class="quit">annuler</button>
                             </div>
                         </div>
                     </form>
