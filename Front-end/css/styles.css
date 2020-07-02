@@ -341,34 +341,39 @@ header .menu .helloWorld {
   width: 150px;
 }
 
-.jumbotron .carousel-control-next-icon, .jumbotron .carousel-control-prev-icon {
+.container.detailsPot {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.container.detailsPot .carousel-control-next-icon, .container.detailsPot .carousel-control-prev-icon {
   width: 25px;
   height: 25px;
   background-color: #A4D626 !important;
 }
 
-.jumbotron .potagerRating {
+.container.detailsPot .potagerRating {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.jumbotron .jardinierRating {
+.container.detailsPot .jardinierRating {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.jumbotron .infoJardinier {
+.container.detailsPot .infoJardinier {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.jumbotron img {
-  height: 150px;
-  width: 200px;
-  margin-left: 2.5%;
+.container.detailsPot .btn {
+  background-color: #A4D626 !important;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid white;
 }
 
 .imageContainer {
@@ -408,7 +413,7 @@ header .menu .helloWorld {
 }
 
 .addProduct label {
-  width: 80px;
+  width: 85px;
 }
 
 .addProduct .btn {

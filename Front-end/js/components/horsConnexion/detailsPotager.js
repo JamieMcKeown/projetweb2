@@ -18,6 +18,7 @@ export default tpl({
             api: "http://api.test/api/potager/",
             connected: false,
             user: "",
+            votes: 1,
         }
     },// end data
     methods: {
@@ -82,11 +83,16 @@ export default tpl({
                 console.log(this.user)
             }
         },
+
+        upVote() {
+            this.votes += 1
+        }
     },
 
 
 
     mounted() {
+        
         // this.fetchThePotager(this.potager)
         // this.checkIfUserIsConnected()
     }
