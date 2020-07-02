@@ -36,6 +36,7 @@ Route::put('/potager/edit/{id}', 'PotagerController@editPotager');
 Route::delete('/potager/delete/{id}', 'PotagerController@delete');
 
 Route::get('/recolte', 'RecolteController@show');
+Route::get('/recolte/{id}', 'RecolteController@findById');
 Route::get('/recolte/potager/{id}', 'RecolteController@findByOwner');
 Route::get('/recolte/typerecolte/{id}', 'RecolteController@findByType');
 Route::post('/recolte/new', 'RecolteController@create');
