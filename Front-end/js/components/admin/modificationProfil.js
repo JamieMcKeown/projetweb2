@@ -5,7 +5,15 @@ export default tpl({
     data () {
         return {
             isActive: true,
-            user: "",
+            prenom: "",
+            nom: "",
+            ville: "",
+            email: "",
+            numero_porte: "",
+            code_postal: "",
+            bio: "", 
+            id: "",
+
         }
     },
     mounted(){
@@ -43,7 +51,14 @@ export default tpl({
             let parseObject =  JSON.parse(retrievedObject)
             console.log(parseObject)
 
-            this.user = parseObject.prenom
+            this.prenom = parseObject.prenom
+            this.nom = parseObject.nom
+            this.ville = parseObject.ville
+            this.numero_porte = parseObject.numero_porte
+            this.code_postal = parseObject.code_postal
+            this.bio = parseObject.bio
+            this.id = parseObject.id
+            this.email = parseObject.email
         },
         preventDisconnectedUser() {
             if(window.localStorage.length == 0) {
