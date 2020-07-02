@@ -22,7 +22,7 @@ export default tpl({
             reponse: "",
             verifEmail: "",
             errorMessage: "",
-            api: "http://projetweb2api.localhost/api/",
+            api: "http://api.test/api/",
 
         }
     },

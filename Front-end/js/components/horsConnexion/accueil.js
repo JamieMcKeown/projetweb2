@@ -10,7 +10,7 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://projetweb2api.localhost/api/",  
+            api: "http://api.test/api/",  
             connected: false,
         }
     },
@@ -92,6 +92,14 @@ export default tpl({
     
                 console.log(this.user)
             }
+        },
+
+        moveToJardinier(id) {
+            this.$router.push("/detailsJardinier/" + id)
+        },
+
+        moveToPotager(id) {
+            this.$router.push("/detailsPotager/" + id)
         },
 
     },

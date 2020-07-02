@@ -57,7 +57,7 @@
                 <div class="card"  >
                     <img src="../../images/mobile_background.png" class="card-img-top" alt="Image de profil du potager">
                     <div class="card-body">              
-                      <a href="#" class="btn btn-primary">Potager de {{ potager.Prenom }}</a>
+                      <a href="#" @click="moveToPotager(potager.id)"class="btn btn-primary">Potager de {{ potager.Prenom }}</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="card"  >
                     <img src="../../images/mobile_background.png" class="card-img-top" alt="...">
                     <div class="card-body">              
-                      <a href="#" class="btn btn-primary">Page de {{ user.prenom }} {{ user.nom }}</a>
+                      <a href="#" @click="moveToJardinier(user.id)" class="btn btn-primary">Page de {{ user.prenom }} {{ user.nom }}</a>
                     </div>
                 </div>
             </div>

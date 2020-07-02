@@ -76,7 +76,7 @@ export default tpl({
         },
       
 
-    },// end of mounted
+    },// end of method
 
     mounted() {
         this.fetchAllPotager()

@@ -28,6 +28,7 @@ Route::delete('/user/delete/{id}', 'UserController@delete');
 
 Route::get('/potager', 'PotagerController@show');
 Route::get('/potager/{id}', "PotagerController@showWithId");
+Route::get('/potager/user/{id}', "PotagerController@showWithUserId");
 Route::get('/potager/random/{amount}', 'PotagerController@showRandom');
 //Route::post('/potager/new', 'PotagerController@create');
 Route::put('/potager/vote/{id}', 'PotagerController@addRating');
@@ -35,6 +36,7 @@ Route::put('/potager/edit/{id}', 'PotagerController@editPotager');
 Route::delete('/potager/delete/{id}', 'PotagerController@delete');
 
 Route::get('/recolte', 'RecolteController@show');
+Route::get('/recolte/{id}', 'RecolteController@findById');
 Route::get('/recolte/potager/{id}', 'RecolteController@findByOwner');
 Route::get('/recolte/typerecolte/{id}', 'RecolteController@findByType');
 Route::post('/recolte/new', 'RecolteController@create');
@@ -43,3 +45,6 @@ Route::put('/recolte/edit/{id}', 'RecolteController@edit');
 
 Route::post('/typerecolte/new', 'TyperecolteController@create');
 Route::put('/typerecolte/edit/{id}', 'TyperecolteController@edit');
+
+Route::get('/echange/{id}', 'EchangeController@getFromId');
+Route::get('/echange/to/{id}', 'EchangeController@getToId');
