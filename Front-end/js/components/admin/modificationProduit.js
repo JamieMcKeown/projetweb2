@@ -1,4 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
+import { http_get, http_post } from '../../utils/request'
 
 var translateValue = 0
 var number = 0
@@ -14,13 +15,19 @@ export default tpl({
             },
             connected: true,
             disconnected: false,
+            api:"http://projetweb2api.localhost/api/",
+            description : "",
+            quantite: "",
+            prenom: "",
+            types: [],
         }
     },
     mounted(){
         this.preventDisconnectedUser()
-        console.log(click)
-        console.log(translateValue)
-        console.log(this.css)
+        this.getUsername()
+        // console.log(click)
+        // console.log(translateValue)
+        // console.log(this.css)
     },
     methods: {
         homepageRoute() {
@@ -92,5 +99,21 @@ export default tpl({
             this.connected = false
             this.$router.push("/").catch(err => {})
         },
+        // ajoutProduit(e) {
+        //     let urlAddProduct = this.api + "recolte/new"
+        //     http_get(urlAddProduct, {
+        //         description: this.description,
+        //         quantite: this.quantite,
+        //     }).then(data => {
+        //         console.log("success")
+        //     })
+
+        //     e.preventDefault()
+        // },
+        getUsername() {
+            let retrievedObject = localStorage.getItem('data')
+            let parseObject =  JSON.parse(retrievedObject)
+            this.prenom = parseObject.prenom
+        }
     },
 })
