@@ -7,10 +7,10 @@
             <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
-                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+                <a v-if='disconnected' @click="connexionPage" class="dropdown-item" href="#">connexion</a>
                 <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
                 <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
-                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+                <a v-if='disconnected' @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
                 <a @click="pageProfil" v-if="connected" class="dropdown-item" href="#">mon profil</a>
                 <a @click="deconnexion" v-if="connected" class="dropdown-item" href="#">déconnexion</a>
             </div>

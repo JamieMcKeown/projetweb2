@@ -11,13 +11,12 @@ export default tpl({
             prenom: "",
             nom: "",
             incomingOffers: [],
-            connected: false,
-
+            connected: true,
+            disconnected: false,
         }
     }, //end of data
     mounted(){
         this.preventDisconnectedUser()
-        this.checkIfUserIsConnected()
         this.getInfos()
         this.getIncomingOffers(this.id)
     },//end of mounted
@@ -68,21 +67,6 @@ export default tpl({
             localStorage.clear()
             this.connected = false
             this.$router.push("/").catch(err => {})
-        },
-        checkIfUserIsConnected() {
-            let checkStorage = window.localStorage.length
-            console.log(checkStorage)
-            if(checkStorage != 0) {
-                this.connected = true
-                console.log(this.connected)
-                let retrievedObject = localStorage.getItem('data')
-                let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
-    
-                this.user = parseObject.prenom
-    
-                console.log(this.user)
-            }
         },
 
         // deleteOffer(id) {

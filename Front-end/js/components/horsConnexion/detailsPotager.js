@@ -17,6 +17,7 @@ export default tpl({
             potager: this.$route.params.id,
             api: "http://projetweb2api.localhost/api/potager/",
             connected: false,
+            disconnected: true,
             user: "",
         }
     },// end data
@@ -43,6 +44,7 @@ export default tpl({
         deconnexion() {
             localStorage.clear()
             this.connected = false
+            this.disconnected = true
             this.$router.push("/").catch(err => {})
         },
         stopAnimation() {
@@ -72,6 +74,7 @@ export default tpl({
             console.log(checkStorage)
             if(checkStorage != 0) {
                 this.connected = true
+                this.disconnected = false
                 console.log(this.connected)
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
@@ -82,12 +85,17 @@ export default tpl({
                 console.log(this.user)
             }
         },
+        UserIsdisconnected(){
+            if(window.localStorage.length == 1) {
+                this.disconnected = false
+            }
+        },
     },
 
 
 
     mounted() {
-        // this.fetchThePotager(this.potager)
-        // this.checkIfUserIsConnected()
+        this.checkIfUserIsConnected()
+        this.fetchThePotager(this.potager)
     }
 })

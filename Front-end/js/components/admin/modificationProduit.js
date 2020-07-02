@@ -13,11 +13,11 @@ export default tpl({
                 transform: "translate(0px)",
             },
             connected: true,
+            disconnected: false,
         }
     },
     mounted(){
         this.preventDisconnectedUser()
-        this.checkIfUserIsConnected()
         console.log(click)
         console.log(translateValue)
         console.log(this.css)
@@ -91,21 +91,6 @@ export default tpl({
             localStorage.clear()
             this.connected = false
             this.$router.push("/").catch(err => {})
-        },
-        checkIfUserIsConnected() {
-            let checkStorage = window.localStorage.length
-            console.log(checkStorage)
-            if(checkStorage != 0) {
-                this.connected = true
-                console.log(this.connected)
-                let retrievedObject = localStorage.getItem('data')
-                let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
-    
-                this.user = parseObject.prenom
-    
-                console.log(this.user)
-            }
         },
     },
 })
