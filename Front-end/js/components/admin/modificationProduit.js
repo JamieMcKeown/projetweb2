@@ -15,6 +15,7 @@ export default tpl({
         }
     },
     mounted(){
+        this.preventDisconnectedUser()
         console.log(click)
         console.log(translateValue)
         console.log(this.css)
@@ -74,6 +75,11 @@ export default tpl({
             }
 
             console.log("left")
+        },
+        preventDisconnectedUser() {
+            if(window.localStorage.length == 0) {
+                this.$router.push("/")
+            }
         },
     },
 })
