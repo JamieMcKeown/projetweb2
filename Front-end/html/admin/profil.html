@@ -22,24 +22,24 @@
                 <div class="potagerProfileContainer">
                     <img src="../../images/bg69.jpg" alt="">
                     <div class="ranking">
-                        <p>évaluation du potager</p>
-                        <p>4.5/5  (240)</p>
+                        <p>Évaluation du potager</p>
+                        <p>{{ rating_potager }} / 5  ({{ vote_potager }})</p>
                     </div>
                 </div>
                 <div class="jardinierProfileContainer">
                     <img src="../../images/bg69.jpg" alt="">
                     <div class="ranking">
-                        <p>évaluation du jardinier</p>
-                        <p>4.5/5  (240)</p>
+                        <p>Évaluation du jardinier</p>
+                        <p>{{ rating_user }} / 5  ({{ vote_user }})</p>
                     </div>
                 </div>
             </div>
           </div>
           <div class="col">
             <div class="profileButtonsContainer">
-                <a @click="modificationProfil" href="#" class="btn btn-primary">modifier profil</a>
-                <a @click="modificationAjoutProduit" href="#" class="btn btn-primary">modifier/ajouter produits</a>
-                <a @click="offres" href="#" class="btn btn-primary">vos offres</a>
+                <a @click="modificationProfil" href="#" class="btn btn-primary">Modifier profil</a>
+                <a @click="modificationAjoutProduit" href="#" class="btn btn-primary">Modifier/ajouter produits</a>
+                <a @click="offres" href="#" class="btn btn-primary">Vos offres</a>
             </div>
           </div>
           
@@ -51,7 +51,7 @@
     
     <div class="newFooter">
         <img src="../../images/cavabienaller.png" alt="logoCaVaBienAller">
-        <h3>une production DreamTeam</h3>
+        <h3>Une production DreamTeam</h3>
     </div>
     
     

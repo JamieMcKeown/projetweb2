@@ -6,18 +6,16 @@ export default tpl({
     data () {
         return {
             isActive: true,
-            user: "",
-            id: "",
-            api: "http://projetweb2api.localhost/api/",
             prenom: "",
             nom: "",
+            ville: "",
             email: "",
             numero_porte: "",
-            ville: "",
             code_postal: "",
-            password: "",
-            question_secrete: "",
-            reponse: "",
+            bio: "", 
+            id: "",
+            api: "http://projetweb2api.localhost/api/",
+
         }
     },
     mounted(){
@@ -55,8 +53,14 @@ export default tpl({
             let parseObject =  JSON.parse(retrievedObject)
             console.log(parseObject)
 
-            this.user = parseObject.prenom
+            this.prenom = parseObject.prenom
+            this.nom = parseObject.nom
+            this.ville = parseObject.ville
+            this.numero_porte = parseObject.numero_porte
+            this.code_postal = parseObject.code_postal
+            this.bio = parseObject.bio
             this.id = parseObject.id
+            this.email = parseObject.email
         },
         preventDisconnectedUser() {
             if(window.localStorage.length == 0) {

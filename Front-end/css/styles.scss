@@ -94,8 +94,8 @@ body,
     
             .helloWorld {
                 animation-name: helloWorld;
-                animation-duration: 4s;
-                animation-iteration-count: 2;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
             }
     
             @keyframes helloWorld {
@@ -215,6 +215,7 @@ body,
 
     /* Modification de profile ------------------------------------------------------------------*/
     .modifProfil {
+        background-color: rgba(255, 255, 255, 0.6);
         .nom, .prenom, .courriel, .bio,  .ville, .addresse, .codePostale, .motdePasse, .questionSecret {
             margin: 10px 0px;
             label {
@@ -231,6 +232,15 @@ body,
            
         }
         width: 100%;
+        .btn {
+            background-color: $green!important;
+            color: white;
+            width: 50%;
+            height: 40px;
+            margin-left: 25%;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
     }
     .Buttons {
         margin-top: 25px;
@@ -553,7 +563,7 @@ body,
     }
     .btn {
         background-color: $green!important;
-        width: 40%;
+        width: 35%;
         color: white;
         border: 2px solid white;
         border-radius: 10px;
@@ -570,7 +580,7 @@ body,
         background-color: red!important;
         color: white;
         border: 2px solid white;
-        width: 15%;
+        width: 12%;
         height: 30px;
         margin-bottom: 10px;
         text-align: center;

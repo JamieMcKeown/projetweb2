@@ -15,8 +15,8 @@ export default tpl({
             vote: "",
             bio: "",
             isActive: true,
-            User: this.$route.params.id,
-            api: "http://projetweb2api.localhost/api/user/",
+            jardinier: this.$route.params.id,
+            api: "http://api.test/api/user/",
             connected: false,
             user: "",
         }
@@ -67,27 +67,29 @@ export default tpl({
                 this.image = data[0].image
                 this.bio = data[0].bio
             })
-        }
+        },
+
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
+    },
     },
 
-    checkIfUserIsConnected() {
-        let checkStorage = window.localStorage.length
-        console.log(checkStorage)
-        if(checkStorage != 0) {
-            this.connected = true
-            console.log(this.connected)
-            let retrievedObject = localStorage.getItem('data')
-            let parseObject =  JSON.parse(retrievedObject)
-            console.log(parseObject)
 
-            this.user = parseObject.prenom
-
-            console.log(this.user)
-        }
-    },
 
     mounted() {
-        this.fetchTheUser(this.user)
+        this.fetchTheUser(this.jardinier)
         this.checkIfUserIsConnected()
     }
 })
