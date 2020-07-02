@@ -126,6 +126,41 @@ class RecolteController extends Controller
         return $result;
     }
 
+    public function findById($id) {
+        $recolte = Recolte::where("id", $id)->first();
+        $result = [];
+        $recolteID = $recolte->id;
+        $potagerID = $recolte->potager->id;
+        $prenom = $recolte->potager->user->prenom;
+        $nom = $recolte->potager->user->nom;
+        $userID = $recolte->potager->user->id;
+        $rating = $recolte->rating;
+        $vote = $recolte->vote;
+        $type = $recolte->typerecolte->nom;
+        $typeID = $recolte->typerecolte->id;
+        $image = $recolte->image;
+        $qte = $recolte->quantite;
+        $description = $recolte->description;
+        array_push($result, [
+            "recolte_id" => $recolteID,
+            "quantite" => $qte,
+            "description" => $description,
+            "potager_id" => $potagerID,
+            "potager_owner_prenom" => $prenom,
+            "potager_owner_nom" => $nom,
+            "potager_owner_id" => $userID,
+            "type" => $type,
+            "type_id" => $typeID,
+            "rating" => $rating,
+            "vote" => $vote,
+            "image" => $image,
+            
+        ]);
+        
+
+        return $result;
+    }
+
     public function addRating(Request $request, $id){
         $recolte = Recolte::find($id);
         $rating = $recolte->rating;

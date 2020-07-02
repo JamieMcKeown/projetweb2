@@ -23,23 +23,23 @@
                <div class="productContainer">
                    <div class="productImageContainer">
                        
-                       <h4>carrottes</h4>
+                       <h4>{{ produceName }} x{{ produceQte }}</h4>
                        <img src="../../images/bg420.jpg" alt="">
-                       <p>Saepe veniam doloremque nam quis illo accusantium. Atque labore est asperiores, aspernatur ipsam beatae quam cum sint explicabo officiis ducimus voluptatibus vero.</p>
+                       <p>{{ produceDescription }}</p>
                        
-                       <a href="#" class="btn btn-primary">offre exchange</a>
+                       <a href="#" class="btn btn-primary">Offrir échange</a>
                    </div>
                </div>
             </div>
             <div class="col">
                 <div class="imageContainer">
                     <div class="potagerContainer">
-                        <h4>le potager</h4>
-                        <img src="../../images/bg420.jpg" alt="">
+                        <h4>Le potager</h4>
+                        <img src="../../images/bg420.jpg" @click="goToPotager(potagerID)"alt="">
                     </div>
                     <div class="jardinierContainer">
-                        <h4>le jardinier</h4>
-                        <img src="../../images/bg420.jpg" alt="">
+                        <h4>Le jardinier: {{ jardinierPrenom }} {{ jardinierNom }}</h4>
+                        <img src="../../images/bg420.jpg" @click="goToJardinier(jardinierID)" alt="">
                     </div>
                 </div>
             </div>
