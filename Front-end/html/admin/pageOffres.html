@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row ">
             <div class="col text-center">
-                <h2>Bienvenue Jade</h2>
+                <h2>Bienvenue {{ prenom }} {{ nom }}</h2>
             </div>
         </div>
         <div class="row ">
@@ -30,21 +30,12 @@
                     <h3 class="text-center">
                         Offres en attente
                     </h3>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
+                    <div v-for="inOffer in incomingOffers" class="alert alert-dark" role="alert">
+                        <p class="text-center">Offre de {{ inOffer.jardinier_from_prenom }} {{ inOffer.jardinier_from_nom }}</p>
+                        <p class="text-center">Offre: {{ inOffer.produce_from_quantite }} {{ inOffer.produce_from_nom }}(s) contre {{ inOffer.produce_to_quantite }} {{ inOffer.produce_to_nom }} </p>
                         <div class="btn">supprimer</div>
                     </div>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
-                        <div class="btn">supprimer</div>
-                    </div>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
-                        <div class="btn">supprimer</div>
-                    </div>
+
                     
                 </div>
             </div>
