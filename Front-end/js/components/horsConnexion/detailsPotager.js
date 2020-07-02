@@ -87,7 +87,7 @@ export default tpl({
 
 
     mounted() {
-        this.fetchThePotager(this.potager)
-        this.checkIfUserIsConnected()
+        // this.fetchThePotager(this.potager)
+        // this.checkIfUserIsConnected()
     }
 })
