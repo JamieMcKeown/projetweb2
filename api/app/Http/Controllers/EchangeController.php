@@ -63,7 +63,9 @@ class EchangeController extends Controller
     }
 
     public function getToId($id){
-        $echangesToShow = Echange::where("user_to_id", $id)->get();
+        $echangesToShow = Echange::where("user_to_id", $id)
+        ->where("completed", 0)
+        ->get();
         $result = [];
 
         foreach ($echangesToShow as $echange) {
@@ -112,5 +114,14 @@ class EchangeController extends Controller
             
         }
         return $result;
+    }
+
+    public function deleteOffer($id){
+        $request = Echange::find($id);
+
+        $request->completed = 1;
+
+        $success = $request->save();
+        return $request;
     }
 }

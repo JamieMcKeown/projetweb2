@@ -48,3 +48,4 @@ Route::put('/typerecolte/edit/{id}', 'TyperecolteController@edit');
 
 Route::get('/echange/{id}', 'EchangeController@getFromId');
 Route::get('/echange/to/{id}', 'EchangeController@getToId');
+Route::put('/echange/complete/{id}', 'EchangeController@deleteOffer');

@@ -1,5 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
-import { http_get } from '../../utils/request'
+import { http_get, http_post } from '../../utils/request'
 
 // export du object literal complet représentant le component
 export default tpl({
@@ -58,6 +58,14 @@ export default tpl({
                 this.incomingOffers = data
                 console.log(data)
             })
-        }
+        },
+
+        // deleteOffer(id) {
+        //     let url = this.api + "complete/" + id
+
+        //     http_post(url, {
+        //         id: this.id
+        //     })
+        // }
     }//end of methods
 })
