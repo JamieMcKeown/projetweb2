@@ -436,6 +436,9 @@ body,
 
 .addProduct {
     background-color: rgba(255, 255, 255, 0.2);
+    label {
+        width: 80px;
+    }
     .btn {
         width: 150px;
         background-color: $green;

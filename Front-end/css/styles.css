@@ -407,6 +407,10 @@ header .menu .helloWorld {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.addProduct label {
+  width: 80px;
+}
+
 .addProduct .btn {
   width: 150px;
   background-color: #A4D626;
