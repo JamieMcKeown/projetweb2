@@ -519,7 +519,7 @@ header .menu .helloWorld {
 
 .search .btn {
   background-color: #A4D626 !important;
-  width: 40%;
+  width: 35%;
   color: white;
   border: 2px solid white;
   border-radius: 10px;
@@ -535,7 +535,7 @@ header .menu .helloWorld {
   background-color: red !important;
   color: white;
   border: 2px solid white;
-  width: 15%;
+  width: 12%;
   height: 30px;
   margin-bottom: 10px;
   text-align: center;
