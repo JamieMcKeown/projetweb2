@@ -47,3 +47,4 @@ Route::post('/typerecolte/new', 'TyperecolteController@create');
 Route::put('/typerecolte/edit/{id}', 'TyperecolteController@edit');
 
 Route::get('/echange/{id}', 'EchangeController@getFromId');
+Route::get('/echange/to/{id}', 'EchangeController@getToId');
