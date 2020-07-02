@@ -68,7 +68,7 @@ export default tpl({
         getInfos() {
             let retrievedObject = localStorage.getItem('data')
             let parseObject =  JSON.parse(retrievedObject)
-            console.log(parseObject)
+            //console.log(parseObject)
             this.prenom = parseObject.prenom
             this.nom = parseObject.nom
             this.ville = parseObject.ville
