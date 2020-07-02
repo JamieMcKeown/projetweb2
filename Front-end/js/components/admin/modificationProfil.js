@@ -15,12 +15,14 @@ export default tpl({
             bio: "", 
             id: "",
             api: "http://projetweb2api.localhost/api/",
+            connected: false,
 
         }
     },
     mounted(){
-        this.getInfos()
         this.preventDisconnectedUser()
+        this.checkIfUserIsConnected()
+        this.getInfos()
     },
     methods: {
         homepageRoute() {
@@ -89,6 +91,30 @@ export default tpl({
                 this.$router.push("/profil")
             })
             e.preventDefault()
-        }
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+    
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
+        },
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
+        },
     },
 })

@@ -10,7 +10,7 @@ export default tpl({
             connected: false,
             user: "",
             recolteID: this.$route.params.id,
-            api: "http://api.test/api/recolte/",
+            api: "http://projetweb2api.localhost/api/recolte/",
             jardinierID: "",
             jardinierPrenom: "",
             jardinierNom: "",

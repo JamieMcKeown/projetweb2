@@ -8,7 +8,7 @@ export default tpl({
         return {
             isActive: true,
             jardiniers: [],
-            api: "http://api.test/api/user",
+            api: "http://projetweb2api.localhost/api/user",
             connected: false,
             user: "",
         }

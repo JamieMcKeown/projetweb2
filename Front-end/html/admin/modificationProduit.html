@@ -1,54 +1,56 @@
 <div id="modifProfil">
     <header>
-        <div @click="homepageRoute" class="logoContainer">
-            <p>partagez votre potager</p>
-        </div>
-        <div class="menu">
-            <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
-                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
-                <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
-                <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
-                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
-            </div>
-        </div>
+      <div @click="homepageRoute" class="logoContainer">
+        <p>partagez votre potager</p>
+      </div>
+      <div class="menu">
+          <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
+              <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+              <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+              <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
+              <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+              <a @click="pageProfil" v-if="connected" class="dropdown-item" href="#">mon profil</a>
+              <a @click="deconnexion" v-if="connected" class="dropdown-item" href="#">déconnexion</a>
+          </div>
+      </div>
     </header>
     <div class="container">
-        <div class="row justify-content-center">
-            <h2>Bienvenue Jade</h2>
-        </div>
-     <div class="row">
-         <div class="col">
-             <div class="jumbotron-fluid">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="../../images/bg420.jpg" alt="First slide">
-                        <a href="#" class="btn btn-primary">Modifier</a>
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../../images/bg420.jpg" alt="Second slide">
-                        <a href="#" class="btn btn-primary">Modifier</a>
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../../images/bg420.jpg" alt="Third slide">
-                        <a href="#" class="btn btn-primary">modifier</a>
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-             </div>
-         </div>
-         
-     </div>
+      <div class="row justify-content-center">
+          <h2>Bienvenue Jade</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+            <div class="jumbotron-fluid">
+               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                   <div class="carousel-inner">
+                     <div class="carousel-item active">
+                       <img class="d-block w-100" src="../../images/bg420.jpg" alt="First slide">
+                       <a href="#" class="btn btn-primary">Modifier</a>
+                     </div>
+                     <div class="carousel-item">
+                       <img class="d-block w-100" src="../../images/bg420.jpg" alt="Second slide">
+                       <a href="#" class="btn btn-primary">Modifier</a>
+                     </div>
+                     <div class="carousel-item">
+                       <img class="d-block w-100" src="../../images/bg420.jpg" alt="Third slide">
+                       <a href="#" class="btn btn-primary">modifier</a>
+                     </div>
+                   </div>
+                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                   </a>
+                   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                   </a>
+                 </div>
+            </div>
+          </div>
+      </div>  
+    </div>
      
      <div class="row addProduct my-2">
          <div class="col text-center">

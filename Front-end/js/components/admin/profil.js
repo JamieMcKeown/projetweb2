@@ -18,12 +18,14 @@ export default tpl({
             rating_potager: "",
             vote_user: "",
             rating_user: "",
-            api_potager: "http://api.test/api/potager/user/"
+            api_potager: "http://projetweb2api.localhost/api/potager/user/",
+            connected: false,
 
         }
     },
     mounted(){
         this.preventDisconnectedUser()
+        this.checkIfUserIsConnected()
         this.getInfos()
         this.getPotagerRating()
     },
@@ -102,7 +104,31 @@ export default tpl({
                 this.rating_potager = data[0].rating
                 this.vote_potager = data[0].vote
             })
-        }
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
+        },
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
+        },
 
 
     },

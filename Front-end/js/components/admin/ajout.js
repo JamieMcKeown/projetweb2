@@ -5,7 +5,7 @@ export default tpl({
     template: 'ajout.html',
     data() {
         return {
-
+            
         }
     },
     mounted() {

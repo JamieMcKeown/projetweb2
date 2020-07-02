@@ -8,7 +8,7 @@ export default tpl({
         return {
             potagers: [],
             isActive: true,
-            api: "http://api.test/api/potager",
+            api: "http://projetweb2api.localhost/api/potager",
             connected: false,
             user: "",
         }

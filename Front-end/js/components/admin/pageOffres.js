@@ -6,17 +6,18 @@ export default tpl({
     template: './html/admin/pageOffres.html',
     data() {
         return {
-            api: "http://api.test/api/echange/",
+            api: "http://projetweb2api.localhost/api/echange/",
             id: "",
             prenom: "",
             nom: "",
             incomingOffers: [],
-
+            connected: false,
 
         }
     }, //end of data
     mounted(){
         this.preventDisconnectedUser()
+        this.checkIfUserIsConnected()
         this.getInfos()
         this.getIncomingOffers(this.id)
     },//end of mounted
@@ -58,6 +59,30 @@ export default tpl({
                 this.incomingOffers = data
                 console.log(data)
             })
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
+        },
+        checkIfUserIsConnected() {
+            let checkStorage = window.localStorage.length
+            console.log(checkStorage)
+            if(checkStorage != 0) {
+                this.connected = true
+                console.log(this.connected)
+                let retrievedObject = localStorage.getItem('data')
+                let parseObject =  JSON.parse(retrievedObject)
+                console.log(parseObject)
+    
+                this.user = parseObject.prenom
+    
+                console.log(this.user)
+            }
         },
 
         // deleteOffer(id) {
