@@ -19,6 +19,7 @@ export default tpl({
             api: "http://api.test/api/user/",
             connected: false,
             user: "",
+            votes: 0,
         }
     },// end data
     methods: {
@@ -84,6 +85,10 @@ export default tpl({
                 console.log(this.user)
             }
     },
+
+    upVote() {
+        this.votes += 1
+    }
     },
 
 

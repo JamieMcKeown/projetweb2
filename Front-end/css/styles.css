@@ -341,35 +341,7 @@ header .menu .helloWorld {
   width: 150px;
 }
 
-.container.detailsPot {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.container.detailsPot .carousel-control-next-icon, .container.detailsPot .carousel-control-prev-icon {
-  width: 25px;
-  height: 25px;
-  background-color: #A4D626 !important;
-}
-
-.container.detailsPot .potagerRating {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.container.detailsPot .jardinierRating {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.container.detailsPot .infoJardinier {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.container.detailsPot .btn {
+.container.detailsPot .btn, .detailsJard .btn {
   background-color: #A4D626 !important;
   color: white;
   border-radius: 10px;

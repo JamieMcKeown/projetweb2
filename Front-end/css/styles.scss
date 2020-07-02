@@ -370,27 +370,11 @@ body,
 
 // detailsPotager
 
-    .container.detailsPot {
-        background-color: rgba(255, 255, 255, 0.6)!important;.carousel-control-next-icon , .carousel-control-prev-icon{
-            width: 25px;
-            height: 25px;
-            background-color: $green!important;
-        }
-        .potagerRating {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .jardinierRating {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .infoJardinier {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+    .container.detailsPot , .detailsJard {
+       
+            
+        
+        
         .btn {
            
             background-color: $green!important;
