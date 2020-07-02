@@ -6,13 +6,13 @@ export default tpl({
     template: './html/admin/pageOffres.html',
     data() {
         return {
-            api: "http://api.test/api/echange/",
+            api: "http://projetweb2api.localhost/api/echange/",
             id: "",
             prenom: "",
             nom: "",
             incomingOffers: [],
-
-
+            connected: true,
+            disconnected: false,
         }
     }, //end of data
     mounted(){
@@ -58,6 +58,15 @@ export default tpl({
                 this.incomingOffers = data
                 console.log(data)
             })
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
         },
 
         // deleteOffer(id) {

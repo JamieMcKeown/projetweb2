@@ -34,4 +34,5 @@ class TyperecolteController extends Controller
 
         return $type;
     }
+
 }

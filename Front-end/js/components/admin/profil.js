@@ -18,7 +18,9 @@ export default tpl({
             rating_potager: "",
             vote_user: "",
             rating_user: "",
-            api_potager: "http://api.test/api/potager/user/"
+            api_potager: "http://projetweb2api.localhost/api/potager/user/",
+            connected: true,
+            disconnected: false,
 
         }
     },
@@ -102,8 +104,15 @@ export default tpl({
                 this.rating_potager = data[0].rating
                 this.vote_potager = data[0].vote
             })
-        }
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
 
-
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.$router.push("/").catch(err => {})
+        },
     },
 })

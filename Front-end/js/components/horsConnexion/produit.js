@@ -8,9 +8,10 @@ export default tpl({
         return{
             isActive: true,
             connected: false,
+            disconnected: true,
             user: "",
             recolteID: this.$route.params.id,
-            api: "http://api.test/api/recolte/",
+            api: "http://projetweb2api.localhost/api/recolte/",
             jardinierID: "",
             jardinierPrenom: "",
             jardinierNom: "",
@@ -48,6 +49,7 @@ export default tpl({
         deconnexion() {
             localStorage.clear()
             this.connected = false
+            this.disconnected = true
             this.$router.push("/").catch(err => {})
         },
         stopAnimation() {
@@ -63,6 +65,7 @@ export default tpl({
             console.log(checkStorage)
             if(checkStorage != 0) {
                 this.connected = true
+                this.disconnected = false
                 console.log(this.connected)
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)

@@ -1,18 +1,20 @@
 <div id="modifProfil">
     <header>
-        <div @click="homepageRoute" class="logoContainer">
-            <p>partagez votre potager</p>
-        </div>
-        <div class="menu">
-            <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
-                <a @click="connexionPage" class="dropdown-item" href="#">connexion</a>
-                <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
-                <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
-                <a @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
-            </div>
-        </div>
+      <div @click="homepageRoute" class="logoContainer">
+        <p>partagez votre potager</p>
+      </div>
+      <div class="menu">
+          <img src="../../images/hamburgerTransparent.png" @click="stopAnimation" :class="{ helloWorld: isActive }" class="dropdown redTomatoe" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a @click="homepageRoute" class="dropdown-item" href="#">accueil</a>
+              <a v-if='disconnected' @click="connexionPage" class="dropdown-item" href="#">connexion</a>
+              <a @click="potagerPage" class="dropdown-item" href="#">potagers</a>
+              <a @click="jardiniersPage" class="dropdown-item" href="#">jardiniers</a>
+              <a v-if='disconnected' @click="inscriptionPage" class="dropdown-item" href="#">inscription</a>
+              <a @click="pageProfil" v-if="connected" class="dropdown-item" href="#">mon profil</a>
+              <a @click="deconnexion" v-if="connected" class="dropdown-item" href="#">déconnexion</a>
+          </div>
+      </div>
     </header>
     <div class="container">
         <div class="row justify-content-center">
@@ -36,15 +38,15 @@
      <div class="row addProduct my-2">
          <div class="col text-center">
              <h3>Ajout de produit</h3>
-            <form>
+            <form @submit="ajoutProduit">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Description</label>
-                  <input type="text"  >
+                  <label for="description">Description</label>
+                  <input v-model="description" type="text"  >
                  
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Quantité</label>
-                  <input type="number" >
+                  <label for="quantite">Quantité</label>
+                  <input v-model="quantite" type="number" >
                 </div>
               
               

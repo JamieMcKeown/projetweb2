@@ -8,8 +8,9 @@ export default tpl({
         return {
             isActive: true,
             jardiniers: [],
-            api: "http://api.test/api/user",
+            api: "http://projetweb2api.localhost/api/user",
             connected: false,
+            disconnected: true,
             user: "",
         }
     }, //end of data
@@ -36,6 +37,7 @@ export default tpl({
         deconnexion() {
             localStorage.clear()
             this.connected = false
+            this.disconnected = true
             this.$router.push("/").catch(err => {})
         },
         stopAnimation() {
@@ -64,6 +66,7 @@ export default tpl({
             console.log(checkStorage)
             if(checkStorage != 0) {
                 this.connected = true
+                this.disconnected = false
                 console.log(this.connected)
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
@@ -79,9 +82,8 @@ export default tpl({
     },
     
     mounted(){
-        console.log("Loading")
-        this.fetchAllUser()
         this.checkIfUserIsConnected()
-        
+        console.log("Loading")
+        this.fetchAllUser()  
     }// end of mounted
 })

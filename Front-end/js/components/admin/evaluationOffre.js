@@ -5,7 +5,8 @@ export default tpl({
     template: './html/admin/evaluationOffre.html',
     data() {
         return {
-            
+            connected: true,
+            disconnected: false
         }
     }, //end of data
     mounted(){
@@ -32,6 +33,16 @@ export default tpl({
             if(window.localStorage.length == 0) {
                 this.$router.push("/")
             }
+        },
+        pageProfil() {
+            this.$router.push("/profil")
+        },
+
+        deconnexion() {
+            localStorage.clear()
+            this.connected = false
+            this.disconnected = true
+            this.$router.push("/").catch(err => {})
         },
     }//end of methods
 })
