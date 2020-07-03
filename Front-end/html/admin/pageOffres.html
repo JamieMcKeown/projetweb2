@@ -30,11 +30,11 @@
             <div class="col">
                 <div class="jumbotron outboundOffers">
                     <h3 class="text-center">
-                        Offres en attente
+                        Vos offres
                     </h3>
-                    <div v-for="inOffer in incomingOffers" class="alert alert-dark" role="alert">
-                        <p class="text-center">Offre de {{ inOffer.jardinier_from_prenom }} {{ inOffer.jardinier_from_nom }}</p>
-                        <p class="text-center">Offre: {{ inOffer.produce_from_quantite }} {{ inOffer.produce_from_nom }}(s) contre {{ inOffer.produce_to_quantite }} {{ inOffer.produce_to_nom }} </p>
+                    <div v-for="outOffer in outgoingOffers" class="alert alert-dark" role="alert">
+                        <p class="text-center">Offre pour {{ outOffer.jardinier_to_prenom }} {{ outOffer.jardinier_to_nom }}</p>
+                        <p class="text-center">Offre: {{ outOffer.produce_from_quantite }} {{ outOffer.produce_from_nom }}(s) contre {{ outOffer.produce_to_quantite }} {{ outOffer.produce_to_nom }}(s) </p>
                         <div class="btn">supprimer</div>
                     </div>
 
@@ -46,25 +46,13 @@
             <div class="col">
                 <div class="jumbotron outboundOffers">
                     <h3 class="text-center">
-                        Vos offres
+                        Offres en attente
                     </h3>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
-                        <div class="btn accept">accepter</div>
-                        <div class="btn">refuser</div>
-                    </div>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
-                        <div class="btn accept">accepter</div>
-                        <div class="btn">refuser</div>
-                    </div>
-                    <div class="alert alert-dark" role="alert">
-                        <p class="text-center">nom du potager</p>
-                        <p class="text-center">l'offre</p>
-                        <div class="btn accept">accepter</div>
-                        <div class="btn">refuser</div>
+                    <div v-for="inOffer in incomingOffers" class="alert alert-dark" role="alert">
+                        <p class="text-center">Offre de {{ inOffer.jardinier_from_prenom }} {{ inOffer.jardinier_from_nom }}</p>
+                        <p class="text-center">Offre: {{ inOffer.produce_from_quantite }} {{ inOffer.produce_from_nom }}(s) contre {{ inOffer.produce_to_quantite }} {{ inOffer.produce_to_nom }} </p>
+                        <div class="btn accept">Accepter</div>
+                        <div class="btn">Refuser</div>
                     </div>
                     
                 </div>
