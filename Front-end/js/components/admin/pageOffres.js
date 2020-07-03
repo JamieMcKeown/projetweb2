@@ -1,5 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
-import { http_get, http_post } from '../../utils/request'
+import { http_get, http_post, http_put } from '../../utils/request'
 
 // export du object literal complet représentant le component
 export default tpl({
@@ -79,12 +79,15 @@ export default tpl({
             this.$router.push("/").catch(err => {})
         },
 
-        // deleteOffer(id) {
-        //     let url = this.api + "complete/" + id
+        deleteOffer(id) {
+            let url = this.api + "complete/" + id
 
-        //     http_post(url, {
-        //         id: this.id
-        //     })
-        // }
+            http_put(url, {
+                completed: 1,
+                
+            }).then(data => {
+                this.$router.go()
+            })
+        },
     }//end of methods
 })

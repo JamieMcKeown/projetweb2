@@ -11,7 +11,9 @@ use App\Recolte;
 class EchangeController extends Controller
 {
     public function getFromId($id){
-        $echangesToShow = Echange::where("user_from_id", $id)->get();
+        $echangesToShow = Echange::where("user_from_id", $id)
+        ->where("completed", 0)
+        ->get();
         $result = [];
 
         foreach ($echangesToShow as $echange) {
@@ -116,12 +118,12 @@ class EchangeController extends Controller
         return $result;
     }
 
-    public function deleteOffer($id){
-        $request = Echange::find($id);
+    public function deleteOffer(Request $request, $id){
+        $echange = Echange::find($id);
 
-        $request->completed = 1;
+        $echange->completed = $request->completed;
 
-        $success = $request->save();
-        return $request;
+        $success = $echange->save();
+        return $echange;
     }
 }

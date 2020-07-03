@@ -65,18 +65,18 @@ export default tpl({
 
         checkIfUserIsConnected() {
             let checkStorage = window.localStorage.length
-            console.log(checkStorage)
+
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false
-                console.log(this.connected)
+
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
+
     
                 this.user = parseObject.prenom
     
-                console.log(this.user)
+
             }
         },
 
@@ -84,7 +84,7 @@ export default tpl({
             let url = this.api + id
 
             http_get(url).then(data => {
-                console.log(data)
+
                 this.jardinierID = data[0].potager_owner_id
                 this.jardinierPrenom = data[0].potager_owner_prenom
                 this.jardinierNom = data[0].potager_owner_nom
