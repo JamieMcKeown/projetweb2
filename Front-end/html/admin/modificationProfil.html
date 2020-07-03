@@ -26,27 +26,31 @@
                     <form @submit="modifProfil">
                         <div class="prenom">
                             <label for="prenom">Prénom</label>
-                            <input type="text" name="prenom" :value="prenom" :placeholder="prenom">
+                            <input type="text" name="prenom" :placeholder="prenom" v-model="prenom">
                         </div>
                         <div class="nom">
                             <label for="nom">Nom</label>
-                            <input type="text" name="nom" :value="nom" :placeholder="nom">
+                            <input type="text" name="nom"  :placeholder="nom" v-model="nom">
                         </div>
                         <div class="courriel">
                             <label for="courriel">Courriel</label>
-                            <input type="email" name="courriel" :value="email" :placeholder="email">
+                            <input type="email" name="courriel" :placeholder="email" v-model="email">
                         </div>
                         <div class="addresse">
                             <label for="addresse">Adresse</label>
-                            <input type="text" name="adresse" :value="numero_porte" :placeholder="numero_porte">
+                            <input type="text" name="adresse" :placeholder="numero_porte" v-model="numero_porte">
                         </div>
                         <div class="ville">
                             <label for="ville">Ville</label>
-                            <input type="text" name="ville" :value="ville" :placeholder="ville">
+                            <input type="text" name="ville" :placeholder="ville" v-model="ville">
                         </div>
                         <div class="codePostale">
                             <label for="codePostale">Code postal</label>
-                            <input type="text" name="codePostale" :value="code_postal" :placeholder="code_postal">
+                            <input type="text" name="codePostale" :placeholder="code_postal" v-model="code_postal">
+                        </div>
+                        <div class="bio">
+                            <label for="bio">Bio</label>
+                            <input type="text" name="bio" :placeholder="bio" v-model="bio">
                         </div>
                         <div class="motdePasse">
                             <label for="mot de passe">Mot de passe</label>
@@ -56,13 +60,9 @@
                             <label for="questionSecret">Question Secrète</label>
                             <input class="btn" type="button" value="modifer">
                         </div>
-                        <div class="bio">
-                            <label for="bio">Bio</label>
-                            <input class="btn" type="button" value="modifer">
-                        </div>
                         <div class="row Buttons">
                             <div class="col ">
-                                <button class="save">Sauvegarde</button>
+                                <button class="save" @click="modifProfil">Sauvegarde</button>
                                 <button class="quit">Annuler</button>
                             </div>
                         </div>

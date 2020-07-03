@@ -77,7 +77,7 @@ export default tpl({
             let getUserEmail = "http://api.test/api/user/" + this.email + "&" + this.password
 
             http_get(getUserEmail).then(data => {
-                // console.log(data)
+
                 this.$router.push("/profil")
                 localStorage.setItem('data', JSON.stringify(data))
             })

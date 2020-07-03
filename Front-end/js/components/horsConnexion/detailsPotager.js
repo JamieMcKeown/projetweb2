@@ -82,14 +82,14 @@ export default tpl({
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false
-                console.log(this.connected)
+
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
+
     
                 this.user = parseObject.prenom
     
-                console.log(this.user)
+
             }
         },
         upVote() {
