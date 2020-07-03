@@ -11,7 +11,7 @@ export default tpl({
             disconnected: true,
             user: "",
             recolteID: this.$route.params.id,
-            api: "http://projetweb2api.localhost/api/recolte/",
+            api: "http://api.test/api/recolte/",
             jardinierID: "",
             jardinierPrenom: "",
             jardinierNom: "",

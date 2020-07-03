@@ -16,7 +16,7 @@ export default tpl({
             bio: "",
             isActive: true,
             jardinier: this.$route.params.id,
-            api: "http://projetweb2api.localhost/api/user/",
+            api: "http://api.test/api/user/",
             connected: false,
             disconnected: true,
             user: "",

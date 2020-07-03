@@ -15,7 +15,7 @@ export default tpl({
             image: "",
             isActive: true,
             potager: this.$route.params.id,
-            api: "http://projetweb2api.localhost/api/potager/",
+            api: "http://api.test/api/potager/",
             connected: false,
             disconnected: true,
             user: "",

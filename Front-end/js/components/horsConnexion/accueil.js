@@ -10,7 +10,7 @@ export default tpl({
             potagers: [],
             isActive: true,
             searchOption: false,
-            api: "http://projetweb2api.localhost/api/",  
+            api: "http://api.test/api/",  
             connected: false,
             disconnected: true,
         }
