@@ -27,7 +27,7 @@
                 <a href="#" @click="goToJardinier(userId)" class="btn ">Profil de {{ prenom }}</a>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mes Produits
+                    Liste de produits
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a v-for="recolte in recoltes" @click="goToRecolte(recolte.recolte_id)" class="dropdown-item" href="#">{{ recolte.type }} x {{ recolte.quantite }}</a>

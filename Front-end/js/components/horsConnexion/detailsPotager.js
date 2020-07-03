@@ -112,7 +112,6 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.recoltes = data
-                console.log(data)
             })
         },
 

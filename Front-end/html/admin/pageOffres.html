@@ -35,7 +35,7 @@
                     <div v-for="outOffer in outgoingOffers" class="alert alert-dark" role="alert">
                         <p class="text-center">Offre pour {{ outOffer.jardinier_to_prenom }} {{ outOffer.jardinier_to_nom }}</p>
                         <p class="text-center">Offre: {{ outOffer.produce_from_quantite }} {{ outOffer.produce_from_nom }}(s) contre {{ outOffer.produce_to_quantite }} {{ outOffer.produce_to_nom }}(s) </p>
-                        <div class="btn">supprimer</div>
+                        <div class="btn" @click="deleteOffer(outOffer.echange_id)">Supprimer</div>
                     </div>
 
                     
@@ -52,7 +52,7 @@
                         <p class="text-center">Offre de {{ inOffer.jardinier_from_prenom }} {{ inOffer.jardinier_from_nom }}</p>
                         <p class="text-center">Offre: {{ inOffer.produce_from_quantite }} {{ inOffer.produce_from_nom }}(s) contre {{ inOffer.produce_to_quantite }} {{ inOffer.produce_to_nom }} </p>
                         <div class="btn accept">Accepter</div>
-                        <div class="btn">Refuser</div>
+                        <div class="btn" @click="deleteOffer(inOffer.echange_id)">Refuser</div>
                     </div>
                     
                 </div>
