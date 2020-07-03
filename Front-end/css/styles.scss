@@ -329,14 +329,15 @@ body,
         }
 
 
-        h3 {
-            margin-left: 10%;
+        h5 {
+            margin-top: 20px;
+            margin-left: 30%;
         }
-
+       
 
         @media only screen and (min-width: 767px) {
             .newFooter {
-                h3 {
+                h5 {
                     margin-left: 50%;
                 }
             }

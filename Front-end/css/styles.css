@@ -311,12 +311,13 @@ header .menu .helloWorld {
   left: 5%;
 }
 
-.newFooter h3 {
-  margin-left: 10%;
+.newFooter h5 {
+  margin-top: 20px;
+  margin-left: 30%;
 }
 
 @media only screen and (min-width: 767px) {
-  .newFooter .newFooter h3 {
+  .newFooter .newFooter h5 {
     margin-left: 50%;
   }
 }
