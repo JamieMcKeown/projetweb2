@@ -15,7 +15,7 @@ export default tpl({
             },
             connected: true,
             disconnected: false,
-            api:"http://projetweb2api.localhost/api/",
+            api:"http://api.test/api/",
             description : "",
             quantite: "",
             prenom: "",

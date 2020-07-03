@@ -14,7 +14,7 @@ export default tpl({
             code_postal: "",
             bio: "", 
             id: "",
-            api: "http://projetweb2api.localhost/api/",
+            api: "http://api.test/api/",
             connected: true,
             disconnected: false,
 

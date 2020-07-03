@@ -6,7 +6,7 @@ export default tpl({
     template: './html/admin/pageOffres.html',
     data() {
         return {
-            api: "http://projetweb2api.localhost/api/echange/",
+            api: "http://api.test/api/echange/",
             id: "",
             prenom: "",
             nom: "",

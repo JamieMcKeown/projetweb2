@@ -1,5 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
-import { http_get } from '../../utils/request'
+import { http_get, http_put} from '../../utils/request'
 
 // export du object literal complet représentant le component
 export default tpl({
@@ -61,18 +61,24 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.prenom = data[0].Prenom
-                this.nom = data[0].nom
+                this.nom = data[0].Nom
                 this.id = data[0].id
                 this.userId = data[0].user_id
                 this.rating = data[0].rating
                 this.vote = data[0].vote
+                if (data[0].rating != 0) {
+                    if (data[0].vote != 0) {
+                        let num = (data[0].rating / data[0].vote)
+                        this.rating = num.toFixed(2)
+                    }
+                }
+                
                 this.image = data[0].image
             })
         },
 
         checkIfUserIsConnected() {
             let checkStorage = window.localStorage.length
-            console.log(checkStorage)
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false
@@ -87,8 +93,18 @@ export default tpl({
             }
         },
         upVote() {
-            this.votes += 1
-        }
+            let upvoteUrl = this.api + "vote/" + this.id
+
+            http_put(upvoteUrl , {
+                rating: this.votes
+            }).then(data => {
+                this.$router.go()
+            })
+        },
+        
+        goToJardinier(id){
+            this.$router.push("/detailsJardinier/" + id)
+        },
     },
 
 

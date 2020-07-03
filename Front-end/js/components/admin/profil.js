@@ -18,7 +18,7 @@ export default tpl({
             rating_potager: "",
             vote_user: "",
             rating_user: "",
-            api_potager: "http://projetweb2api.localhost/api/potager/user/",
+            api_potager: "http://api.test/api/potager/user/",
             connected: true,
             disconnected: false,
 
