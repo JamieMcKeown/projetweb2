@@ -69,7 +69,6 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.potagers = data
-                console.log(this.potagers)
             })
         },
         searchClicked(){
@@ -82,7 +81,6 @@ export default tpl({
 
         checkIfUserIsConnected() {
             let checkStorage = window.localStorage.length
-            console.log(checkStorage)
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false

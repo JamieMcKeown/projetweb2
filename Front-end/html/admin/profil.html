@@ -22,14 +22,14 @@
           <div class="col">
             <div class="profileContainer">
                 <div class="potagerProfileContainer">
-                    <img src="../../images/bg69.jpg" alt="">
+                    <img @click="goToPotager(id_potager)" :src="image_potager" alt="">
                     <div class="ranking">
                         <p>Évaluation du potager</p>
                         <p>{{ rating_potager }} / 5  ({{ vote_potager }})</p>
                     </div>
                 </div>
                 <div class="jardinierProfileContainer">
-                    <img src="../../images/bg69.jpg" alt="">
+                    <img @click="goToJardinier(id)" :src="image_user" alt="">
                     <div class="ranking">
                         <p>Évaluation du jardinier</p>
                         <p>{{ rating_user }} / 5  ({{ vote_user }})</p>

@@ -18,7 +18,11 @@ export default tpl({
             rating_potager: "",
             vote_user: "",
             rating_user: "",
+            image_user: "",
+            image_potager: "",
+            id_potager: "",
             api_potager: "http://api.test/api/potager/user/",
+            api_jardinier: "http://api.test/api/user/",
             connected: true,
             disconnected: false,
 
@@ -28,6 +32,7 @@ export default tpl({
         this.preventDisconnectedUser()
         this.getInfos()
         this.getPotagerRating()
+        this.getJardinierRating()
     },
     methods: {
         homepageRoute() {
@@ -80,17 +85,16 @@ export default tpl({
             this.id = parseObject.id
             this.email = parseObject.email
 
-            if (parseObject.vote != 0 && parseObject.rating != 0) {
-                this.rating_user = parseObject.rating / parseObject.vote
-                this.vote_user = parseObject.vote
-            } else {
-                this.rating_user = 0
-                this.vote_user = 0
-            }
+            // if (parseObject.vote != 0 && parseObject.rating != 0) {
+            //     this.rating_user = parseObject.rating / parseObject.vote
+            //     this.vote_user = parseObject.vote
+            // } else {
+            //     this.rating_user = 0
+            //     this.vote_user = 0
+            // }
         },
 
         preventDisconnectedUser() {
-            console.log(window.localStorage.length)
             if(window.localStorage.length == 0) {
                 this.$router.push("/")
             }
@@ -100,11 +104,30 @@ export default tpl({
             let url = this.api_potager + this.id
 
             http_get(url).then(data => {
-                console.log(data)
-                this.rating_potager = data[0].rating
-                this.vote_potager = data[0].vote
+                this.image_potager = data[0].image
+                this.id_potager = data[0].id
+                if(data[0].rating != 0) {
+                    if (data[0].vote != 0) {
+                        let num = data[0].rating / data[0].vote
+                        this.rating_potager = num.toFixed(2)
+                        this.vote_potager = data[0].vote
+                    }
+                } else {
+                    this.rating_potager = data[0].rating
+                    this.vote_potager = data[0].vote
+                }
             })
         },
+
+        getJardinierRating() {
+            let url = this.api_jardinier + this.id
+            http_get(url).then(data => {
+                this.rating_user = data[0].truerating.toFixed(2)
+                this.vote_user = data[0].vote
+                this.image_user = data[0].image
+            })
+        },
+
         pageProfil() {
             this.$router.push("/profil")
         },
@@ -113,6 +136,14 @@ export default tpl({
             localStorage.clear()
             this.connected = false
             this.$router.push("/").catch(err => {})
+        },
+
+        goToJardinier(id){
+            this.$router.push("/detailsJardinier/" + id)
+        },
+
+        goToPotager(id){
+            this.$router.push("/detailsPotager/" + id)
         },
     },
 })
