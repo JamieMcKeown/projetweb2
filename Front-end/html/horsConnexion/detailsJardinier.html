@@ -23,9 +23,9 @@
             <div class="card" style="width: 70%; margin-left: 15%">
               <img src="../../images/Potagers/potager1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Nom</h5>
-               
-                <a href="#" class="btn btn-primary">voire potager</a>
+                <h5 class="card-title">{{ prenom }} {{ nom }}</h5>
+               <p>{{ bio }}</p>
+                <a href="#" @click="goToPotager(potagerId)" class="btn btn-primary">Voir son potager</a>
                 <form action="#">
                   <label for="1">1</label>
                   <input type="radio" name="vote" value="1" v-model="votes">
@@ -38,8 +38,8 @@
                   <label for="5">5</label>
                   <input type="radio" name="vote" value="5" v-model="votes">
                 </form>
-                <p>5/5  {{ votes }}</p>
-                <button @click="upVote" class="btn">vote</button>
+                <p>{{ rating }} / 5 ({{ vote }} Votes)</p>
+                <button @click="upVote" class="btn">Voter!</button>
               </div>
             </div>
            </div>
