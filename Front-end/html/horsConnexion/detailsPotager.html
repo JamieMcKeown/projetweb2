@@ -25,6 +25,16 @@
               <div class="card-body">
                 <h5 class="card-title">Potager de {{ prenom }} {{ nom }}</h5>
                 <a href="#" @click="goToJardinier(userId)" class="btn ">Profil de {{ prenom }}</a>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mes Produits
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
                 <form action="#">
                   <label for="1">1</label>
                   <input type="radio" name="vote" value="1" v-model="votes">
@@ -40,6 +50,7 @@
                 <p>{{ rating }} / 5  ({{ vote }} Votes)</p>
                 <button @click="upVote" class="btn">Voter!</button>
               </div>
+              
             </div>
            </div>
            
