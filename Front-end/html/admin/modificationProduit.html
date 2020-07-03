@@ -23,11 +23,11 @@
      <div class="row">
          <div class="coltext-center">
            <h3>Modification de produit</h3>
-          <div class="card" style="width: 18rem;">
-            <img src="../../images/bg420.jpg" class="card-img-top" alt="...">
+          <div v-for="recolte in recoltes" class="card" style="width: 18rem;">
+            <img :src="recolte.image" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Produit</h5>
-             
+              <h5 class="card-title">{{ recolte.type }} x{{ recolte.quantite }}</h5>
+              <p>{{ recolte.description }}</p>
               <a href="#" class="btn btn-primary">modifier</a>
             </div>
           </div>
@@ -38,7 +38,7 @@
      <div class="row addProduct my-2">
          <div class="col text-center">
              <h3>Ajout de produit</h3>
-            <form @submit="ajoutProduit">
+            <form submit="#">
                 <div class="form-group">
                   <label for="description">Description</label>
                   <input v-model="description" type="text"  >
@@ -60,4 +60,5 @@
         <h3>Une production DreamTeam</h3>
     </div>
 
+</div>
 </div>

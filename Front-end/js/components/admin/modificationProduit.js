@@ -19,12 +19,16 @@ export default tpl({
             description : "",
             quantite: "",
             prenom: "",
+            jardinierId: "",
+            potagerId: "",
+            recoltes: [],
             types: [],
         }
     },
     mounted(){
         this.preventDisconnectedUser()
         this.getUsername()
+        
         // console.log(click)
         // console.log(translateValue)
         // console.log(this.css)
@@ -114,6 +118,26 @@ export default tpl({
             let retrievedObject = localStorage.getItem('data')
             let parseObject =  JSON.parse(retrievedObject)
             this.prenom = parseObject.prenom
-        }
+            this.jardinierId = parseObject.id
+            this.getPotager(this.jardinierId)
+        },
+
+        getRecolte(id) {
+            let url = this.api + "recolte/potager/" + id
+
+            http_get(url).then(data => {
+                this.recoltes = data
+                console.log(data)
+            })
+        },
+
+        getPotager(id) {
+            let url = this.api + "potager/user/" + id
+
+            http_get(url).then(data => {
+                this.potagerId = data[0].id
+                this.getRecolte(data[0].id)
+            })
+        },
     },
 })
