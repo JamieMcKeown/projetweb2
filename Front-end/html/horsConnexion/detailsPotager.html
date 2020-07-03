@@ -30,9 +30,7 @@
                     Mes Produits
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a v-for="recolte in recoltes" @click="goToRecolte(recolte.recolte_id)" class="dropdown-item" href="#">{{ recolte.type }} x {{ recolte.quantite }}</a>
                   </div>
                 </div>
                 <form action="#">

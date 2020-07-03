@@ -108,13 +108,17 @@ export default tpl({
         },
 
         getRecolte(id){
-            let url = this.api + "http://api.test/api/recolte/potager/" + id
+            let url = "http://api.test/api/recolte/potager/" + id
 
             http_get(url).then(data => {
                 this.recoltes = data
                 console.log(data)
             })
-        }
+        },
+
+        goToRecolte(id) {
+            this.$router.push("/produit/" + id)
+        },
     },
 
 
@@ -122,6 +126,6 @@ export default tpl({
     mounted() {
         this.checkIfUserIsConnected()
         this.fetchThePotager(this.potager)
-        this.getRecolte(this.id)
+        this.getRecolte(this.potager)
     }
 })
