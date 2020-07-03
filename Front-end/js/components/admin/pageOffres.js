@@ -11,6 +11,7 @@ export default tpl({
             prenom: "",
             nom: "",
             incomingOffers: [],
+            outgoingOffers: [],
             connected: true,
             disconnected: false,
         }
@@ -19,6 +20,7 @@ export default tpl({
         this.preventDisconnectedUser()
         this.getInfos()
         this.getIncomingOffers(this.id)
+        this.getOutgoingOffers(this.id)
     },//end of mounted
     methods: {
         homepageRoute() {
@@ -56,6 +58,14 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.incomingOffers = data
+                console.log(data)
+            })
+        },
+        getOutgoingOffers(id) {
+            let url = this.api + id
+
+            http_get(url).then(data => {
+                this.outgoingOffers = data
                 console.log(data)
             })
         },

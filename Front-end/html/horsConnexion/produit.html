@@ -24,7 +24,7 @@
                    <div class="productImageContainer">
                        
                        <h4>{{ produceName }} x{{ produceQte }}</h4>
-                       <img src="../../images/bg420.jpg" alt="">
+                       <img :src="produceImage" alt="">
                        <p>{{ produceDescription }}</p>
                        
                        <a href="#" class="btn btn-primary">Offrir échange</a>
@@ -35,11 +35,11 @@
                 <div class="imageContainer">
                     <div class="potagerContainer">
                         <h4>Le potager</h4>
-                        <img src="../../images/bg420.jpg" @click="goToPotager(potagerID)"alt="">
+                        <img :src="potagerImage" @click="goToPotager(potagerID)"alt="">
                     </div>
                     <div class="jardinierContainer">
                         <h4>Le jardinier: {{ jardinierPrenom }} {{ jardinierNom }}</h4>
-                        <img src="../../images/bg420.jpg" @click="goToJardinier(jardinierID)" alt="">
+                        <img :src="jardinierImage" @click="goToJardinier(jardinierID)" alt="">
                     </div>
                 </div>
             </div>

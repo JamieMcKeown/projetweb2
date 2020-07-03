@@ -15,11 +15,14 @@ export default tpl({
             jardinierID: "",
             jardinierPrenom: "",
             jardinierNom: "",
+            jardinierImage: "",
             potagerID: "",
+            potagerImage: "",
             produceDescription: "",
             produceQte: "",
             produceID: "",
             produceName: "",
+            produceImage: "",
         }
     },// end data
     mounted() {
@@ -90,6 +93,9 @@ export default tpl({
                 this.produceQte = data[0].quantite
                 this.produceID = data[0].recolte_id
                 this.produceName = data[0].type
+                this.potagerImage = data[0].image_potager
+                this.jardinierImage = data[0].image_jardinier
+                this.produceImage = data[0].image_recolte
             })
         },
 

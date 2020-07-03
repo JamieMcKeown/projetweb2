@@ -139,6 +139,8 @@ class RecolteController extends Controller
         $type = $recolte->typerecolte->nom;
         $typeID = $recolte->typerecolte->id;
         $image = $recolte->image;
+        $imagePotager = $recolte->potager->image;
+        $imageJardinier = $recolte->potager->user->image;
         $qte = $recolte->quantite;
         $description = $recolte->description;
         array_push($result, [
@@ -153,7 +155,9 @@ class RecolteController extends Controller
             "type_id" => $typeID,
             "rating" => $rating,
             "vote" => $vote,
-            "image" => $image,
+            "image_recolte" => $image,
+            "image_potager" => $imagePotager,
+            "image_jardinier" => $imageJardinier,
             
         ]);
         
