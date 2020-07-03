@@ -1,5 +1,5 @@
 import tpl from '../../utils/avecTemplateHtml'
-import { http_get } from '../../utils/request'
+import { http_get, http_put } from '../../utils/request'
 
 // export du object literal complet représentant le component
 export default tpl({
@@ -21,6 +21,7 @@ export default tpl({
             disconnected: true,
             user: "",
             votes: 0,
+            potagerId: "",
         }
     },// end data
     methods: {
@@ -65,10 +66,11 @@ export default tpl({
                 this.nom = data[0].nom
                 this.ville = data[0].ville
                 this.vote = data[0].vote
-                this.rating = data[0].truerating
+                this.rating = data[0].truerating.toFixed(2)
                 this.id = data[0].id
                 this.image = data[0].image
                 this.bio = data[0].bio
+                this.findPotager(data[0].id)
             })
         },
 
@@ -90,7 +92,25 @@ export default tpl({
     },
 
     upVote() {
-        this.votes += 1
+        let upvoteUrl = this.api + "vote/" + this.id
+
+        http_put(upvoteUrl , {
+            rating: this.votes
+        }).then(data => {
+            this.$router.go()
+        })
+    },
+
+    findPotager(id) {
+        let potagerUrl = "http://api.test/api/potager/user/" + id
+
+        http_get(potagerUrl).then(data => {
+            this.potagerId = data[0].id
+        })
+    },
+
+    goToPotager(id) {
+        this.$router.push("/detailsPotager/" + id)
     }
     },
 
@@ -99,5 +119,6 @@ export default tpl({
     mounted() {
         this.checkIfUserIsConnected()
         this.fetchTheUser(this.jardinier)
+        
     }
 })
