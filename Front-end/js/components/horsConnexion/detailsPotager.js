@@ -19,6 +19,7 @@ export default tpl({
             connected: false,
             disconnected: true,
             user: "",
+            recoltes: [],
             votes: 1,
         }
     },// end data
@@ -105,6 +106,15 @@ export default tpl({
         goToJardinier(id){
             this.$router.push("/detailsJardinier/" + id)
         },
+
+        getRecolte(id){
+            let url = this.api + "http://api.test/api/recolte/potager/" + id
+
+            http_get(url).then(data => {
+                this.recoltes = data
+                console.log(data)
+            })
+        }
     },
 
 
@@ -112,5 +122,6 @@ export default tpl({
     mounted() {
         this.checkIfUserIsConnected()
         this.fetchThePotager(this.potager)
+        this.getRecolte(this.id)
     }
 })
