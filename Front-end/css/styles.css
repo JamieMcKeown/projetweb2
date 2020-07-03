@@ -7,36 +7,24 @@ body,
   font-family: sans-serif;
   background-image: url("../images/bg1986.jpg");
   background-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* Header -----------------------------------------------------------------------------------*/
 header {
   background-image: url("../images/footer.png");
   background-position: 35% 65%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 90%;
   margin-left: 5%;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 160px;
   font-family: sans-serif;
 }
@@ -98,66 +86,33 @@ header .menu .redTomatoe {
 }
 
 header .menu .helloWorld {
-  -webkit-animation-name: helloWorld;
-          animation-name: helloWorld;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-@-webkit-keyframes helloWorld {
-  0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
-  75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
-  }
+  animation-name: helloWorld;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 @keyframes helloWorld {
   0% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   25% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   50% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
   75% {
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    transform: rotate(40deg);
   }
 }
 
 /* Accueil ----------------------------------------------------------------------------------*/
 .container {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .container .row {
@@ -194,28 +149,18 @@ header .menu .helloWorld {
   border: 2px solid #A4D626;
   width: 40% !important;
   margin-left: 30% !important;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 /* Inscription ------------------------------------------------------------------------------*/
 .jumbotron .container .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .jumbotron .container .row .col-xs-12 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -231,16 +176,9 @@ header .menu .helloWorld {
 }
 
 .jumbotron .container .row .inscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jumbotron .container .btn {
@@ -248,9 +186,7 @@ header .menu .helloWorld {
   color: white;
   border-radius: 10px;
   width: 50% !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   border: 2px solid white !important;
 }
 
@@ -262,16 +198,9 @@ header .menu .helloWorld {
 
 .modifProfil .nom, .modifProfil .prenom, .modifProfil .courriel, .modifProfil .bio, .modifProfil .ville, .modifProfil .addresse, .modifProfil .codePostale, .modifProfil .motdePasse, .modifProfil .questionSecret {
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .modifProfil .nom label, .modifProfil .prenom label, .modifProfil .courriel label, .modifProfil .bio label, .modifProfil .ville label, .modifProfil .addresse label, .modifProfil .codePostale label, .modifProfil .motdePasse label, .modifProfil .questionSecret label {
@@ -315,16 +244,9 @@ header .menu .helloWorld {
 .profileImagesModif {
   width: 90%;
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .profileImagesModif .btn {
@@ -345,39 +267,23 @@ header .menu .helloWorld {
 }
 
 .profileContainer .ranking {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .profileButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .profileButtonsContainer a {
   height: 55px;
   width: 100%;
   margin-top: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: rgba(164, 214, 38, 0.65);
   color: white;
   border: 2px solid white;
@@ -386,15 +292,9 @@ header .menu .helloWorld {
 /* Footer -----------------------------------------------------------------------------------*/
 .newFooter {
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 15%;
   height: 100px;
@@ -422,8 +322,6 @@ header .menu .helloWorld {
 }
 
 .vote {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -445,61 +343,14 @@ header .menu .helloWorld {
 
 .container.detailsPot .btn, .detailsJard .btn {
   background-color: #A4D626 !important;
-}
-
-.jumbotron .potagerRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.jumbotron .jardinierRating {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.jumbotron .infoJardinier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.jumbotron img {
-  height: 150px;
-  width: 200px;
-  margin-left: 2.5%;
+  color: white !important;
+  border-radius: 10px;
+  border: 2px solid white;
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 10px 0;
 }
 
@@ -548,16 +399,9 @@ header .menu .helloWorld {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .supprimerUser .btn {
@@ -580,16 +424,9 @@ header .menu .helloWorld {
 }
 
 .jumbotron.outboundOffers .alert {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jumbotron.outboundOffers .btn {
@@ -697,15 +534,7 @@ header .menu .helloWorld {
 }
 
 .search .searchButtonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-/*# sourceMappingURL=styles.css.map */
