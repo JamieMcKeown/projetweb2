@@ -53,7 +53,7 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.potagers = data
-                console.log(this.potagers)
+
             })
         },
 
@@ -63,18 +63,18 @@ export default tpl({
 
         checkIfUserIsConnected() {
             let checkStorage = window.localStorage.length
-            console.log(checkStorage)
+
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false
-                console.log(this.connected)
+
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
+
     
                 this.user = parseObject.prenom
     
-                console.log(this.user)
+
             }
         },
       

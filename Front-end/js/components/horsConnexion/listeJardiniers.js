@@ -53,7 +53,7 @@ export default tpl({
 
             http_get(url).then(data => {
                 this.jardiniers = data
-                console.log(this.jardiniers)
+
             })
         },
 
@@ -63,18 +63,18 @@ export default tpl({
 
         checkIfUserIsConnected() {
             let checkStorage = window.localStorage.length
-            console.log(checkStorage)
+
             if(checkStorage != 0) {
                 this.connected = true
                 this.disconnected = false
-                console.log(this.connected)
+
                 let retrievedObject = localStorage.getItem('data')
                 let parseObject =  JSON.parse(retrievedObject)
-                console.log(parseObject)
+
     
                 this.user = parseObject.prenom
     
-                console.log(this.user)
+
             }
         },
       
@@ -83,7 +83,6 @@ export default tpl({
     
     mounted(){
         this.checkIfUserIsConnected()
-        console.log("Loading")
         this.fetchAllUser()  
     }// end of mounted
 })

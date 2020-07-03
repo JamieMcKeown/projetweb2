@@ -53,7 +53,6 @@ export default tpl({
         getInfos() {
             let retrievedObject = localStorage.getItem('data')
             let parseObject =  JSON.parse(retrievedObject)
-            console.log(parseObject)
 
             this.prenom = parseObject.prenom
             this.nom = parseObject.nom
@@ -72,13 +71,6 @@ export default tpl({
 
         modifProfil(e) {
             let userEdit = this.api + "user/edit/" + this.id
-            console.log(userEdit)
-            console.log(this.prenom)
-            console.log(this.nom)
-            console.log(this.email)
-            console.log(this.numero_porte)
-            console.log(this.ville)
-            console.log(this.code_postal)
 
             http_put(userEdit , {
                 prenom: this.prenom,
@@ -87,6 +79,7 @@ export default tpl({
                 numero_porte: this.numero_porte,
                 ville: this.ville,
                 code_postal: this.code_postal,
+                bio: this.bio
             }).then(data => {
                 this.$router.push("/profil")
             })
