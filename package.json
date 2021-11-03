@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/JamieMcKeown/projetweb2#readme",
   "dependencies": {
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   }
 }
